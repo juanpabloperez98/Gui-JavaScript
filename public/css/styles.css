@@ -1,0 +1,192 @@
+/* All */
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+
+* {
+    font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+#header {
+    background-color: #323330;
+    max-height: 55px;
+}
+
+#header a {
+    color: white;
+    font-size: 17px;
+}
+
+#header a:hover {
+    border-bottom: 1px solid white;
+    color: #F0DB4F;
+}
+
+#navbar {
+    max-width: 1111px;
+    margin: auto;
+}
+
+/* Welcome */
+
+#contentvideo #mainvideo {
+    max-height: 300px;
+}
+
+#contentImage {
+    height: 500px;
+    background-image: url('../imagenes/fondo.jpg');
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+#contentImage::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, .9); */
+    background: #323330;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(244, 219, 79, 1), rgba(50, 51, 48, 1));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(244, 219, 79, 1), rgba(50, 51, 48, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: -1;
+}
+
+#contentImage .row {
+    padding-top: 110px;
+}
+
+#contentImage .row h3 {
+    font-size: 45px;
+}
+
+#back-opacity {
+    background-color: rgba(0, 0, 0, .7);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+body {
+    background-image: url('../imagenes/bg.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(235, 235, 235, 0.9);
+    z-index: -1;
+}
+
+#acercadepagina {
+    margin-top: 80px;
+}
+
+#teoria {
+    margin-top: 80px;
+    /* background-color: rgba(255, 255, 255, .9); */
+    background: rgba(244, 219, 79, 1);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(244, 219, 79, 1), rgba(50, 51, 48, 1));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(50, 51, 48, 1), rgba(244, 219, 79, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 300px;
+}
+
+#teoria #columna {
+    margin-top: 25px;
+}
+
+.component-basic h3 {
+    text-align: center;
+    font-size: 50px;
+    margin: auto auto 30px auto;
+    font-weight: bold;
+}
+
+.component-basic p {
+    font-size: 20px;
+}
+
+#teoria-elements {
+    margin-top: 70px;
+}
+
+#teoria-elements .tema {
+    text-align: center;
+    min-height: 360px;
+    /* background-color: rgb(226, 226, 226); */
+    /* margin-left: 0px; */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#teoria-elements #title-moduls {
+    margin: 10px auto 50px auto;
+}
+
+#teoria-elements #title-moduls h3 {
+    font-size: 40px;
+    font-weight: bold !important;
+}
+
+#teoria-elements .tema .img img {
+    width: 100%;
+    height: 200px;
+}
+
+#teoria-elements .tema .img img:hover{
+    width: 90%;
+    height: 200px;
+}
+
+#teoria-elements .tema h3 {
+    font-weight: bold !important;
+    margin: 20px auto;
+    color: white;
+    min-height: 68px;
+}
+
+#teoria-elements .tema a{
+    color: black;
+}
+
+#teoria-elements .tema p {
+    text-align: left;
+}
+
+.page-footer{
+    background-color: #323330;
+    margin: 100px auto auto auto;
+}
+
+.container-fluid{
+    max-width: 1111px;
+    margin: auto;
+}
+
+.container-fluid h5{
+    color: white;
+}
+
+.footer-copyright{
+    background-color: #4d4d4d;   
+}
