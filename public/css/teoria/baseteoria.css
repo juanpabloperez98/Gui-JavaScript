@@ -1,0 +1,161 @@
+#main-secuencia {
+    margin: 80px auto;
+}
+
+#main-secuencia .row {
+    max-width: 1111px;
+    margin: 0px auto;
+}
+
+#section-image .img-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#section-image .img-section img {
+    width: 100%;
+}
+
+.bottom-50 {
+    margin: 0px 0px 30px 0px;
+}
+
+.bottom-50 h3 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.bottom-50 p {
+    font-size: 20px;
+}
+
+#title-themes {
+    text-align: center;
+}
+
+.secciones {
+    margin-bottom: 60px;
+}
+
+.imagen img {
+    width: 200px;
+}
+
+.tarjeta {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.tarjeta p {
+    text-align: left;
+    min-height: 170px;
+}
+
+.boton a {
+    background-color: #2180c3;
+    color: white;
+}
+
+.boton a:hover {
+    background-color: #1c689e;
+    font-weight: bold;
+    color: white;
+}
+
+.spancolor {
+    color: #F0DB4F;
+    font-weight: bold;
+}
+
+.btn-probar {
+    background-color: #2180c3;
+    color: white;
+    margin: auto;
+}
+
+.btn-probar:hover {
+    background-color: #1c689e;
+    color: white;
+}
+
+.result {
+    background-color: #272822;
+}
+
+.card-personalizada {
+    width: 40%;
+    background-color: rgb(231, 231, 231);
+    padding: 25px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: auto;
+}
+
+.p-ejemplo {
+    min-height: 335px;
+    text-align: left;
+}
+
+.card-personalizada .cardheader {
+    text-align: center;
+}
+
+.card-personalizada .cardheader h5 {
+    font-weight: bold;
+}
+
+.card-personalizada .cardboton {
+    text-align: center;
+}
+
+.card-personalizada .cardboton a {
+    background-color: #2180c3;
+    color: white;
+}
+
+.card-personalizada .cardboton a:hover {
+    background-color: #1c689e;
+    color: white;
+}
+
+.carousel-control-prev {
+    left: -45px !important;
+}
+
+.carousel-control-next {
+    right: -26px !important;
+}
+
+.icon-styles {
+    background-color: black;
+    padding: 27px;
+    border-radius: 18px;
+}
+
+/* Tipo de datos */
+
+#tp-main {
+    background-color: rgb(189, 189, 189);
+}
+
+#tp-main .row {
+    max-width: 1111px;
+}
+
+#tp-main .row .columna-principal {
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+/* #tp-main .row .columna-principal h3{
+    min-height: 66px;
+} */
+
+/* Footer */
+
+.page-footer {
+    margin: 0px !important;
+}

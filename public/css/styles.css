@@ -11,11 +11,22 @@
     padding: 0;
 }
 
+#app{
+    min-height: 100%;
+}
+
+.desactivate{
+    display: none;
+}
+
 /* Header */
 
 #header {
     background-color: #323330;
     max-height: 55px;
+    /* position: fixed; */
+    /* z-index: 3; */
+    /* width: 100%; */
 }
 
 #header a {
@@ -112,13 +123,13 @@ body::after {
 }
 
 #teoria #columna {
-    margin-top: 25px;
+    margin-top: 7px;
 }
 
 .component-basic h3 {
     text-align: center;
     font-size: 50px;
-    margin: auto auto 30px auto;
+    margin: auto auto 20px auto;
     font-weight: bold;
 }
 
@@ -187,6 +198,21 @@ body::after {
     color: white;
 }
 
+#introduccionJS{
+    margin-top: 100px;
+}
+
+#introduccionJS a{
+    background-color: #4d4d4d;
+    color: white;
+    padding: 10px;
+}
+
+#introduccionJS a:hover{
+    font-weight: bold;
+}
+
+/* Footer */
 .footer-copyright{
     background-color: #4d4d4d;   
 }

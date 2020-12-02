@@ -1,0 +1,63 @@
+#ej-main {
+    background-color: rgb(189, 189, 189);
+    padding-bottom: 55px;
+}
+
+#ej-main .row {
+    max-width: 1111px;
+    margin: auto;
+}
+
+#ej-main h4 {
+    color: white;
+    text-align: center;
+}
+
+.result {
+    margin-top: -58px;
+    background-color: #272822;
+    border-top: 1px solid white;
+}
+
+.result h6 {
+    margin-top: 10px;
+}
+
+#botones {
+    text-align: center;
+}
+
+#botones a {
+    background-color: #2180c3;
+    color: white;
+}
+
+#botones a:hover {
+    background-color: #1c689e;
+    color: white;
+}
+
+.submit {
+    background-color: #2180c3;
+    color: white;
+
+}
+
+#submit:hover {
+    background-color: #1c689e;
+    color: white;
+}
+
+#reiniciar {
+    background-color: #2180c3;
+    color: white;
+}
+
+#reiniciar:hover {
+    background-color: #1c689e;
+    color: white;
+}
+
+#datos {
+    margin-top: -57px;
+}
