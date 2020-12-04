@@ -46,7 +46,7 @@
         <div id="contentImage">
             <div class="row mx-auto" style="max-width: 1111px">
                 <div class="col-lg-7" id="back-opacity" style="">
-                    <h3 style="color: white; font-weight: bold">Aprende a programar con JavaScript</h3>
+                    <h3 style="color: white; font-weight: bold">Guía de programación con JavaScript</h3>
                     <p style="color: white; font-weight: bold;font-size: 20px;margin-top: 30px">Software creado por la
                         Universidad Tecnologica de pereria</p>
                 </div>

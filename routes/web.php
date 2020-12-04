@@ -70,4 +70,28 @@ Route::prefix('estructuras-secuencia/')->group(function () {
             'page' => 'operadores-ejemplos'
         ]);
     })->name('operadores-ejemplo3');
+
+    Route::get('operadores/ejemplo4', function () {
+        return view('teoria.secuencia.operadores.ejemplos.ejemplo4',[
+            'page' => 'operadores-ejemplos'
+        ]);
+    })->name('operadores-ejemplo4');
+
+    Route::get('operadores/ejemplo5', function () {
+        return view('teoria.secuencia.operadores.ejemplos.ejemplo5',[
+            'page' => 'operadores-ejemplos'
+        ]);
+    })->name('operadores-ejemplo5');
+
+    Route::get('operadores/ejemplo6', function () {
+        return view('teoria.secuencia.operadores.ejemplos.ejemplo6',[
+            'page' => 'operadores-ejemplos'
+        ]);
+    })->name('operadores-ejemplo6');
+
+    Route::get('operadores/ejercicio1', function () {
+        return view('teoria.secuencia.operadores.ejercicios.ejercicio1',[
+            'page' => 'operadores-ejemplos'
+        ]);
+    })->name('operadores-ejercicio1');
 });
