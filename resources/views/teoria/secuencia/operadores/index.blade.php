@@ -340,7 +340,7 @@
                 </table>
             </div>
         </div>
-        <div class="row mx-auto p-md-4" id="ejemplos">
+        {{-- <div class="row mx-auto p-md-4" id="ejemplos">
             <div class="col-lg-11 text-center mx-auto bg-light columna-principal">
                 <h4 class="text-center mb-md-5 font-weight-bold">Ejemplos</h4>
                 <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
@@ -465,6 +465,102 @@
                       <span class="carousel-control-next-icon icon-styles" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
                     </a>
+                </div>
+            </div>
+        </div> --}}
+
+        <div class="row mx-auto p-md-4" id="ejemplos">
+            <div class="col-lg-11 text-center mx-auto bg-light columna-principal">
+                <h4 class="text-center mb-md-5 font-weight-bold">Practica y teoría</h4>
+                {{-- <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="card-personalizada">
+                            <div class="cardheader">
+                                <h5>Ejemplo # 1</h5>
+                            </div>
+                            
+                            <div class="cardboton">
+                                <a href="{{ route('operadores-ejemplo1') }}" class="btn">Ir al ejemplo</a>
+                            </div>
+                        </div>
+                        <div class="card-personalizada mx-md-4">
+                            <div class="cardheader">
+                                <h5>Ejemplo # 2</h5>
+                            </div>
+                            
+                            <div class="cardboton">
+                                <a href="{{ route('operadores-ejemplo2') }}" class="btn">Ir al ejemplo</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card-personalizada">
+                            <div class="cardheader">
+                                <h5>Ejemplo # 3</h5>
+                            </div>
+                            
+                            <div class="cardboton">
+                                <a href="{{ route('operadores-ejemplo3') }}" class="btn">Ir al ejemplo</a>
+                            </div>
+                        </div>
+                        <div class="card-personalizada mx-md-4">
+                            <div class="cardheader">
+                                <h5>Ejemplo # 4</h5>
+                            </div>
+                            
+                            <div class="cardboton">
+                                <a href="{{ route('operadores-ejemplo4') }}" class="btn">Ir al ejemplo</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card-personalizada">
+                            <div class="cardheader">
+                                <h5>Ejemplo # 5</h5>
+                            </div>
+                            
+                            <div class="cardboton">
+                                <a href="{{ route('operadores-ejemplo5') }}" class="btn">Ir al ejemplo</a>
+                            </div>
+                        </div>
+                        <div class="card-personalizada mx-md-4">
+                            <div class="cardheader">
+                                <h5>Ejemplo # 6</h5>
+                            </div>
+                            
+                            <div class="cardboton">
+                                <a href="{{ route('operadores-ejemplo6') }}" class="btn">Ir al ejemplo</a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon icon-styles" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon icon-styles" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div> --}}
+                <div class="card-personalizada">
+                    <div class="cardheader">
+                        <h5>Ejemplos</h5>
+                    </div>
+                    
+                    <div class="cardboton">
+                        <a href="{{ route('operadores-ejemplo-index') }}" class="btn">Ir al ejemplo</a>
+                    </div>
+                </div>
+                <div class="card-personalizada">
+                    <div class="cardheader">
+                        <h5>Practica</h5>
+                    </div>
+                    
+                    <div class="cardboton">
+                        <a href="{{ route('operadores-ejercicios-index') }}" class="btn">Ir a la Practica</a>
+                    </div>
                 </div>
             </div>
         </div>

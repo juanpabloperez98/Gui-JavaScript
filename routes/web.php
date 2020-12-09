@@ -53,6 +53,22 @@ Route::prefix('estructuras-secuencia/')->group(function () {
         ]);
     })->name('operadores');
 
+
+    //Ir a la practica / Ir a ejemplos
+    Route::get('operadores/ejemplos', function () {
+        return view('teoria.secuencia.operadores.ejemplos.ejemplos_index',[
+            'page' => 'operadores-ejemplos-index'
+        ]);
+    })->name('operadores-ejemplo-index');
+
+    Route::get('operadores/practica', function () {
+        return view('teoria.secuencia.operadores.ejercicios.ejercicios_index',[
+            'page' => 'operadores-ejemplos-index'
+        ]);
+    })->name('operadores-ejercicios-index');
+
+
+    // Ir a los ejemplos
     Route::get('operadores/ejemplo1', function () {
         return view('teoria.secuencia.operadores.ejemplos.ejemplo1',[
             'page' => 'operadores-ejemplos'
@@ -91,7 +107,7 @@ Route::prefix('estructuras-secuencia/')->group(function () {
 
     Route::get('operadores/ejercicio1', function () {
         return view('teoria.secuencia.operadores.ejercicios.ejercicio1',[
-            'page' => 'operadores-ejemplos'
+            'page' => 'operadores-ejercicios'
         ]);
     })->name('operadores-ejercicio1');
 });

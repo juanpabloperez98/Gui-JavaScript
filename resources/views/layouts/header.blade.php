@@ -48,7 +48,7 @@
                         <a class="nav-link" href="#ejemplos">
                             <img src="{{ asset('imagenes/icons/ejemplo.png') }}" alt="icon-back"
                                 style="width: 20px; margin: 0px 5px 0px 0px">
-                            Ejemplos
+                            Ejemplos/Ejercicios
                         </a>
                     </li>
                     <li class="nav-item">
@@ -68,7 +68,25 @@
                     @break
                     @case('operadores-ejemplos')
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('operadores-ejemplo-index') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('operadores-ejemplos-index')
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ url('estructuras-secuencia/operadores/#ejemplos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('operadores-ejercicios')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('operadores-ejercicios-index') }}">
                             <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
                                 style="width: 20px; margin: 0px 5px 0px 0px">
                             Volver

@@ -65,3 +65,37 @@
 #datos {
     margin-top: -57px;
 }
+
+.card-personalizada {
+    background-color: rgb(231, 231, 231);
+    padding: 25px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.p-ejemplo {
+    min-height: 335px;
+    text-align: left;
+}
+
+.card-personalizada .cardheader {
+    text-align: center;
+}
+
+.card-personalizada .cardheader h5 {
+    font-weight: bold;
+}
+
+.card-personalizada .cardboton {
+    text-align: center;
+}
+
+.card-personalizada .cardboton a {
+    background-color: #2180c3;
+    color: white;
+}
+
+.card-personalizada .cardboton a:hover {
+    background-color: #1c689e;
+    color: white;
+}
