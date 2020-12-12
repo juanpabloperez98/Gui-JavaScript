@@ -10,8 +10,8 @@
 @endsection
 
 @section('content')
-<div class="row mx-auto mt-md-5" id="content">
-    <div class="col-md-12 text-center">
+<div class="row mx-auto pt-md-5" id="content">
+    <div class="col-md-12 mt-md-5 text-center">
         <h1>Ejercicio #1</h1>
     </div>
 </div>
@@ -47,6 +47,28 @@
             </code>
         </pre>
     </div>
+
+    <div class="mx-auto col-12 mt-md-2 desactivate" id="botones">
+        <a href="#" class="btn" id="exp">Ver explicación</a>
+    </div>
+
+    <div class="col-lg-6 mt-md-5 desactivate" id="code-explain">
+        <pre>
+            <code class="javascript">    Se comienza declarando la variable "num1" y se iguala a lo que ingrese el usuario por pantalla
+    Igual que la línea anterior se declara la variable "num2" y se iguala a lo que ingrese el usuario por pantalla
+    Luego se declara la variable residuo y se iguala a cero 
+    Se convierte la variable "num1" en entero usando la función parseInt, el valor convertido a entero se iguala a la misma variable "num1"
+    Se convierte la variable "num2" en entero usando la función parseInt, el valor convertido a entero se iguala a la misma variable "num2"
+    La variable "residuo" se iguala al resultado de la operación de modulo entre "num1" y "num2"
+    Por último, se imprime por pantalla el resultado (<span style="color: rgba(244, 219, 79, 1);">NOTA</span>: al utilizar el operador "+" con un string y un entero, este concatena al string el entero especificado) 
+            </code>
+        </pre>
+        <div class="text-md-center">
+            <a href="#" class="btn" id="reiniciar">Reiniciar</a>
+        </div>
+    </div>
+
+
 
     <div class="mx-auto col-md-5 mt-md-5" id="form-selects">
         <h4 id="linea">Linea # </h4>
@@ -141,10 +163,25 @@
             }else{
                 $(cont_higlight).removeClass('line-higlight')
                 $('#form-selects').toggle('')
+                $('#botones').toggle('')
             }
         }else{
-            alert("¿Estas seguro?... revisa bien")
+            alertify.set('notifier', 'position', 'bottom-center');
+            var msg = alertify.error('¿Estas seguro? <br>revisa bien');
+            msg.delay(2)
         }
+    })
+
+
+    $('#exp').on('click', (e) => {
+        e.preventDefault()
+        $('#code-explain').toggle('')
+        $('#botones').toggle('')
+    })
+
+    $('#reiniciar').on('click', (e) => {
+        e.preventDefault()
+        location.reload()
     })
 </script>
 

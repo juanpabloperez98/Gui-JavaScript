@@ -198,13 +198,13 @@
                                 var1 >= 3</td>
                         </tr>
                         <tr>
-                            <td class="font-weight-bold">Menor que (<)< /td>
+                            <td class="font-weight-bold">Menor que (<)</td>
                             <td class="text-left">Devuelve true si el operando izquierdo es menor que el operando derecho.
                             </td>
                             <td>var1 < var2 "2" < 12</td>
                         </tr>
                         <tr>
-                            <td class="font-weight-bold">Menor o igual (<=)< /td>
+                            <td class="font-weight-bold">Menor o igual (<=)</td>
                             <td class="text-left">Devuelve true si el operando izquierdo es menor o igual que el operando
                                 derecho.</td>
                             <td>var1 <= var2 var2 <=5</td>
@@ -471,7 +471,7 @@
 
         <div class="row mx-auto p-md-4" id="ejemplos">
             <div class="col-lg-11 text-center mx-auto bg-light columna-principal">
-                <h4 class="text-center mb-md-5 font-weight-bold">Practica y teoría</h4>
+                <h4 class="text-center mb-md-5 font-weight-bold">Ejemplos y practica</h4>
                 {{-- <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -550,7 +550,7 @@
                     </div>
                     
                     <div class="cardboton">
-                        <a href="{{ route('operadores-ejemplo-index') }}" class="btn">Ir al ejemplo</a>
+                        <a href="{{ route('operadores-ejemplo-index') }}" class="btn">Ir a los ejemplos</a>
                     </div>
                 </div>
                 <div class="card-personalizada">
@@ -559,7 +559,7 @@
                     </div>
                     
                     <div class="cardboton">
-                        <a href="{{ route('operadores-ejercicios-index') }}" class="btn">Ir a la Practica</a>
+                        <a href="{{ route('operadores-ejercicios-index') }}" class="btn">Ir a los Ejercicios</a>
                     </div>
                 </div>
             </div>

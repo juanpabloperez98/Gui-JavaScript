@@ -121,43 +121,13 @@
     <script>
         hljs.initHighlightingOnLoad();
         hljs.initLineNumbersOnLoad();
-        /* window.sr = ScrollReveal()
-        sr.reveal('#back-opacity', {
-            duration: 2000,
-            origin: 'top',
-            distance: '200px'
-        })
-        sr.reveal('#logoutp', {
-            duration: 2000,
-            origin: 'bottom',
-            distance: '100px'
-        })
-        sr.reveal('#acercadepagina', {
-            duration: 2000,
-            origin: 'left',
-            distance: '100px'
-        })
-        sr.reveal('#navbar', {
-            duration: 2000,
-            origin: 'left',
-            distance: '100px'
-        })
-        sr.reveal('#teoria', {
-            duration: 2000,
-            origin: 'bottom',
-            distance: '50px'
-        })
-        sr.reveal('#teoria-elements', {
-            duration: 2000,
-            origin: 'top',
-            distance: '150px'
-        })
-        sr.reveal('#footer', {
-            duration: 2000,
-            origin: 'left',
-            distance: '150px'
-        }) */
 
+        $('#open-toggle').on('click', (e) => {
+            e.preventDefault()
+            $('#slide-menu').toggleClass('activate-slide')
+            $('#icon-menu').toggleClass('desactivate')
+            $('#icon-close').toggleClass('desactivate')
+        })
     </script>
     @yield('scripts')
 </body>

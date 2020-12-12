@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome',[
         'page' => 'welcome'
     ]);
-});
+})->name('welcome');
 
 
 // Estructuras de secuencia

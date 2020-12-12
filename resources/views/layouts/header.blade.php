@@ -3,6 +3,7 @@
         <img src="{{ asset('imagenes/logo.png') }}" alt="" class="mr-2" style="width: 30px">
         <a class="navbar-brand" id="title" href="{{ url('/') }}">Guia JavaScript
         </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

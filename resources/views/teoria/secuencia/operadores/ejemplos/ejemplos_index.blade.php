@@ -11,11 +11,11 @@
 
 @section('content')
     <main id="ej-main">
-        <div class="row mx-auto mt-md-5">
+        <div class="row mx-auto pt-md-5">
             <div class="col-lg-12">
                 <h3 class="text-md-center font-weight-bold my-md-4">Ejemplos Operadores</h3>
                 <p class="my-md-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti hic eveniet eos optio pariatur tempore neque, natus dolores voluptate ut, ducimus eius magni dolore voluptatibus.
+                    A continuación, se presentan una serie de ejemplos acerca de los operadores en JavaScript, en estos ejemplos podrá visualizar unos problemas planteados y la solución a estos con su respectiva explicación.
                 </p>
             </div>
             <div class="col-lg-12">
@@ -83,7 +83,6 @@
                 </div>
             </div>
         </div>
-
     </main>
     
 @endsection

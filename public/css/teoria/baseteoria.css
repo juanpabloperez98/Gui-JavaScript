@@ -1,6 +1,6 @@
-#main-secuencia {
+/* #main-secuencia {
     margin: 80px auto;
-}
+} */
 
 #main-secuencia .row {
     max-width: 1111px;
@@ -9,7 +9,11 @@
 
 #section-image .img-section {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 88px;
+}
+
+#section-explain{
+    margin-top: 80px;
 }
 
 #section-image .img-section img {
@@ -139,6 +143,7 @@
 
 #tp-main {
     background-color: rgb(189, 189, 189);
+    padding-top: 50px;
 }
 
 #tp-main .row {
