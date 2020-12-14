@@ -110,4 +110,16 @@ Route::prefix('estructuras-secuencia/')->group(function () {
             'page' => 'operadores-ejercicios'
         ]);
     })->name('operadores-ejercicio1');
+
+    Route::get('operadores/ejercicio2', function () {
+        return view('teoria.secuencia.operadores.ejercicios.ejercicio2',[
+            'page' => 'operadores-ejercicios'
+        ]);
+    })->name('operadores-ejercicio2');
+
+    Route::get('operadores/ejercicio3', function () {
+        return view('teoria.secuencia.operadores.ejercicios.ejercicio3',[
+            'page' => 'operadores-ejercicios'
+        ]);
+    })->name('operadores-ejercicio3');
 });

@@ -1,5 +1,5 @@
 #app{
-    min-height: 60vh;
+    min-height: 70vh;
 }
 
 .content{
@@ -56,4 +56,18 @@
 #reiniciar:hover {
     background-color: #1c689e;
     color: white;
+}
+
+#explain{
+    padding-top: 60px;
+}
+
+
+@media only screen and (max-width: 990px) {
+    #content{
+        padding-top: 80px;
+    }
+    #form-selects{
+        font-size: 15px;
+    }
 }

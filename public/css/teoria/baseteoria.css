@@ -164,3 +164,18 @@
 .page-footer {
     margin: 0px !important;
 }
+
+
+@media only screen and (max-width: 990px) {
+    #section-image .img-section {
+        margin-top: 8px;
+    }
+
+    .card-personalizada{
+        width: 100%;
+    }
+
+    .table td, .table th{
+        font-size: 14px;
+    }
+}

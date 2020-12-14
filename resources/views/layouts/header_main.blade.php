@@ -1,14 +1,10 @@
 <header id="header">
     <nav class="navbar navbar-expand-lg" id="navbar">
         <img src="{{ asset('imagenes/logo.png') }}" alt="" class="mr-2" style="width: 30px">
-        <a class="navbar-brand" id="title" href="{{ route('welcome') }}">Guia JavaScript
+        <a class="navbar-brand mr-auto" id="title" href="{{ route('welcome') }}">Guia JavaScript
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" id="open-toggle" href="#">
@@ -19,6 +15,7 @@
             </ul>
         </div>
     </nav>
+
     <div id="slide-menu">
         <div class="p-4">
             <div class="mt-2 text-center">
@@ -126,4 +123,5 @@
         </div>
 
     </div>
+    
 </header>

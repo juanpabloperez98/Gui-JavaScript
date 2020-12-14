@@ -22,10 +22,10 @@
         <h2 class="text-md-center mt-md-3">Enunciado</h2>
         <br>
         <div class="content">
-            <p class="text-center">
-               Sitio en construcción, ejecute el ejercicio para ver la dinamica 
+            <p class="text-left">
+                Sean las variables a,b y c, se requiere realizar un programa educativo que permita al usuario ingresar 3 valores, y almacenarlos en las variables respectivamente. Luego se desea realizar la ecuación cuadrática con dichas variables.
             </p>
-            <div class="text-md-center my-md-4">
+            <div class="text-center my-4">
                 <a href="#" id="empezar" class="button">Empezar ejercicio</a>
             </div>
         </div>
@@ -33,17 +33,14 @@
 </div>
 
 <div class="row mx-auto desactivate" style="max-width: 1111px" id="desarrollo">
-    <div class="mx-auto col-md-5 mt-md-5">
+    <div class="mx-auto col-md-5 mt-md-5 p-0">
         <pre id="code">
-            <code class="javascript">  Linea de codigo 1
-  Linea de codigo 2
-  <span id="cont-higlight1" class="line-higlight"><span id="linea-higlight1"> </span><span id="linea-1" class="desactivate">Linea de codigo 3</span></span>
-  Linea de codigo 4
-  Linea de codigo 5
-  <span id="cont-higlight2" class="line-higlight"><span id="linea-higlight2"> </span><span id="linea-2" class="desactivate">Linea de codigo 6</span></span>
-  Linea de codigo 7
-  Linea de codigo 8
-  <span id="cont-higlight3" class="line-higlight"><span id="linea-higlight3"> </span><span id="linea-3" class="desactivate">Linea de codigo 9</span></span>
+            <code class="javascript">  var a = parseInt(prompt("Ingrese el valor de a: ")),
+         b = parseInt(prompt("Ingrese el valor de b: ")),
+         <span id="cont-higlight1" class="line-higlight"><span id="linea-higlight1"> </span><span id="linea-1" class="desactivate">c = parseInt(prompt("Ingrese el valor de c: "))</span></span>
+    var x1 = (-b + Math.sqrt((b**2) - (4*a*c)))/(2*a),
+    <span id="cont-higlight2" class="line-higlight"><span id="linea-higlight2"> </span><span id="linea-2" class="desactivate">x2 = (-b - Math.sqrt((b**2) - (4*a*c)))/(2*a)</span></span>
+    <span id="cont-higlight3" class="line-higlight"><span id="linea-higlight3"> </span><span id="linea-3" class="desactivate">console.log("X1:"+x1+" x2:"+ x2)</span></span>
             </code>
         </pre>
     </div>
@@ -54,13 +51,12 @@
 
     <div class="col-lg-6 mt-md-5 desactivate" id="code-explain">
         <pre>
-            <code class="javascript">    Se comienza declarando la variable "num1" y se iguala a lo que ingrese el usuario por pantalla
-    Igual que la línea anterior se declara la variable "num2" y se iguala a lo que ingrese el usuario por pantalla
-    Luego se declara la variable residuo y se iguala a cero 
-    Se convierte la variable "num1" en entero usando la función parseInt, el valor convertido a entero se iguala a la misma variable "num1"
-    Se convierte la variable "num2" en entero usando la función parseInt, el valor convertido a entero se iguala a la misma variable "num2"
-    La variable "residuo" se iguala al resultado de la operación de modulo entre "num1" y "num2"
-    Por último, se imprime por pantalla el resultado (<span style="color: rgba(244, 219, 79, 1);">NOTA</span>: al utilizar el operador "+" con un string y un entero, este concatena al string el entero especificado) 
+            <code class="javascript">    Primero se declara la variable "a" y se iguala a lo que ingrese el usuario por pantalla, convertido a entero utilizando el método parseInt
+    Segundo se declara la variable "b" y se iguala a lo que ingrese el usuario por pantalla, convertido a entero utilizando el método parseInt
+    Tercero se declara la variable "c" y se iguala a lo que ingrese el usuario por pantalla, convertido a entero utilizando el método parseInt
+    Luego se declara la variable "x1", y se iguala a la operación que equivale a la ecuación cuadrática con el signo positivo
+    Luego se declara la variable "x2", y se iguala a la operación que equivale a la ecuación cuadrática con el signo negativo
+    Por último, se imprime el resultado de "x1" y de "x2"
             </code>
         </pre>
         <div class="text-md-center">
@@ -72,7 +68,8 @@
 
     <div class="mx-auto col-md-5 mt-md-5" id="form-selects">
         <h4 id="linea">Linea # </h4>
-        <form id="formulario" action="">
+        <p id="explain_code" class="text-left"></p>
+        <form id="formulario" class="text-left" action="">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="select" id="select1" value="1">
                 <label class="form-check-label" for="select1" id="label1">
@@ -93,7 +90,7 @@
                 <label class="form-check-label" for="select4" id="label4">
                 </label>
             </div>
-            <div class="boton">
+            <div class="boton text-center">
                 <button type="submit" class="btn">Probar</button>
             </div>
         </form>
@@ -112,23 +109,27 @@
     var lineas = {
         '1': {
             'line_code':3,
+            'explaincode':'Falta recibir el valor para la variable c, ¿Qué línea de código viene aquí?',
             'correct_line':2,
-            'values':['Default 1','Linea de codigo 3','Default 3','Default 4']
+            'values':['c = prompt("Ingrese el valor de c: ")','c = parseInt(prompt("Ingrese el valor de c: "))','c = parseInt("Ingrese el valor de c: ")','parseInt(prompt("Ingrese el valor de c: "))']
         },
         '2': {
-            'line_code':6,
+            'line_code':5,
+            'explaincode':'Ahora se debe hallar x2, es igual a x1, cambia el signo de ‘+’ a ‘-’, ¿Qué línea de código viene aquí?',
             'correct_line':3,
-            'values':['Default 1','Default 2','Linea de codigo 6','Default 4']
+            'values':['(-b - Math.sqrt((b**2) - (4*a*c)))/(2*a)','x2 = (-b - Math.sqrt((b*2) - (4*a*c))/(2*a)','x2 = (-b - Math.sqrt((b**2) - (4*a*c)))/(2*a)','x2 = (-b - Math.sqrt(b**2 - 4*a*c)/2a']
         },
         '3': {
-            'line_code':9,
+            'line_code':6,
+            'explaincode':'Ahora se debe imprimir los valores de x1 y x2, ¿Qué línea de código viene aquí?',
             'correct_line':4,
-            'values':['Default 1','Default 2','Default 3','Linea de codigo 9']
+            'values':['console.log(X1:+x1+x2:+x2)','console("X1:"+x1+" x2:"+ x2)','console.log(x1+x2)','console.log("X1:"+x1+" x2:"+ x2)']
         }
     }
 
     var addLinesInitial = () => {
         $('#linea').text('Linea #' + lineas[cont].line_code)
+        $('#explain_code').text(lineas[cont].explaincode)
         for (let i = 0; i < 4; i++) {
             var identificador = '#label'+ (i+1)
             const element = lineas[cont].values[i]

@@ -171,7 +171,7 @@
                         <a href="{{ route('tipodatos-ejemplo1') }}" class="btn">Ir al ejemplo</a>
                     </div>
                 </div>
-                <div class="card-personalizada mx-md-4">
+                <div class="card-personalizada mx-lg-4 mt-4 mt-lg-0">
                     <div class="cardheader">
                         <h5>Ejemplo # 2</h5>
                     </div>

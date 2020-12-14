@@ -14,7 +14,7 @@
         <div class="row mx-auto p-md-4">
             <div class="col-lg-11 mx-auto bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">1.2.1</span>Operadores en JavaScript</h3>
-                <p class="mt-md-3">
+                <p class="mt-3">
                     Anteriormente se vio acerca de las variables, que son, como se declaran y para que se usan. Ahora bien,
                     si se vio que la funcionalidad de las variables es efectiva a la hora de realizar un software, también
                     es de darse cuenta que no sirven de a mucho si no se pueden realizar tareas o acciones con dichas
@@ -26,9 +26,9 @@
                     para poder realizar un software completo.
                 </p>
             </div>
-            <div class="col-lg-11 mx-auto mt-md-3 bg-light columna-principal">
+            <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">1.2.2</span>Operadores de asignación</h3>
-                <p class="mt-md-3">
+                <p class="mt-3">
                     Los operadores de asignación sirven como su nombre lo indica para asignar valores a las variables
                     declaradas, anteriormente cuando se declaraban variables se veía que se utilizado el símbolo <span
                         style="color:red;">=</span> para
@@ -40,7 +40,7 @@
                     una tabla con el contenido de dichos
                     operadores.
                 </p>
-                <table class="table mt-md-3">
+                <table class="table mt-3">
                     <thead>
                         <tr style="background-color: #d3c568; color: white">
                             <th scope="col">Nombre</th>
@@ -93,9 +93,9 @@
                     verificar con algunos ejemplos.
                 </p>
             </div>
-            <div class="col-lg-5 mx-auto mt-md-3 bg-light columna-principal">
+            <div class="col-lg-5 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">1.2.3</span>Incremento y decremento</h3>
-                <p class="mt-md-3">
+                <p class="mt-3">
                     El incremento y el decremento como su nombre lo indica, son operadores que sirven para aumentar o
                     decrementar el valor de una variable, estos operadores solo funcionan con tipos de datos numéricos.
                 </p>
@@ -113,13 +113,13 @@
                         11 9
                     </p>
                 </div>
-                <div class="text-center mt-md-3">
+                <div class="text-center mt-3">
                     <a href="#" class="btn btn-probar" id="boton-probar1">Probar</a>
                 </div>
             </div>
-            <div class="col-lg-5 mx-auto mt-md-3 bg-light columna-principal">
+            <div class="col-lg-5 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">1.2.4</span>Operadores de comparación</h3>
-                <p class="mt-md-3">
+                <p class="mt-3">
                     Los operadores de comparación, comparan sus operandos y devuelven un valor lógico en función de si la
                     comparación es verdadera (True) o Falsa (False). Los operandos pueden ser variables o valores numéricos,
                     cadenas (string), lógicos u objetos.
@@ -139,17 +139,17 @@
                         false
                     </p>
                 </div>
-                <div class="text-center mt-md-3">
+                <div class="text-center mt-3">
                     <a href="#" class="btn btn-probar" id="boton-probar2">Probar</a>
                 </div>
             </div>
-            <div class="col-lg-11 mx-auto mt-md-3 bg-light columna-principal">
+            <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">1.2.5</span>Tabla operadores comparación</h3>
-                <p class="mt-md-3">
+                <p class="mt-3">
                     A continuación, se muestra una tabla donde se especifican los operadores de comparación que maneja
                     JavaScript
                 </p>
-                <table class="table mt-md-3">
+                <table class="table mt-3">
                     <thead>
                         <tr style="background-color: #d3c568; color: white">
                             <th scope="col">Operador</th>
@@ -212,9 +212,9 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-lg-11 mx-auto mt-md-3 bg-light columna-principal">
+            <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">1.2.6</span>Operadores aritméticos</h3>
-                <p class="mt-md-3">
+                <p class="mt-3">
                     Los operadores aritméticos, son aquellos operadores que permiten realizar las operaciones matemáticas
                     conocidas tales como la suma, resta, multiplicación, división, etc. Los operandos en los operadores
                     aritméticos, pueden tomar valores numéricos para realizar dichas operaciones, pero operaciones como la
@@ -232,7 +232,7 @@
                         15
                     </p>
                 </div>
-                <div class="text-center mt-md-3">
+                <div class="text-center mt-3">
                     <a href="#" class="btn btn-probar" id="boton-probar3">Probar</a>
                 </div>
                 <p class="mt-md-4">
@@ -251,13 +251,13 @@
                         HolaMundo
                     </p>
                 </div>
-                <div class="text-center mt-md-3">
+                <div class="text-center mt-3">
                     <a href="#" class="btn btn-probar" id="boton-probar4">Probar</a>
                 </div>
                 <p class="my-md-4">
                     Al igual que el ejemplo anterior, se utiliza el operador suma, pero esta vez con dos variables de tipo string, lo que da como resultado una nueva cadena de caracteres (string), concatenando los valores de las variables str1 y str2
                 </p>
-                <table class="table mt-md-3">
+                <table class="table mt-3">
                     <thead>
                         <tr style="background-color: #d3c568; color: white">
                             <th scope="col">Operador</th>
@@ -291,9 +291,9 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-lg-11 mx-auto mt-md-3 bg-light columna-principal">
+            <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">1.2.7</span>Operadores lógicos</h3>
-                <p class="mt-md-3">
+                <p class="mt-3">
                     Los operadores lógicos son operadores que se utilizan con valores booleanas, es decir, true o false. En gran parte los operadores booleanos son utilizados para realizar comparaciones que retornaran como resultado un valor booleano, como decir si un número es mayor a 10 Y el mismo numero es menor a 20, al realizar esas comparaciones, se retornara un valor booleano dado el caso de que las condiciones se cumplan. Para tener una idea mas clara, a continuación, un ejemplo
                 </p>
                 <pre>
@@ -309,10 +309,10 @@
                         true
                     </p>
                 </div>
-                <div class="text-center mt-md-3">
+                <div class="text-center mt-3">
                     <a href="#" class="btn btn-probar" id="boton-probar5">Probar</a>
                 </div>
-                <table class="table mt-md-3">
+                <table class="table mt-3">
                     <thead>
                         <tr style="background-color: #d3c568; color: white">
                             <th scope="col">Operador</th>
@@ -553,7 +553,8 @@
                         <a href="{{ route('operadores-ejemplo-index') }}" class="btn">Ir a los ejemplos</a>
                     </div>
                 </div>
-                <div class="card-personalizada">
+
+                <div class="card-personalizada mt-5 mt-lg-0">
                     <div class="cardheader">
                         <h5>Practica</h5>
                     </div>

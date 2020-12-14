@@ -13,7 +13,7 @@
 <main id="main-secuencia">
     <div class="row mx-auto">
         <div class="col-lg-6 bottom-50" id="section-explain">
-            <h3>Estructuras de secuencia</h3>
+            <h3 class="text-center">Estructuras de secuencia</h3>
             <p>
                 Las estructuras de secuencias en programación, son aquellas estructuras o algoritmos los cuales son
                 secuenciales, es decir que el resultado de una acción depende totalmente de la anterior, en este módulo
@@ -53,7 +53,7 @@
                         <a href="{{ route('tipodatos') }}" class="btn">Vamos aprender</a>
                     </div>
                 </div>
-                <div class="col-lg-4 mx-auto tarjeta">
+                <div class="col-lg-4 mx-auto mt-5 mt-md-5 mt-lg-0 tarjeta">
                     <h3>Operadores</h3>
                     <div class="imagen">
                         <img src="{{ asset('imagenes/estructuras_secuencia/Operadores.png') }}" alt="secuencia-img">

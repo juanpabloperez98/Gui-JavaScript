@@ -13,8 +13,8 @@
                     <p style="color: white; font-weight: bold;font-size: 20px;margin-top: 30px">Software creado por la
                         Universidad Tecnologica de pereria</p>
                 </div>
-                <div class="col-lg-5" id="logoutp" style="">
-                    <img src="{{ asset('imagenes/UTP.png') }}" alt="" style="max-width: 500px">
+                <div class="col-lg-5 mt-sm-4 mt-4 text-center" id="logoutp" style="">
+                    <img src="{{ asset('imagenes/UTP.png') }}" alt="">
                 </div>
             </div>
         </div>

@@ -99,3 +99,12 @@
     background-color: #1c689e;
     color: white;
 }
+
+@media only screen and (max-width: 990px) {
+    #ej-main{
+        padding-top: 90px;
+    }
+    #ej-main .row {
+        padding-top: 0px !important;
+    }
+}
