@@ -123,3 +123,36 @@ Route::prefix('estructuras-secuencia/')->group(function () {
         ]);
     })->name('operadores-ejercicio3');
 });
+
+
+// Estructuras de condición
+Route::prefix('estructuras-condicion/')->group(function () {
+    Route::get('index/', function () {
+        return view('teoria.condicion.index',[
+            'page' => 'condicion'
+        ]);
+    })->name('condicion');
+
+    Route::get('simplesydobles/', function () {
+        return view('teoria.condicion.simplesydobles.index',[
+            'page' => 'simplesydobles'
+        ]);
+    })->name('simplesydobles');
+
+
+    Route::get('simplesydobles/ejemplos', function () {
+        return view('teoria.condicion.simplesydobles.ejemplos.ejemplos_index',[
+            'page' => 'simplesydobles-ejemplos-index'
+        ]);
+    })->name('simplesydobles-ejemplo-index');
+
+     // Ir a los ejemplos
+     Route::get('operadores/ejemplo1', function () {
+        return view('teoria.condicion.simplesydobles.ejemplos.ejemplo1',[
+            'page' => 'operadores-ejemplos'
+        ]);
+    })->name('operadores-ejemplo1');
+
+
+    
+});

@@ -45,9 +45,10 @@
                 </div>
                 <div class="collapse" id="collapseExample2">
                     <div class="card card-body text-left" style="background: none; color: white">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                        proident.
+                        En este módulo, se explicarán las estructuras condicionales tales como lo son el if, if-else, y switch, que sirven para el control del flujo de un programa.
+                    </div>
+                    <div id="boton">
+                        <a href="{{ route('condicion') }}" class="btn btn-primary">Ir al modulo</a>
                     </div>
                 </div>
             </div>
