@@ -18,7 +18,7 @@
                     La sentencia if se le conoce como una estructura de selección simple, y cumple con la tarea de permitir realizar o no, una determinada acción o sentencia. Esta estructura de selección basa su criterio evaluativo de si debe o no realizar una acción tomando en cuenta la evaluación de una expresión en función de una condición es decir si la comparación da como resultado un verdadero o falso.
                 </p>
             </div>
-            <div class="col-lg-5 mx-auto bg-light columna-principal">
+            <div class="col-lg-5 mx-auto mt-3 mt-lg-0 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">2.1.2</span>Sintaxis condicional if</h3>
                 <p class="mt-3">
                     La sintaxis de una sentencia if consta de la palabra clave if seguida de una expresión booleana encerrada entre paréntesis. Esta expresión está seguida por un bloque de sentencias delimitado por llaves de cierre. 
@@ -90,7 +90,7 @@
                     <p class="text-center" style="color: white">
                         0
                     </p>
-                    <p class="text-left" style="color: white">
+                    <p class="text-left p-3 p-lg-0" style="color: white">
                         <span style="color: #F0DB4F">NOTA:</span> Nótese que los dos números son iguales, por lo que la condición no se cumple ya que <span style="color: blue; font-weight: bold">numero1</span> debe ser mayor a <span style="color: blue; font-weight: bold">numero2</span>, entonces entra al else.
                     </p>
                 </div>
