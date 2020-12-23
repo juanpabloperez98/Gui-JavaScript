@@ -10,6 +10,7 @@
 #ej-main .row {
     max-width: 1111px;
     margin: auto;
+    padding-top: 80px;
 }
 
 #ej-main h4 {

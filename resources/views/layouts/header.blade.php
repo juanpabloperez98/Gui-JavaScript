@@ -62,6 +62,42 @@
                         </a>
                     </li>
                     @break
+                    @case('operadores-ejemplos')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('operadores-ejemplo-index') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('operadores-ejemplos-index')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('estructuras-secuencia/operadores/#ejemplos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('operadores-ejercicios')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('operadores-ejercicios-index') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('simplesydobles-ejemplos-index')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('estructuras-condicion/simplesydobles/#ejemplos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
                     @case('simplesydobles')
                     <li class="nav-item">
                         <a class="nav-link" href="#ejemplos">
@@ -85,36 +121,9 @@
                         </a>
                     </li>
                     @break
-                    @case('operadores-ejemplos')
+                    @case('simplesydobles-ejemplos')
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('operadores-ejemplo-index') }}">
-                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
-                                style="width: 20px; margin: 0px 5px 0px 0px">
-                            Volver
-                        </a>
-                    </li>
-                    @break
-                    @case('simplesydobles-ejemplos-index')
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('estructuras-condicion/simplesydobles/#ejemplos') }}">
-                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
-                                style="width: 20px; margin: 0px 5px 0px 0px">
-                            Volver
-                        </a>
-                    </li>
-                    @break
-                    @case('operadores-ejemplos-index')
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('estructuras-secuencia/operadores/#ejemplos') }}">
-                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
-                                style="width: 20px; margin: 0px 5px 0px 0px">
-                            Volver
-                        </a>
-                    </li>
-                    @break
-                    @case('operadores-ejercicios')
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('operadores-ejercicios-index') }}">
+                        <a class="nav-link" href="{{ route('simplesydobles-ejemplo-index') }}">
                             <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
                                 style="width: 20px; margin: 0px 5px 0px 0px">
                             Volver

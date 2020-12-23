@@ -70,7 +70,7 @@
     </section>
 
 
-    <section id="acercadepagina" class="component-basic">
+    <section id="" class="component-basic mt-5">
         <div class="row mx-auto" style="max-width: 1111px">
             <div class="col-lg-9 mx-auto">
                 <h3>

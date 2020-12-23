@@ -68,6 +68,7 @@
     width: 41%;
     height: 100vh;
     left: 100%;
+    overflow: scroll;
     transition: all 300ms linear;
 }
 
@@ -272,6 +273,11 @@ body::after {
     }
     .content-link-toggle {
         width: 80%;
+    }
+
+    #teoria {
+        margin-top: 12px;
+        height: 562px;
     }
 }
 

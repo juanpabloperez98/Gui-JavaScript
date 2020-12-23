@@ -116,11 +116,12 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div id="manuals" class="mt-5 p-4" style="background-color: #41423e">
-            <a href="#" class="d-block">Manual de usuario</a>
-            <a href="#" class="d-block">Manual tecnico</a>
+            <div id="manuals" class="mt-1 p-4" style="background-color: #41423e">
+                <a href="#" class="d-block">Manual de usuario</a>
+                <a href="#" class="d-block">Manual tecnico</a>
+            </div>
+
         </div>
 
     </div>

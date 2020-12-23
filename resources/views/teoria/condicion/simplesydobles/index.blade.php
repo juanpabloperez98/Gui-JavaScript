@@ -99,6 +99,66 @@
                 </div>
                 
             </div>
+
+            <div class="col-lg-5 mx-auto mt-3 bg-light columna-principal">
+                <h3 class="text-md-center"><span class="spancolor mr-2">2.1.6</span>Estructura else if</h3>
+                <p class="mt-3">
+                    Como se ha visto anteriormente, las estructuras de selección doble disponen de dos bloques de sentencias que se ejecutan cuando se cumple o no una determinada condición. Ahora las estructuras else-if, sirven para cuando se requiera validar más de dos condiciones, es decir, si no se cumple una determinada condición, se pase a validar otra nueva condición diferente a la anterior.
+                </p>
+            </div>
+
+            <div class="col-lg-5 mx-auto mt-3 bg-light columna-principal">
+                <h3 class="text-md-center"><span class="spancolor mr-2">2.1.7</span>Síntaxis else if</h3>
+                <p class="mt-3">
+                    La sintaxis de una estructura else-if, es similar a la del if-else, solo que adicional a esta, en la parte del else, se coloca una nueva validación if, que permitirá que se valide una nueva condición.
+                </p>
+                <pre>
+                    <code class="javascript">   if( <span style="color: greenyellow">condicion</span> ){
+        bloque de sentencias
+    }else if( <span style="color: greenyellow">condicion 2</span> ){
+        bloque de sentencias
+    }else{
+        bloque de sentencias
+    }
+                    </code>
+                </pre>
+            </div>
+
+
+            <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
+                <h3 class="text-md-center"><span class="spancolor mr-2">2.1.8</span>Ejemplos Estructura else if</h3>
+                <p class="mt-3">
+                    Miremos un ejemplo para tener mas claro la estructura <span style="color: blue; font-weight: bold">else-if</span>. Supongamos que se requiere validar si una persona se encuentra en un rango de edad, y dependiendo de este rango de edad poder indicarle si esta joven, es un adulto o ya está en la vejez, para este ejercicio, se tomara como parámetro que una persona es joven si su edad se encuentra entre 1 y 25, adulto si su edad se encuentra entre 26 – 60 y vejez si se encuentra mayor a 60, de no estar en ninguno de estos rangos, se dirá que la edad es no valida.
+                </p>
+
+                <pre>
+                    <code class="javascript">  var edad = 50
+  if(edad > 0 && edad < 26){
+      console.log("Aun es joven")
+  }else if(edad > 25 && edad <= 60){
+      console.log("Ya es adulto")
+  }else if(edad > 60){
+      console.log("Esta en vejez")
+  }else{
+      console.log("Edad no valida")
+  }
+                    </code>
+                </pre>
+
+                <div id="result3" class="result px-md-3 desactivate" style="margin-top: -59px">
+                    <h6 class="text-center font-weight-bold" style="color: white">Resultado</h6>
+                    <p class="text-center" style="color: white">
+                        Ya es adulto
+                    </p>
+                    {{-- <p class="text-left" style="color: white">
+                        <span style="color: #F0DB4F">NOTA:</span> Nótese que los dos números son iguales, por lo que la condición no se cumple ya que <span style="color: blue; font-weight: bold">numero1</span> debe ser mayor a <span style="color: blue; font-weight: bold">numero2</span>, entonces entra al else.
+                    </p> --}}
+                </div>
+                <div class="text-center mt-3">
+                    <a href="#" class="btn btn-probar" id="boton-probar3">Probar</a>
+                </div>
+                
+            </div>
             
         </div>
         

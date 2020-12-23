@@ -26,7 +26,7 @@
                                 <h5>Ejemplo # 1</h5>
                             </div>
                             <div class="cardboton">
-                                <a href="{{ route('operadores-ejemplo1') }}" class="btn">Ir al ejemplo</a>
+                                <a href="{{ route('simplesydobles-ejemplo1') }}" class="btn">Ir al ejemplo</a>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                                 <h5>Ejemplo # 2</h5>
                             </div>
                             <div class="cardboton">
-                                <a href="{{ route('operadores-ejemplo2') }}" class="btn">Ir al ejemplo</a>
+                                <a href="{{ route('simplesydobles-ejemplo2') }}" class="btn">Ir al ejemplo</a>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                                 <h5>Ejemplo # 3</h5>
                             </div>
                             <div class="cardboton">
-                                <a href="{{ route('operadores-ejemplo3') }}" class="btn">Ir al ejemplo</a>
+                                <a href="{{ route('simplesydobles-ejemplo3') }}" class="btn">Ir al ejemplo</a>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                                 <h5>Ejemplo # 4</h5>
                             </div>
                             <div class="cardboton">
-                                <a href="{{ route('operadores-ejemplo4') }}" class="btn">Ir al ejemplo</a>
+                                <a href="{{ route('simplesydobles-ejemplo4') }}" class="btn">Ir al ejemplo</a>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                                 <h5>Ejemplo # 5</h5>
                             </div>
                             <div class="cardboton">
-                                <a href="{{ route('operadores-ejemplo5') }}" class="btn">Ir al ejemplo</a>
+                                <a href="{{ route('simplesydobles-ejemplo5') }}" class="btn">Ir al ejemplo</a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                 <h5>Ejemplo # 6</h5>
                             </div>
                             <div class="cardboton">
-                                <a href="{{ route('operadores-ejemplo6') }}" class="btn">Ir al ejemplo</a>
+                                <a href="{{ route('simplesydobles-ejemplo6') }}" class="btn">Ir al ejemplo</a>
                             </div>
                         </div>
                     </div>
