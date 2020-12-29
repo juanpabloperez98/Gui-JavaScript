@@ -182,4 +182,28 @@ Route::prefix('estructuras-condicion/')->group(function () {
             'page' => 'simplesydobles-ejemplos'
         ]);
     })->name('simplesydobles-ejemplo6');
+
+    Route::get('simplesydobles/practica', function () {
+        return view('teoria.condicion.simplesydobles.ejercicios.ejercicios_index', [
+            'page' => 'simplesydobles-ejemplos-index'
+        ]);
+    })->name('simplesydobles-ejercicios-index');
+
+    Route::get('simplesydobles/ejercicio1', function () {
+        return view('teoria.condicion.simplesydobles.ejercicios.ejercicio1', [
+            'page' => 'simplesydobles-ejercicios'
+        ]);
+    })->name('simplesydobles-ejercicio1');
+
+    Route::get('simplesydobles/ejercicio2', function () {
+        return view('teoria.condicion.simplesydobles.ejercicios.ejercicio2', [
+            'page' => 'simplesydobles-ejercicios'
+        ]);
+    })->name('simplesydobles-ejercicio2');
+
+    Route::get('simplesydobles/ejercicio3', function () {
+        return view('teoria.condicion.simplesydobles.ejercicios.ejercicio3', [
+            'page' => 'simplesydobles-ejercicios'
+        ]);
+    })->name('simplesydobles-ejercicio3');
 });
