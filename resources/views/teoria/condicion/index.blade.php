@@ -58,7 +58,7 @@
                         </div>
 
                         <div class="boton">
-                            <a href="{{ route('operadores') }}" class="btn">Vamos aprender</a>
+                            <a href="{{ route('multiples') }}" class="btn">Vamos aprender</a>
                         </div>
                     </div>
                 </div>

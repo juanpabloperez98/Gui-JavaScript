@@ -107,7 +107,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ route('multiples') }}">
                             <img src="{{ asset('imagenes/icons/icon-next.png') }}" alt="icon-back"
                                 style="width: 20px; margin: 0px 5px 0px 0px">
                             Siguiente
@@ -133,6 +133,38 @@
                     @case('simplesydobles-ejercicios')
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('simplesydobles-ejercicios-index') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('multiples')
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ejemplos">
+                            <img src="{{ asset('imagenes/icons/ejemplo.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Ejemplos/Ejercicios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="{{ asset('imagenes/icons/icon-next.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Siguiente
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('condicion') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('multiples-ejemplos-index')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('estructuras-condicion/multiples#ejemplos') }}">
                             <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
                                 style="width: 20px; margin: 0px 5px 0px 0px">
                             Volver

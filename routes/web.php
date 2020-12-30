@@ -26,7 +26,6 @@ Route::prefix('estructuras-secuencia/')->group(function () {
         ]);
     })->name('secuencia');
 
-
     // Tipos de datos
     Route::get('tipos-datos/', function () {
         return view('teoria.secuencia.tiposdatos.index', [
@@ -139,7 +138,6 @@ Route::prefix('estructuras-condicion/')->group(function () {
         ]);
     })->name('simplesydobles');
 
-
     Route::get('simplesydobles/ejemplos', function () {
         return view('teoria.condicion.simplesydobles.ejemplos.ejemplos_index', [
             'page' => 'simplesydobles-ejemplos-index'
@@ -206,4 +204,17 @@ Route::prefix('estructuras-condicion/')->group(function () {
             'page' => 'simplesydobles-ejercicios'
         ]);
     })->name('simplesydobles-ejercicio3');
+
+    Route::get('multiples/', function () {
+        return view('teoria.condicion.multiples.index', [
+            'page' => 'multiples'
+        ]);
+    })->name('multiples');
+
+    Route::get('multiples/ejemplos', function () {
+        return view('teoria.condicion.multiples.ejemplos.ejemplos_index', [
+            'page' => 'multiples-ejemplos-index'
+        ]);
+    })->name('multiples-ejemplo-index');
+
 });
