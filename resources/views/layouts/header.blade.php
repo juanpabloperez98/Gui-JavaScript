@@ -171,6 +171,24 @@
                         </a>
                     </li>
                     @break
+                    @case('multiples-ejemplos')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('multiples-ejemplo-index') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('multiples-ejercicios')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('multiples-ejercicios-index') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
                     @default
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/#title-moduls') }}">

@@ -217,4 +217,58 @@ Route::prefix('estructuras-condicion/')->group(function () {
         ]);
     })->name('multiples-ejemplo-index');
 
+    Route::get('multiples/ejemplo1', function () {
+        return view('teoria.condicion.multiples.ejemplos.ejemplo1', [
+            'page' => 'multiples-ejemplos'
+        ]);
+    })->name('multiples-ejemplo1');
+
+    Route::get('multiples/ejemplo2', function () { 
+        return view('teoria.condicion.multiples.ejemplos.ejemplo2', [
+            'page' => 'multiples-ejemplos'
+        ]);
+    })->name('multiples-ejemplo2');
+
+    Route::get('multiples/ejemplo3', function () { 
+        return view('teoria.condicion.multiples.ejemplos.ejemplo3', [
+            'page' => 'multiples-ejemplos'
+        ]);
+    })->name('multiples-ejemplo3');
+
+    Route::get('multiples/ejemplo4', function () { 
+        return view('teoria.condicion.multiples.ejemplos.ejemplo4', [
+            'page' => 'multiples-ejemplos'
+        ]);
+    })->name('multiples-ejemplo4');
+
+    Route::get('multiples/ejemplo5', function () { 
+        return view('teoria.condicion.multiples.ejemplos.ejemplo5', [
+            'page' => 'multiples-ejemplos'
+        ]);
+    })->name('multiples-ejemplo5');
+
+    Route::get('multiples/ejemplo6', function () { 
+        return view('teoria.condicion.multiples.ejemplos.ejemplo6', [
+            'page' => 'multiples-ejemplos'
+        ]);
+    })->name('multiples-ejemplo6');
+
+    Route::get('multiples/practica', function () {
+        return view('teoria.condicion.multiples.ejercicios.ejercicios_index', [
+            'page' => 'multiples-ejemplos-index'
+        ]);
+    })->name('multiples-ejercicios-index');
+
+    Route::get('multiples/ejercicio1', function () {
+        return view('teoria.condicion.multiples.ejercicios.ejercicio1', [
+            'page' => 'multiples-ejercicios'
+        ]);
+    })->name('multiples-ejercicio1');
+
+    Route::get('multiples/ejercicio2', function () {
+        return view('teoria.condicion.multiples.ejercicios.ejercicio2', [
+            'page' => 'multiples-ejercicios'
+        ]);
+    })->name('multiples-ejercicio2');
+
 });
