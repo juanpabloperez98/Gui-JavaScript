@@ -122,8 +122,6 @@ Route::prefix('estructuras-secuencia/')->group(function () {
         ]);
     })->name('operadores-ejercicio3');
 });
-
-
 // Estructuras de condición
 Route::prefix('estructuras-condicion/')->group(function () {
     Route::get('index/', function () {
@@ -271,4 +269,30 @@ Route::prefix('estructuras-condicion/')->group(function () {
         ]);
     })->name('multiples-ejercicio2');
 
+});
+// Estructuras de repetición
+Route::prefix('estructuras-repeticion/')->group(function () {
+    Route::get('index/', function () {
+        return view('teoria.repeticion.index', [
+            'page' => 'repeticion'
+        ]);
+    })->name('repeticion');
+
+    Route::get('for/', function () {
+        return view('teoria.repeticion.for.index', [
+            'page' => 'for'
+        ]);
+    })->name('forindex');
+
+    Route::get('while/', function () {
+        return view('teoria.repeticion.while.index', [
+            'page' => 'while'
+        ]);
+    })->name('whileindex');
+
+    Route::get('dowhile/', function () {
+        return view('teoria.repeticion.dowhile.index', [
+            'page' => 'dowhile'
+        ]);
+    })->name('dowhileindex');
 });

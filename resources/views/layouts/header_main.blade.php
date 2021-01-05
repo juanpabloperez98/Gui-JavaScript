@@ -17,7 +17,7 @@
     </nav>
 
     <div id="slide-menu">
-        <div class="p-4">
+        <div class="p-4" style="height: 90%">
             <div class="mt-2 text-center">
                 <div class="content-link-toggle ">
                     <a data-toggle="collapse" href="#collapseExample" role="button"
@@ -62,9 +62,10 @@
                 </div>
                 <div class="collapse" id="collapseExample3">
                     <div class="card card-body text-left" style="background: none; color: white">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                        proident.
+                        En este módulo, se explicarán las estructuras de repetición o ciclos, en los cuales se mostrarán su sintaxis y funcionamiento, como también la explicación de cada uno de los ciclos.
+                    </div>
+                    <div id="boton">
+                        <a href="{{ route('repeticion') }}" class="btn btn-primary">Ir al modulo</a>
                     </div>
                 </div>
             </div>
