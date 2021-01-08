@@ -296,3 +296,29 @@ Route::prefix('estructuras-repeticion/')->group(function () {
         ]);
     })->name('dowhileindex');
 });
+// Estructuras de Datos
+Route::prefix('estructuras-datos/')->group(function () {
+    Route::get('index/', function () {
+        return view('teoria.datos.index', [
+            'page' => 'datos'
+        ]);
+    })->name('datos');
+
+    Route::get('listas/', function () {
+        return view('teoria.datos.lista.index', [
+            'page' => 'lista'
+        ]);
+    })->name('lista');
+
+    Route::get('while/', function () {
+        return view('teoria.repeticion.while.index', [
+            'page' => 'while'
+        ]);
+    })->name('whileindex');
+
+    Route::get('dowhile/', function () {
+        return view('teoria.repeticion.dowhile.index', [
+            'page' => 'dowhile'
+        ]);
+    })->name('dowhileindex');
+});
