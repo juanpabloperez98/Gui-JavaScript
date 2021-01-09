@@ -212,6 +212,24 @@
                         </a>
                     </li>
                     @break
+                    @case('for-ejemplos-index')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('estructuras-repeticion/for#ejemplos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('for-ejemplos')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('for-ejemplo-index') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
                     @case('while')
                     <li class="nav-item">
                         <a class="nav-link" href="#ejemplos">

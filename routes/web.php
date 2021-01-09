@@ -278,12 +278,56 @@ Route::prefix('estructuras-repeticion/')->group(function () {
         ]);
     })->name('repeticion');
 
+    // For
     Route::get('for/', function () {
         return view('teoria.repeticion.for.index', [
             'page' => 'for'
         ]);
     })->name('forindex');
 
+    Route::get('for/ejemplos', function () {
+        return view('teoria.repeticion.for.ejemplos.ejemplos_index', [
+            'page' => 'for-ejemplos-index'
+        ]);
+    })->name('for-ejemplo-index');
+
+    Route::get('for/ejemplo1', function () {
+        return view('teoria.repeticion.for.ejemplos.ejemplo1', [
+            'page' => 'for-ejemplos'
+        ]);
+    })->name('for-ejemplo1');
+
+    Route::get('for/ejemplo2', function () {
+        return view('teoria.repeticion.for.ejemplos.ejemplo2', [
+            'page' => 'for-ejemplos'
+        ]);
+    })->name('for-ejemplo2');
+
+    Route::get('for/ejemplo3', function () {
+        return view('teoria.repeticion.for.ejemplos.ejemplo3', [
+            'page' => 'for-ejemplos'
+        ]);
+    })->name('for-ejemplo3');
+
+    Route::get('for/ejemplo4', function () {
+        return view('teoria.repeticion.for.ejemplos.ejemplo4', [
+            'page' => 'for-ejemplos'
+        ]);
+    })->name('for-ejemplo4');
+
+    Route::get('for/ejemplo5', function () {
+        return view('teoria.repeticion.for.ejemplos.ejemplo5', [
+            'page' => 'for-ejemplos'
+        ]);
+    })->name('for-ejemplo5');
+
+    Route::get('for/ejemplo6', function () {
+        return view('teoria.repeticion.for.ejemplos.ejemplo6', [
+            'page' => 'for-ejemplos'
+        ]);
+    })->name('for-ejemplo6');
+
+    // While
     Route::get('while/', function () {
         return view('teoria.repeticion.while.index', [
             'page' => 'while'

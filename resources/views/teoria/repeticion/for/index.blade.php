@@ -210,7 +210,7 @@
                     </div>
 
                     <div class="cardboton">
-                        <a href="{{ route('simplesydobles-ejemplo-index') }}" class="btn">Ir a los ejemplos</a>
+                        <a href="{{ route('for-ejemplo-index') }}" class="btn">Ir a los ejemplos</a>
                     </div>
                 </div>
 
