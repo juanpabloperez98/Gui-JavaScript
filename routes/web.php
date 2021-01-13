@@ -334,11 +334,95 @@ Route::prefix('estructuras-repeticion/')->group(function () {
         ]);
     })->name('whileindex');
 
+    Route::get('while/ejemplos', function () {
+        return view('teoria.repeticion.while.ejemplos.ejemplos_index', [
+            'page' => 'while-ejemplos-index'
+        ]);
+    })->name('while-ejemplo-index');
+
+    Route::get('while/ejemplo1', function () {
+        return view('teoria.repeticion.while.ejemplos.ejemplo1', [
+            'page' => 'while-ejemplos'
+        ]);
+    })->name('while-ejemplo1');
+
+    Route::get('while/ejemplo2', function () {
+        return view('teoria.repeticion.while.ejemplos.ejemplo2', [
+            'page' => 'while-ejemplos'
+        ]);
+    })->name('while-ejemplo2');
+
+    Route::get('while/ejemplo3', function () {
+        return view('teoria.repeticion.while.ejemplos.ejemplo3', [
+            'page' => 'while-ejemplos'
+        ]);
+    })->name('while-ejemplo3');
+
+    Route::get('while/ejemplo4', function () {
+        return view('teoria.repeticion.while.ejemplos.ejemplo4', [
+            'page' => 'while-ejemplos'
+        ]);
+    })->name('while-ejemplo4');
+
+    Route::get('while/ejemplo5', function () {
+        return view('teoria.repeticion.while.ejemplos.ejemplo5', [
+            'page' => 'while-ejemplos'
+        ]);
+    })->name('while-ejemplo5');
+
+    Route::get('while/ejemplo6', function () {
+        return view('teoria.repeticion.while.ejemplos.ejemplo6', [
+            'page' => 'while-ejemplos'
+        ]);
+    })->name('while-ejemplo6');
+    
     Route::get('dowhile/', function () {
         return view('teoria.repeticion.dowhile.index', [
             'page' => 'dowhile'
         ]);
     })->name('dowhileindex');
+
+    Route::get('dowhile/ejemplos', function () {
+        return view('teoria.repeticion.dowhile.ejemplos.ejemplos_index', [
+            'page' => 'dowhile-ejemplos-index'
+        ]);
+    })->name('dowhile-ejemplo-index');
+
+    Route::get('dowhile/ejemplo1', function () {
+        return view('teoria.repeticion.dowhile.ejemplos.ejemplo1', [
+            'page' => 'dowhile-ejemplos'
+        ]);
+    })->name('dowhile-ejemplo1');
+
+    Route::get('dowhile/ejemplo2', function () {
+        return view('teoria.repeticion.dowhile.ejemplos.ejemplo2', [
+            'page' => 'dowhile-ejemplos'
+        ]);
+    })->name('dowhile-ejemplo2');
+
+    Route::get('dowhile/ejemplo3', function () {
+        return view('teoria.repeticion.dowhile.ejemplos.ejemplo3', [
+            'page' => 'dowhile-ejemplos'
+        ]);
+    })->name('dowhile-ejemplo3');
+
+    Route::get('dowhile/ejemplo4', function () {
+        return view('teoria.repeticion.dowhile.ejemplos.ejemplo4', [
+            'page' => 'dowhile-ejemplos'
+        ]);
+    })->name('dowhile-ejemplo4');
+
+    Route::get('dowhile/ejemplo5', function () {
+        return view('teoria.repeticion.dowhile.ejemplos.ejemplo5', [
+            'page' => 'dowhile-ejemplos'
+        ]);
+    })->name('dowhile-ejemplo5');
+
+    Route::get('dowhile/ejemplo6', function () {
+        return view('teoria.repeticion.dowhile.ejemplos.ejemplo6', [
+            'page' => 'dowhile-ejemplos'
+        ]);
+    })->name('dowhile-ejemplo6');
 });
 // Estructuras de Datos
 Route::prefix('estructuras-datos/')->group(function () {

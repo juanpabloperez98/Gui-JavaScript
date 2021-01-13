@@ -253,6 +253,24 @@
                         </a>
                     </li>
                     @break
+                    @case('while-ejemplos-index')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('estructuras-repeticion/while#ejemplos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('while-ejemplos')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('while-ejemplo-index') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
                     @case('dowhile')
                     <li class="nav-item">
                         <a class="nav-link" href="#ejemplos">
@@ -262,7 +280,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ route('datos') }}">
                             <img src="{{ asset('imagenes/icons/icon-next.png') }}" alt="icon-back"
                                 style="width: 20px; margin: 0px 5px 0px 0px">
                             Siguiente
@@ -270,6 +288,24 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('repeticion') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('dowhile-ejemplos-index')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('estructuras-repeticion/dowhile#ejemplos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('dowhile-ejemplos')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('dowhile-ejemplo-index') }}">
                             <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
                                 style="width: 20px; margin: 0px 5px 0px 0px">
                             Volver
