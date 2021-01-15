@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="boton">
-                            <a href="{{ route('whileindex') }}" class="btn">Vamos aprender</a>
+                            <a href="{{ route('matrices') }}" class="btn">Vamos aprender</a>
                         </div>
                     </div>
 
@@ -73,7 +73,7 @@
                         </div>
 
                         <div class="boton">
-                            <a href="{{ route('dowhileindex') }}" class="btn">Vamos aprender</a>
+                            <a href="{{ route('objetos') }}" class="btn">Vamos aprender</a>
                         </div>
                     </div>
                 </div>

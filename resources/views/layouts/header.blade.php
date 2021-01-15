@@ -321,6 +321,70 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('matrices') }}">
+                            <img src="{{ asset('imagenes/icons/icon-next.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Siguiente
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('datos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('lista-ejemplos-index')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('estructuras-datos/listas#ejemplos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('lista-ejemplos')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('lista-ejemplo-index') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('matrices')
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ejemplos">
+                            <img src="{{ asset('imagenes/icons/ejemplo.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Ejemplos/Ejercicios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="{{ asset('imagenes/icons/icon-next.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Siguiente
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('datos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('objetos')
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ejemplos">
+                            <img src="{{ asset('imagenes/icons/ejemplo.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Ejemplos/Ejercicios
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">
                             <img src="{{ asset('imagenes/icons/icon-next.png') }}" alt="icon-back"
                                 style="width: 20px; margin: 0px 5px 0px 0px">

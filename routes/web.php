@@ -432,21 +432,64 @@ Route::prefix('estructuras-datos/')->group(function () {
         ]);
     })->name('datos');
 
+    // Listas
     Route::get('listas/', function () {
         return view('teoria.datos.lista.index', [
             'page' => 'lista'
         ]);
     })->name('lista');
 
-    Route::get('while/', function () {
-        return view('teoria.repeticion.while.index', [
-            'page' => 'while'
+    Route::get('listas/ejemplos', function () {
+        return view('teoria.datos.lista.ejemplos.ejemplos_index', [
+            'page' => 'lista-ejemplos-index'
         ]);
-    })->name('whileindex');
+    })->name('lista-ejemplo-index');
 
-    Route::get('dowhile/', function () {
-        return view('teoria.repeticion.dowhile.index', [
-            'page' => 'dowhile'
+    Route::get('listas/ejemplo1', function () {
+        return view('teoria.datos.lista.ejemplos.ejemplo1', [
+            'page' => 'lista-ejemplos'
         ]);
-    })->name('dowhileindex');
+    })->name('lista-ejemplo1');
+
+    Route::get('listas/ejemplo2', function () {
+        return view('teoria.datos.lista.ejemplos.ejemplo2', [
+            'page' => 'lista-ejemplos'
+        ]);
+    })->name('lista-ejemplo2');
+
+    Route::get('listas/ejemplo3', function () {
+        return view('teoria.datos.lista.ejemplos.ejemplo3', [
+            'page' => 'lista-ejemplos'
+        ]);
+    })->name('lista-ejemplo3');
+
+    Route::get('listas/ejemplo4', function () {
+        return view('teoria.datos.lista.ejemplos.ejemplo4', [
+            'page' => 'lista-ejemplos'
+        ]);
+    })->name('lista-ejemplo4');
+
+    Route::get('listas/ejemplo5', function () {
+        return view('teoria.datos.lista.ejemplos.ejemplo5', [
+            'page' => 'lista-ejemplos'
+        ]);
+    })->name('lista-ejemplo5');
+
+    Route::get('listas/ejemplo6', function () {
+        return view('teoria.datos.lista.ejemplos.ejemplo6', [
+            'page' => 'lista-ejemplos'
+        ]);
+    })->name('lista-ejemplo6');
+
+    Route::get('matrices/', function () {
+        return view('teoria.datos.matrices.index', [
+            'page' => 'matrices'
+        ]);
+    })->name('matrices');
+
+    Route::get('objetos/', function () {
+        return view('teoria.datos.objetos.index', [
+            'page' => 'objetos'
+        ]);
+    })->name('objetos');
 });
