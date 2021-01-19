@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Realizar un programa que calcula el factorial de un nº entero y positivo.
+                    Escriba un programa que permita crear una lista de palabras y que, a continuación, pida una palabra y diga cuántas veces aparece esa palabra en la lista
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,14 +25,18 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var n = parseInt(prompt("Ingrese un número: "))
-    for (var i =1; i <= n; i++) {
-        factorial = 1
-        for(var j = i;j > 0; j --){
-            factorial *= j
-        }
-        console.log("Factorial de "+i+" = "+ factorial)
+                    <code class="javascript">   var lista_palabras = [],
+        cont = 0
+    for (var i = 0; i < 5; i++) {
+        var palabra = prompt("Ingrese una palabra: ")
+        lista_palabras.push(palabra)
     }
+    var palabra_buscar = prompt("Ingrese una palabra a buscar: ")
+    for (var i = 0; i < 5; i++) {
+        var palabra = lista_palabras[i]
+        palabra_buscar == palabra ? cont ++ : null
+    }
+    console.log("La palabra aparece: "+ cont + " veces")
                     </code>
                 </pre>
                 <div id="datos" class="desactivate">
@@ -55,14 +59,18 @@
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se declara la variable "n" y se iguala a lo que ingrese el usuario convertido a entero
-    Se declara un ciclo for superior, que ira iterando desde 1 hasta el valor de "n", utilizando como variable iteradora a "i"
-    Se declara una variable llamada "factorial", esta se iguala a 1
-    Ahora se declara el ciclo inferior, que ira desde el valor de la variable "i" hasta 0, por lo que el operador tendrá que ser de decremento
-    Se ira multiplicando el valor de la variable factorial en j por cada iteración que se haga en el ciclo inferior
-    Se cierra el ciclo for de la línea 4
-    Se imprime el valor de la variable "factorial", que hace referencia a el factorial de "i" en esa iteración
-    Se cierra  el ciclo for superior de la línea 2
+                    <code class="javascript">    Se crea la variable "lista_palabras" y se iguala a una lista vacía
+    Luego se crea una variable llamada "cont" esta variable servirá para saber cuantas veces se repite una palabra 
+    Se declara un ciclo for, el cual inicia con un "i=0" y va hasta "i < 5", su valor de incremento será de 1 en 1
+    Dentro de este ciclo, se declara una variable llamada "palabra" y se iguala a lo que ingrese el usuario
+    Luego a "lista_palabras" se le agrega la variable "palabra" que contiene el valor de la palabra ingresada
+    Se cierra el ciclo for de la línea 3
+    Ahora se declara una variable llamada "palabra_buscar", esta se iguala a la palabra ingresada por el usuario
+    Se declara otro ciclo for, exactamente igual que en la línea 3
+    Dentro de este ciclo for, se declara nuevamente una variable llamada "palabra", pero esta se iguala ahora, al valor que se encuentre en la lista de palabras en la posición "[ i ]"
+    Con una condición ternaria, se valida si la variable "palabra_buscar" es igual a la variable "palabra", de ser así, la variable "cont" aumenta en 1, de lo contrario no se hace nada
+    Se cierra el ciclo for de la línea 8
+    Se imprime al final el número de veces que se encontró la palabra a buscar
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -73,7 +81,6 @@
     </main>
 @endsection
 
-
 @section('scripts')
 
     <script>
@@ -81,30 +88,43 @@
         var dato1 = 0,
             max_inputs = 1, 
             cont = 0,
-            placeholders_form1 = ['Ingrese numero: '],
+            placeholders_form1 = ['Ingrese una palabra: ','Ingrese una palabra a buscar: '],
             list_datas_form1 = []
 
         var validar = (dato) => {
-            dato = parseInt(dato)
-            return !isNaN(dato) && dato <11 && dato > 0 ? true:false 
+            // dato = parseInt(dato)
+            return dato != "" ? true:false 
         }
 
-        var placeholder_set_inputs = () => {
-            $('#dato').attr('placeholder',placeholders_form1[cont])
+        var placeholder_set_inputs = (index) => {
+            $('#dato').attr('placeholder',placeholders_form1[index])
         }
 
         const show_results = () => {
-            var n = parseInt(list_datas_form1[0]),
-            texto = ""
-            
-            for (var i =1; i <= n; i++) {
-                factorial = 1
-                for(var j = i;j > 0; j --){
-                    factorial *= j
+            var texto = "",
+                retorno = false,
+                lista_palabras = [],
+                cont_ = 0
+
+            cont ++
+            if(cont == 5){
+                placeholder_set_inputs(1)
+            }
+
+            if(cont == 6){
+                for (let i = 0; i < 5; i++) {
+                    lista_palabras.push(list_datas_form1[i])
                 }
-                texto += "Factorial de "+i+" = "+ factorial + "<br>"
+                var palabra_buscar = list_datas_form1[5]
+                for (var i = 0; i < 5; i++) {
+                    var palabra = lista_palabras[i]
+                    palabra_buscar == palabra ? cont_ ++ : null
+                }
+                texto = "La palabra aparece: "+ cont_ + " veces"
+                retorno = true
             }
             $('#resultado-operacion').html(texto)
+            return retorno
         }
 
         $('#iniciar').on('click', (e) => {
@@ -118,7 +138,7 @@
             $('#datos').toggle('explode')
             $('#ejecutar').toggle('explode')
             $('#sig').toggle('explode')
-            placeholder_set_inputs()
+            placeholder_set_inputs(0)
         })
 
         $('#formulario').submit((e) => {
@@ -128,18 +148,15 @@
                 dato1 = valor
                 list_datas_form1.push(dato1)
                 $('#formulario')[0].reset()
-                cont ++
-                if(cont < max_inputs){
-                    placeholder_set_inputs()
-                }else{
+                retorno = show_results()
+                if(retorno){
                     $('#datos').toggle('explode')
                     $('#exp').toggle('explode')
                     $('#result').toggle('explode')
-                    show_results()
                 }
             }else{
                 alertify.set('notifier', 'position', 'bottom-center');
-                if(parseInt(valor) < 10){ var msg = alertify.error('Dato no valido'); }else { var msg = alertify.error('El dato debe ser menor o igual a 10'); }
+                var msg = alertify.error('Dato no valido');
                 msg.delay(1.3)
             }
         })

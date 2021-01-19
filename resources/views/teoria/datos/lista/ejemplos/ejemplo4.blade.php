@@ -17,7 +17,12 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Realizar un programa que genera la lista de los N primeros números primos, N es el dato de entrada
+                    Se necesita crear un programa que clasifique número y los almacene en una lista dependiendo de:
+                    <ul class="container">
+                        <li>Si el número es negativo se almacenará en una lista llamada num_negativos</li>
+                        <li>Si el número es positivo y es par, se almacenará en una lista llamada num_pares</li>
+                        <li>Si el número es positivo y NO es par, se almacenará en una lista llamada num_NOpares</li>
+                    </ul>
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,17 +30,22 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var n = parseInt(prompt("Ingrese un número: "))
-   for (var i = 2; i < n; i++) {
-        var isprime = true
-        for (var j = 2; j < i; j++) {
-            if (i % j == 0) {
-                isprime = false
-                break
-            }
+                    <code class="javascript">   var num_negativos = [],
+        num_pares = [],
+        num_NOpares = []
+    for (var i = 0; i < 5; i++) {
+        var numero = parseInt(prompt("Ingrese número: "))
+        if(numero < 0){
+            num_negativos.push(numero)
+        }else if(numero > 0 && numero%2 == 0){
+            num_pares.push(numero)
+        }else{
+            num_NOpares.push(numero)
         }
-        isprime == true ? console.log(i) : null
     }
+    console.log(num_negativos)
+    console.log(num_pares)
+    console.log(num_NOpares)
                     </code>
                 </pre>
                 <div id="datos" class="desactivate">
@@ -52,23 +62,27 @@
                 </div>
                 <div id="botones">
                     <a href="#" class="btn" id="ejecutar">Ejecutar</a>
-                    {{-- <a href="#" class="btn desactivate" id="sig">Siguiente</a> --}}
                     <a href="#" class="btn desactivate" id="exp">Ver explicación</a>
                 </div>
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se declara la variable "n" y se iguala al valor que ingrese el usuario convertido a entero
-    Luego se crea la sentencia for, donde la variable de iteración será "i", la cual empieza en 2 y va hasta "n" (El número ingresado por el usuario)
-    Se declara una variable llamada "isprime" y se iguala a true (Esta variable sirve para verificar más adelante si un número es primo o no)
-    Se crea otra sentencia for (ciclo interno), para recorrer los números desde el 2 hasta el valor de la variable del ciclo superior "i" (Este ciclo es el que permite recorrer todos los números desde el 2 hasta el valor de la variable "i" que se encuentre en iteración)
-    Se valida si el valor de la operación módulo entre "i" y "j" es igual a cero
-    Si la condición se cumple, significa que el número no es primo (Porque hay más de un divisor diferentes al 1 y al mismo número), entonces se iguala la variable "isprime" a false
-    Se rompe el ciclo for con un break (Se utiliza el break para romper el ciclo porque ya no es necesario seguir recorriendo los números comprendidos entre 2 y la variable "i", pues ya se sabe que el número no es primo)
-    Se cierra la condicional de la línea 5
-    Se cierra el ciclo inferior de la línea 4
-    Ahora utilizando una condición ternaria, se valida si la variable "isprime" es igual a true, de ser cierto, entonces se imprime la variable "i", de lo contrario no se hace nada utilizando la palabra reservada null
-    Se cierra el ciclo superior de la línea 2
+                    <code class="javascript">    Se declara la variable "num_negativos" y se iguala a una lista vacía
+    Se declara la variable "num_pares" y se iguala a una lista vacía
+    Se declara la variable "num_NOpares" y se iguala a una lista vacía
+    Se declara un ciclo for que ira desde un "i=0" hasta "i < 5" e ira aumentando de 1 en 1
+    Dentro del ciclo se declara una variable "numero" y se iguala a lo que ingrese el usuario por pantalla
+    Se valida si "numero" es menor a cero
+    De cumplirse la condición entonces a la lista "num_negativos" se le agrega el número ingresado por el usuario
+    De no cumplirse la condición de la línea 6, entonces se valida ahora si la variable "numero" es mayor a cero y además su modulo entre 2 es igual a cero
+    De cumplirse la condición entonces a la lista "num_pares" se le agrega el número ingresado por el usuario
+    Si no se cumple ninguna de las condiciones anteriores
+    A la lista "num_NOpares" se le agrega el número ingresado por el usuario
+    Se cierra el condicional de la línea 6
+    Se cierra el ciclo de la línea 4
+    Se imprime la lista "num_negativos"
+    Se imprime la lista "num_pares"
+    Se imprime la lista "num_NOpares"
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -80,16 +94,18 @@
 @endsection
 
 
-
 @section('scripts')
 
     <script>
 
         var dato1 = 0,
-            max_inputs = 1, 
             cont = 0,
-            placeholders_form1 = ['Ingrese numero: '],
-            list_datas_form1 = []
+            placeholders_form1 = ['Ingrese número: '],
+            list_datas_form1 = [],
+            num_negativos = [],
+            num_pares = [],
+            num_NOpares = []
+
 
         var validar = (dato) => {
             dato = parseInt(dato)
@@ -97,25 +113,34 @@
         }
 
         var placeholder_set_inputs = () => {
-            $('#dato').attr('placeholder',placeholders_form1[cont])
+            $('#dato').attr('placeholder',placeholders_form1[0])
         }
 
         const show_results = () => {
-            var n = parseInt(list_datas_form1[0]),
-            texto = ""
-            
-            for (var i = 2; i < n; i++) {
-                var isprime = true
-                for (var j = 2; j < i; j++) {
-                    if (i % j == 0) {
-                        isprime = false
-                        break
+
+            var retorno = false,
+                texto = "",
+                lon = list_datas_form1.length
+
+            cont ++
+            if(cont == 5){
+                for (var i = 0; i < 5; i++) {
+                    var numero = parseInt(list_datas_form1[i])
+                    if(numero < 0){
+                        num_negativos.push(numero)
+                    }else if(numero > 0 && numero%2 == 0){
+                        num_pares.push(numero)
+                    }else{
+                        num_NOpares.push(numero)
                     }
                 }
-                isprime == true ? texto += i+" " : null
+                retorno = true
+                texto = num_negativos + "<br>"
+                texto += num_pares + "<br>"
+                texto += num_NOpares
             }
-
             $('#resultado-operacion').html(texto)
+            return retorno
         }
 
         $('#iniciar').on('click', (e) => {
@@ -130,6 +155,7 @@
             $('#ejecutar').toggle('explode')
             $('#sig').toggle('explode')
             placeholder_set_inputs()
+            alert("Día "+dias[cont]+": ")
         })
 
         $('#formulario').submit((e) => {
@@ -139,14 +165,11 @@
                 dato1 = valor
                 list_datas_form1.push(dato1)
                 $('#formulario')[0].reset()
-                cont ++
-                if(cont < max_inputs){
-                    placeholder_set_inputs()
-                }else{
+                retorno = show_results()
+                if(retorno){
                     $('#datos').toggle('explode')
                     $('#exp').toggle('explode')
                     $('#result').toggle('explode')
-                    show_results()
                 }
             }else{
                 alertify.set('notifier', 'position', 'bottom-center');
