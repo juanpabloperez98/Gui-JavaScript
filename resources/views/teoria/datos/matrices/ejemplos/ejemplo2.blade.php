@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Programa que calcula el producto de dos números enteros y positivos mediante sumas sucesivas.
+                    Crear una matriz de 5 filas y n columnas (se pide al usuario y no mayor a 5). Rellenarlo con números aleatorios entre 0 y 9. Al final se deberá mostrar la matriz creada.
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,11 +25,19 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var numero1 = parseInt(prompt("Ingrese numero1: ")),
-          numero2 = parseInt(prompt("Ingrese numero2: ")),
-          resultado = 0
-    for (var i = 0; i < numero2; i++) {  resultado += numero1 }
-    console.log("El resultado de la multipliación es:" + resultado)
+                    <code class="javascript">   var n = parseInt(prompt("Ingresa el número de columnas: "))
+    if (n >= 0 && n < 5) {
+        var matriz = []
+        for (var i = 0; i < 5; i++) {
+            var fila = []
+            for (var j = 0; j < n; j++) {
+                num = parseInt(Math.random() * 11) 
+                fila.push(num)
+            }
+            matriz.push(fila)
+        }
+        console.log(matriz)
+    } else { console.log("Número de columnas no valido") }
                     </code>
                 </pre>
                 <div id="datos" class="desactivate">
@@ -52,11 +60,19 @@
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se crea la variable "numero1" y se iguala a un valor ingresado por el usuario convertido a entero
-    Se crea la variable "numero2" y se iguala a un valor ingresado por el usuario convertido a entero
-    Luego se declara la variable "resultado" y se iguala a cero (esta variable servirá para hacer las sumas sucesivas)
-    Ahora se declara la sentencia for, la cual se le define una variable "i" que inicia en 0 y va hasta el valor de la variable "numero2", por cada iteración que haga la variable resultado (que en un comienzo vale cero), ira aumentando en el valor de la variable "numero1" (si por ejemplo su valor es 2, entonces se ira aumentado en 2 la variable resultado)
-    Por último, Se imprime el resultado de la multiplicación
+                    <code class="javascript">    Se crea una variable "n" y se iguala al número de columnas ingresado por el usuario
+    Luego se valida que la variable "n" sea mayor a cero o menor a 5
+    Se crea la variable "matriz" y se iguala a una lista vacía
+    Se crea un ciclo for, que empieza en "i = 0" y va hasta "i < 5", su incremento es de 1 en 1
+    Dentro de este ciclo superior, se declara la variable "fila", esta variable se iguala a una lista vacía (Que representa las filas de la matriz)
+    Luego se declara un ciclo for interno (Que sirve para agregar datos a la lista "fila"), este ciclo for vas desde "j=0" hasta "j < n" y su incremento será de 1 en 1
+    Se crea una variable llamada "num" y se iguala a un número aleatorio entre 0 y 10
+    Ahora a la lista "fila" se le agrega el valor de la variable "num"
+    Se cierra el ciclo for interno 
+    Ahora por fuera del ciclo interno, se agrega a la lista "matriz" (La que representa la matriz completa), la lista "fila" (Que contiene los datos agregados del ciclo interno anterior)
+    Se cierra el ciclo externo
+    Se imprime la matriz resultante
+    Si la condición de la línea 2 no se cumple, entonces se imprime que el número de columnas no es valido
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -67,14 +83,15 @@
     </main>
 @endsection
 
+
 @section('scripts')
 
     <script>
 
         var dato1 = 0,
-            max_inputs = 2, 
+            max_inputs = 1, 
             cont = 0,
-            placeholders_form1 = ['Ingrese numero1: ','Ingrese numero2: '],
+            placeholders_form1 = ['Ingresa el número de columnas:'],
             list_datas_form1 = []
 
         var validar = (dato) => {
@@ -87,12 +104,25 @@
         }
 
         const show_results = () => {
-            var numero1 = parseInt(list_datas_form1[0]),
-            numero2 = parseInt(list_datas_form1[1]),
-            resultado = 0,
-            texto = ""
-            for (var i = 0; i < numero2; i++) {  resultado += numero1 }
-            texto = "El resultado de la multipliación es:  " + resultado
+            var n = parseInt(list_datas_form1[0]),
+                texto = ""
+            if (n >= 0 && n < 5) {
+                var matriz = []
+                for (var i = 0; i < 5; i++) {
+                    var columna = []
+                    for (var j = 0; j < n; j++) {
+                        num = parseInt(Math.random() * 11) 
+                        columna.push(num)
+                    }
+                    matriz.push(columna)
+                }
+                for (let i = 0; i < 5; i++) {
+                    for (let j = 0; j < n; j++) {
+                        texto += matriz[i][j] + "     "
+                    }
+                    texto += "<br>"
+                }
+            } else { texto = "Número de columnas no valido" }
             $('#resultado-operacion').html(texto)
         }
 
@@ -117,22 +147,16 @@
                 dato1 = valor
                 list_datas_form1.push(dato1)
                 $('#formulario')[0].reset()
-                cont ++
-                if(cont < max_inputs){
-                    placeholder_set_inputs()
-                }else{
-                    $('#datos').toggle('explode')
-                    $('#exp').toggle('explode')
-                    $('#result').toggle('explode')
-                    show_results()
-                }
+                $('#datos').toggle('explode')
+                $('#exp').toggle('explode')
+                $('#result').toggle('explode')
+                show_results()
             }else{
                 alertify.set('notifier', 'position', 'bottom-center');
                 var msg = alertify.error('Dato no valido');
                 msg.delay(1.3)
             }
         })
-
 
         $('#exp').on('click', (e) => {
             e.preventDefault()

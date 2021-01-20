@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Realizar un programa que genera la lista de los N primeros números primos, N es el dato de entrada
+                    Realice un programa que haga la transpuesta de una matriz la cual será de un orden nxm (ingresados por el usuario) y llenadas de manera aleatorio con números del 1 al 10
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,17 +25,30 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var n = parseInt(prompt("Ingrese un número: "))
-   for (var i = 2; i < n; i++) {
-        var isprime = true
-        for (var j = 2; j < i; j++) {
-            if (i % j == 0) {
-                isprime = false
-                break
+                    <code class="javascript">   var n = parseInt(prompt("Ingrese el número de filas: ")),
+        m = parseInt(prompt("Ingrese el número de columnas: ")),
+        matriz = [],
+        matriz_T = []
+    if (n > 1 && n < 6 && m > 1 && m < 6) {
+        for (var i = 0; i < n; i++) {
+            var fila = []
+            for (var j = 0; j < m; j++) {
+                num = parseInt(Math.random() * 11)
+                fila.push(num)
             }
+            matriz.push(fila)
         }
-        isprime == true ? console.log(i) : null
-    }
+        for (var i = 0; i < m; i++) {
+            var fila = []
+            for (var j = 0; j < n; j++) {
+                num = matriz[j][i]
+                fila.push(num)
+            }
+            matriz_T.push(fila)
+        }
+        console.log(matriz)
+        console.log(matriz_T)
+    }else{ console.log("El orden de las matrices no es permitido") }
                     </code>
                 </pre>
                 <div id="datos" class="desactivate">
@@ -58,17 +71,30 @@
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se declara la variable "n" y se iguala al valor que ingrese el usuario convertido a entero
-    Luego se crea la sentencia for, donde la variable de iteración será "i", la cual empieza en 2 y va hasta "n" (El número ingresado por el usuario)
-    Se declara una variable llamada "isprime" y se iguala a true (Esta variable sirve para verificar más adelante si un número es primo o no)
-    Se crea otra sentencia for (ciclo interno), para recorrer los números desde el 2 hasta el valor de la variable del ciclo superior "i" (Este ciclo es el que permite recorrer todos los números desde el 2 hasta el valor de la variable "i" que se encuentre en iteración)
-    Se valida si el valor de la operación módulo entre "i" y "j" es igual a cero
-    Si la condición se cumple, significa que el número no es primo (Porque hay más de un divisor diferentes al 1 y al mismo número), entonces se iguala la variable "isprime" a false
-    Se rompe el ciclo for con un break (Se utiliza el break para romper el ciclo porque ya no es necesario seguir recorriendo los números comprendidos entre 2 y la variable "i", pues ya se sabe que el número no es primo)
-    Se cierra la condicional de la línea 5
-    Se cierra el ciclo inferior de la línea 4
-    Ahora utilizando una condición ternaria, se valida si la variable "isprime" es igual a true, de ser cierto, entonces se imprime la variable "i", de lo contrario no se hace nada utilizando la palabra reservada null
-    Se cierra el ciclo superior de la línea 2
+                    <code class="javascript">    Se crea la variable "n" y se iguala al valor de las filas ingresado por el usuario
+    Después se crea la variable "m" y se iguala al valor de las filas ingresado por el usuario
+    Se crea la variable "matriz" y se iguala a una lista vacía (En esta se van a guardar los valores aleatorios)
+    Se crea la variable "matriz_T" y se iguala a una lista vacía (En esta se van a guardar los valores transpuestos)
+    Se valida si el valor de "n" es mayor a 1 y menor a 6 y también si el valor de "m" es mayor a 1 y menor a 6
+    Se crea un ciclo for, que empieza en "i = 0" y va hasta "i < n", su incremento es de 1 en 1
+    Dentro de este ciclo superior, se declara la variable "fila", esta variable se iguala a una lista vacía (Que representa las filas de la matriz)
+    Luego se declara un ciclo for interno (Que sirve para agregar datos a la lista "fila"), este ciclo for vas desde "j=0" hasta "j < n" y su incremento será de 1 en 1
+    Se crea una variable llamada "num" y se iguala a un número aleatorio entre 0 y 10
+    Ahora a la lista "fila" se le agrega el valor de la variable "num"
+    Se cierra el ciclo for interno
+    Ahora por fuera del ciclo interno, se agrega a la lista "matriz" (La que representa la matriz de números aleatorios), la lista "fila" (Que contiene los datos agregados del ciclo interno anterior)
+    Se cierra el ciclo externo
+    Se crea un ciclo for, que empieza en "i = 0" y va hasta "i < m", su incremento es de 1 en 1
+    Dentro de este ciclo superior, se declara la variable "fila", esta variable se iguala a una lista vacía (Que representa las filas de la matriz)
+    Luego se declara un ciclo for interno (Que sirve para agregar datos a la lista "fila"), este ciclo for vas desde "j=0" hasta "j < n" y su incremento será de 1 en 1
+    Se crea una variable llamada "num" y se iguala al valor que se encuentre en la variable "matriz" en la posición "[ j ][ i ]" (Posición invertida para hacer la transpuesta)
+    Ahora a la lista "fila" se le agrega el valor de la variable "num"
+    Se cierra el ciclo for interno
+    Ahora por fuera del ciclo interno, se agrega a la lista "matriz" (La que representa la matriz de números aleatorios), la lista "fila" (Que contiene los datos agregados del ciclo interno anterior)
+    Se cierra el ciclo externo
+    Se imprime la matriz de números aleatorios
+    Y se imprime la matriz invertida
+    Si la condición de la línea 5 no se cumple, entonces se imprime que el orden no es permitido
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -79,16 +105,14 @@
     </main>
 @endsection
 
-
-
 @section('scripts')
 
     <script>
 
         var dato1 = 0,
-            max_inputs = 1, 
+            max_inputs = 2, 
             cont = 0,
-            placeholders_form1 = ['Ingrese numero: '],
+            placeholders_form1 = ['Ingrese el número de filas: ','Ingrese el número de columnas: '],
             list_datas_form1 = []
 
         var validar = (dato) => {
@@ -102,19 +126,41 @@
 
         const show_results = () => {
             var n = parseInt(list_datas_form1[0]),
-            texto = ""
-            
-            for (var i = 2; i < n; i++) {
-                var isprime = true
-                for (var j = 2; j < i; j++) {
-                    if (i % j == 0) {
-                        isprime = false
-                        break
+                m = parseInt(list_datas_form1[1]),
+                texto = "",
+                matriz = [],
+                matriz_T = []
+            if (n > 1 && n < 6 && m > 1 && m < 6) {
+                for (var i = 0; i < n; i++) {
+                    var columna = []
+                    for (var j = 0; j < m; j++) {
+                        num = parseInt(Math.random() * 11)
+                        columna.push(num)
                     }
+                    matriz.push(columna)
                 }
-                isprime == true ? texto += i+" " : null
-            }
-
+                for (var i = 0; i < m; i++) {
+                    var columna = []
+                    for (var j = 0; j < n; j++) {
+                        num = matriz[j][i]
+                        columna.push(num)
+                    }
+                    matriz_T.push(columna)
+                }
+                for (let i = 0; i < n; i++) {
+                    for (let j = 0; j < n; j++) {
+                        texto += matriz[i][j] + "     "
+                    }
+                    texto += "<br>"
+                }
+                texto += "<br>"
+                for (let i = 0; i < n; i++) {
+                    for (let j = 0; j < n; j++) {
+                        texto += matriz_T[i][j] + "     "
+                    }
+                    texto += "<br>"
+                }
+            }else{ texto = "El orden de las matrices no es permitido" }
             $('#resultado-operacion').html(texto)
         }
 
@@ -139,7 +185,7 @@
                 dato1 = valor
                 list_datas_form1.push(dato1)
                 $('#formulario')[0].reset()
-                cont ++
+                cont++
                 if(cont < max_inputs){
                     placeholder_set_inputs()
                 }else{
@@ -155,7 +201,6 @@
             }
         })
 
-
         $('#exp').on('click', (e) => {
             e.preventDefault()
             $('#exp').toggle('explode')
@@ -165,7 +210,7 @@
         $('#reiniciar').on('click', (e) => {
             e.preventDefault()
             location.reload()
-        })  
+        })   
 
     </script>
 

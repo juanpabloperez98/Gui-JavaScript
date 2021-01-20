@@ -362,7 +362,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ route('objetos') }}">
                             <img src="{{ asset('imagenes/icons/icon-next.png') }}" alt="icon-back"
                                 style="width: 20px; margin: 0px 5px 0px 0px">
                             Siguiente
@@ -370,6 +370,24 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('datos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('matrices-ejemplos-index')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('estructuras-datos/matrices#ejemplos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('matrices-ejemplos')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('matrices-ejemplo-index') }}">
                             <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
                                 style="width: 20px; margin: 0px 5px 0px 0px">
                             Volver

@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Realizar un programa que calcule la serie de Fibonacci hasta un número ingresado por el usuario (El número no puede ser mayor a 20)
+                    Crear una matriz donde el orden es de nxn ingresado por el usuario y los valores de la matriz son ingresados también por el usuario, al final se deberá mostrar la suma de todos sus valores 
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,18 +25,26 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var n = parseInt(prompt("Ingrese número: "))
-        num1 = 0,
-        num2 = 1
-        serie = ""
-    serie += "0-1"
-    for(var i = 1; i < n; i++){
-        z = num2 + num1
-        serie += "-" + z 
-        num1 = num2
-        num2 = z 
-    }
-    console.log(serie)
+                    <code class="javascript">   var n = parseInt(prompt("Ingrese orden de la matriz: ")),
+        matriz = []
+    if (n >= 0 && n <= 4) {
+        for (var i = 0; i < n; i++) {
+            var fila = []
+            for (var j = 0; j < n; j++) {
+                num = parseInt(prompt("Ingrese número: ")),
+                fila.push(num)
+            }
+            matriz.push(fila)
+        }
+        var suma = 0
+        for (var i = 0; i < n; i++) {
+            for (var j = 0; j < n; j++) {
+                suma += matriz[i][j]
+            }
+        }
+        console.log(matriz)
+        console.log("Suma de la matriz: " + suma)
+    }else{ console.log("Orden de la matriz no valido") }
                     </code>
                 </pre>
                 <div id="datos" class="desactivate">
@@ -59,18 +67,26 @@
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se crea la variable "n" y se iguala a lo que ingresa el usuario convertido a entero
-    Se crea la variable "num1" y se iguala a 0 (El inicio de la serie de Fibonacci)
-    Se crea la variable "num2" y se iguala a 1 (El segundo número de la serie de Fibonacci)
-    Se declara una variable llamada "serie" y se iguala a un string vacío
-    La variable serie se le concatena "01"
-    Luego se crea una sentencia for, que ira desde el número 1 hasta el valor de la variable "n" ingresada por el usuario
-    Después se declara una variable "z", esta se iguala a la suma entre las variables "num2" y "num1"
-    La variable "serie" se le concatena el valor de "z", (Esta variable contiene el valor de la suma de los dos números anteriores de la serie)
-    La variable "num1" se actualiza al valor de lo que hay en la variable "num2"
-    Y ahora la variable "num2" se iguala al valor de la variable z (La suma de los anteriores dos números de la serie)
-    Se cierra el ciclo for de la línea 6
-    Se imprime el valor de la variable "serie"
+                    <code class="javascript">    Se crea una variable llamada "n" y se iguala al valor ingresado por el usuario
+    Luego se declara una variable llamada "matriz" y se iguala a una lista vacía
+    Se valida si "n" es mayor o igual a cero y también si es menor o igual a 4 (Para validar que este en ese rango de 0 - 4)
+    Se crea un ciclo for, que empieza en "i = 0" y va hasta "i < n", su incremento es de 1 en 1
+    Dentro de este ciclo superior, se declara la variable "fila", esta variable se iguala a una lista vacía (Que representa las filas de la matriz)
+    Luego se declara un ciclo for interno (Que sirve para agregar datos a la lista "fila"), este ciclo for vas desde "j=0" hasta "j < n" y su incremento será de 1 en 1
+    Se crea una variable llamada "num" y se iguala a un dato que ingresa el usuario por pantalla
+    Ahora a la lista "fila" se le agrega el valor de la variable "num"
+    Se cierra el ciclo for interno
+    Ahora por fuera del ciclo interno, se agrega a la lista "matriz" (La que representa la matriz de números aleatorios), la lista "fila" (Que contiene los datos agregados del ciclo interno anterior)
+    Se cierra el ciclo externo
+    Se declara una variable "suma" esta variable se iguala a cero
+    Se vuelve a crear un ciclo for, que empieza en "i = 0" y va hasta "i < n", su incremento es de 1 en 1
+    Luego se declara un ciclo for interno (Que sirve para agregar datos a la lista "fila"), este ciclo for vas desde "j=0" hasta "j < n" y su incremento será de 1 en 1
+    La variable "suma" ira aumentando en el valor que se obtenga de la matriz en la posición "[ i ][ j ]"
+    Se cierra el ciclo for interno
+    Se cierra el ciclo externo
+    Se imprime la matriz creada
+    Se imprime la suma de todos los elementos de la matriz
+    Si la condición de la línea 3 no se cumple, entonces se imprime que el orden de la matriz no es valido
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -81,14 +97,14 @@
     </main>
 @endsection
 
+
 @section('scripts')
 
     <script>
 
         var dato1 = 0,
-            max_inputs = 1, 
             cont = 0,
-            placeholders_form1 = ['Ingrese número: '],
+            placeholders_form1 = ['Ingrese orden de la matriz: ','Ingrese número: '],
             list_datas_form1 = []
 
         var validar = (dato) => {
@@ -96,24 +112,39 @@
             return !isNaN(dato) && dato <20 && dato > 0 ? true:false 
         }
 
-        var placeholder_set_inputs = () => {
-            $('#dato').attr('placeholder',placeholders_form1[cont])
+        var placeholder_set_inputs = (i) => {
+            $('#dato').attr('placeholder',placeholders_form1[i])
         }
 
         const show_results = () => {
             var n = parseInt(list_datas_form1[0]),
-            texto = "",
-            num1 = 0,
-            num2 = 1
-            serie = ""
-            serie += "0-1"
-            for(var i = 1; i < n; i++){
-                z = num2 + num1
-                serie += "-"+z
-                num1 = num2
-                num2 = z 
-            }
-            texto = serie
+                texto = "",
+                matriz = []
+            if (n >= 0 && n <= 4) {
+                var p = 1
+                for (let i = 0; i < n; i++) {
+                    fila = []
+                    for (let j = 0; j < n; j++) {
+                        const element = list_datas_form1[p];
+                        fila.push(element)
+                        p++
+                    }   
+                    matriz.push(fila)
+                }
+                console.log(matriz)
+                var suma = 0
+                for (let i = 1; i < list_datas_form1.length; i++) {
+                    suma += parseInt(list_datas_form1[i]);
+                }
+                for (let i = 0; i < n; i++) {
+                    for (let j = 0; j < n; j++) {
+                        texto += matriz[i][j] + "     "
+                    }
+                    texto += "<br>"
+                }
+                texto += "<br>"
+                texto += "Suma de la matriz: "+ suma
+            }else{ texto = "Orden de la matriz no valido" }
             $('#resultado-operacion').html(texto)
         }
 
@@ -128,7 +159,7 @@
             $('#datos').toggle('explode')
             $('#ejecutar').toggle('explode')
             $('#sig').toggle('explode')
-            placeholder_set_inputs()
+            placeholder_set_inputs(0)
         })
 
         $('#formulario').submit((e) => {
@@ -139,13 +170,18 @@
                 list_datas_form1.push(dato1)
                 $('#formulario')[0].reset()
                 cont ++
-                if(cont < max_inputs){
-                    placeholder_set_inputs()
+                if(cont < (parseInt(list_datas_form1[0])*parseInt(list_datas_form1[0]) + 1) && (parseInt(list_datas_form1[0]) >=0 && parseInt(list_datas_form1[0]) <= 4) ){
+                    placeholder_set_inputs(1)
                 }else{
                     $('#datos').toggle('explode')
                     $('#exp').toggle('explode')
                     $('#result').toggle('explode')
-                    show_results()
+                    if((parseInt(list_datas_form1[0]) >=0 && parseInt(list_datas_form1[0]) <= 4)){
+                        show_results()
+                    }else{
+                        $('#resultado-operacion').html("Orden de la matriz no valido")
+                    }
+                    
                 }
             }else{
                 alertify.set('notifier', 'position', 'bottom-center');

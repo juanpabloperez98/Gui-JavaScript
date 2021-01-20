@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Realizar un programa que calcula los números pares entre un número n1 y otro número n2 
+                    Crear una matriz de 3×3 con los números del 1 al 9. Mostrar por pantalla, tal como aparece en la matriz.
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,13 +25,17 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var numero1 = parseInt(prompt("Ingrese numero1: ")),
-           numero2 = parseInt(prompt("Ingrese numero2: "))
-    if (numero2 > numero1) {
-        for (var i = numero1; i <= numero2; i++) {
-            i % 2 == 0 ? console.log(i):null
+                    <code class="javascript">   var matriz = [],
+        n = 1
+    for (var i = 0; i < 3; i++) {
+        var fila = []
+        for (var j = 0; j < 3; j++) {
+            fila.push(n)
+            n++
         }
-    }else{ console.log("El número 1 debe ser mayor al número 2") }        
+        matriz.push(fila)
+    }
+    console.log(matriz)        
                     </code>
                 </pre>
                 <div id="datos" class="desactivate">
@@ -54,13 +58,17 @@
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se crea la variable "numero1" y se iguala a un valor ingresado por el usuario convertido a entero
-    Se crea la variable "numero2" y se iguala a un valor ingresado por el usuario convertido a entero
-    Se valida si el valor de "numero2" es mayor al de "numero1"
-    De cumplirse la condición anterior, entonces se declara un ciclo for que va desde el valor de "numero1" hasta el valor de "numero2" incluyéndolo, e ira aumentando la variable "i" en 1
-    Con una condición ternaria, se valida si el módulo del valor de "i" entre 2 es igual a cero (Con la operación módulo se valida que el número sea primo si es igual a cero), de cumplirse la condición se imprime el valor de la variable "i", de no cumplirse la condición entonces no se hace nada (se coloca null)
-    Se cierra el ciclo for
-    Si la condición de la línea 3 no se cumple, entonces se imprime que el número 1 debe ser mayor al número 2
+                    <code class="javascript">    Se crea la variable "matriz" y se iguala a una lista vacía (Esta representara toda la matriz completa)
+    Luego se declara una variable "n" y se iguala a 1 (Esta variable representara los datos agregar en la matriz)
+    Se declara una variable for que va desde "i=0" hasta "i < 3", su incremento es de 1 en 1
+    Dentro de este ciclo superior, se declara la variable "filas", esta variable se iguala a una lista vacía (Que representa las filas de la matriz)
+    Luego se declara un ciclo for interno (Que sirve para agregar datos a la lista "fila"), este ciclo for vas desde "j=0" hasta "j < 3" y su incremento será de 1 en 1
+    Ahora a la lista "fila" se le agrega el valor de la variable "n" (Esta variable ira cambiando cada vez que se repita el ciclo interno)
+    Se aumenta en 1 la variable n como se comentó anteriormente
+    Se cierra el ciclo for interno 
+    Ahora por fuera del ciclo interno, se agrega a la lista "matriz" (La que representa la matriz completa), la lista "fila" (Que contiene los datos agregados del ciclo interno anterior)
+    Se cierra el ciclo externo
+    Por último, se imprime la variable "matriz"
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -72,35 +80,15 @@
 @endsection
 
 
-
 @section('scripts')
 
     <script>
 
-        var dato1 = 0,
-            max_inputs = 2, 
-            cont = 0,
-            placeholders_form1 = ['Ingrese numero1: ','Ingrese numero2: '],
-            list_datas_form1 = []
-
-        var validar = (dato) => {
-            dato = parseInt(dato)
-            return !isNaN(dato) ? true:false 
-        }
-
-        var placeholder_set_inputs = () => {
-            $('#dato').attr('placeholder',placeholders_form1[cont])
-        }
-
         const show_results = () => {
-            var numero1 = parseInt(list_datas_form1[0]),
-            numero2 = parseInt(list_datas_form1[1]),
-            texto = ""
-            if (numero2 > numero1) {
-                for (var i = numero1; i <= numero2; i++) {
-                    i % 2 == 0 ? texto += i+' ' :null
-                }
-            }else{ texto = "El número 1 debe ser mayor al número 2" }        
+            var texto = ""
+            texto = "1 2 3"
+            texto += "<br>4 5 6"
+            texto += "<br>7 8 9"
             $('#resultado-operacion').html(texto)
         }
 
@@ -112,35 +100,12 @@
 
         $('#ejecutar').on('click', (e) => {
             e.preventDefault()
-            $('#datos').toggle('explode')
             $('#ejecutar').toggle('explode')
             $('#sig').toggle('explode')
-            placeholder_set_inputs()
+            $('#exp').toggle('explode')
+            $('#result').toggle('explode')
+            show_results()
         })
-
-        $('#formulario').submit((e) => {
-            e.preventDefault()
-            var valor = $('#dato').val()
-            if(validar(valor)){
-                dato1 = valor
-                list_datas_form1.push(dato1)
-                $('#formulario')[0].reset()
-                cont ++
-                if(cont < max_inputs){
-                    placeholder_set_inputs()
-                }else{
-                    $('#datos').toggle('explode')
-                    $('#exp').toggle('explode')
-                    $('#result').toggle('explode')
-                    show_results()
-                }
-            }else{
-                alertify.set('notifier', 'position', 'bottom-center');
-                var msg = alertify.error('Dato no valido');
-                msg.delay(1.3)
-            }
-        })
-
 
         $('#exp').on('click', (e) => {
             e.preventDefault()

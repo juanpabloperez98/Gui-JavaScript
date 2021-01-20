@@ -487,6 +487,48 @@ Route::prefix('estructuras-datos/')->group(function () {
         ]);
     })->name('matrices');
 
+    Route::get('matrices/ejemplos', function () {
+        return view('teoria.datos.matrices.ejemplos.ejemplos_index', [
+            'page' => 'matrices-ejemplos-index'
+        ]);
+    })->name('matrices-ejemplo-index');
+
+    Route::get('matrices/ejemplo1', function () {
+        return view('teoria.datos.matrices.ejemplos.ejemplo1', [
+            'page' => 'matrices-ejemplos'
+        ]);
+    })->name('matrices-ejemplo1');
+
+    Route::get('matrices/ejemplo2', function () {
+        return view('teoria.datos.matrices.ejemplos.ejemplo2', [
+            'page' => 'matrices-ejemplos'
+        ]);
+    })->name('matrices-ejemplo2');
+
+    Route::get('matrices/ejemplo3', function () {
+        return view('teoria.datos.matrices.ejemplos.ejemplo3', [
+            'page' => 'matrices-ejemplos'
+        ]);
+    })->name('matrices-ejemplo3');
+
+    Route::get('matrices/ejemplo4', function () {
+        return view('teoria.datos.matrices.ejemplos.ejemplo4', [
+            'page' => 'matrices-ejemplos'
+        ]);
+    })->name('matrices-ejemplo4');
+
+    Route::get('matrices/ejemplo5', function () {
+        return view('teoria.datos.matrices.ejemplos.ejemplo5', [
+            'page' => 'matrices-ejemplos'
+        ]);
+    })->name('matrices-ejemplo5');
+
+    Route::get('matrices/ejemplo6', function () {
+        return view('teoria.datos.matrices.ejemplos.ejemplo6', [
+            'page' => 'matrices-ejemplos'
+        ]);
+    })->name('matrices-ejemplo6');
+
     Route::get('objetos/', function () {
         return view('teoria.datos.objetos.index', [
             'page' => 'objetos'

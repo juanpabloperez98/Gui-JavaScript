@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Realizar un programa que calcula el factorial de un nº entero y positivo.
+                    Crear una matriz de orden 3x3 con datos aleatorios. Luego se deberá sacar la suma de sus dos diagonales. Diagonal 1: [0,0][1,1][2,2], diagonal 2: [0,2][1,1][2,0]
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,14 +25,33 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var n = parseInt(prompt("Ingrese un número: "))
-    for (var i =1; i <= n; i++) {
-        factorial = 1
-        for(var j = i;j > 0; j --){
-            factorial *= j
+                    <code class="javascript">   matriz = []
+    for (var i = 0; i < 3; i++) {
+        var fila = []
+        for (var j = 0; j < 3; j++) {
+            num = parseInt(Math.random() * 11)
+            fila.push(num)
         }
-        console.log("Factorial de "+i+" = "+ factorial)
+        matriz.push(fila)
     }
+    // Primera diagonal
+    var i=0,j=0,
+        sum1 = 0
+    while(i!=3 && j!=3){
+        sum1 += matriz[i][j]
+        i++
+        j++
+    }
+    // Segunda diagonal
+    i=0,j=2
+    var sum2 = 0
+    while(i!=3 && j > -1){
+        sum2 += matriz[i][j]
+        i++
+        j--
+    }
+    console.log(matriz)
+    console.log("Suma de sus diagonales: " + (sum1+sum2))
                     </code>
                 </pre>
                 <div id="datos" class="desactivate">
@@ -55,14 +74,33 @@
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se declara la variable "n" y se iguala a lo que ingrese el usuario convertido a entero
-    Se declara un ciclo for superior, que ira iterando desde 1 hasta el valor de "n", utilizando como variable iteradora a "i"
-    Se declara una variable llamada "factorial", esta se iguala a 1
-    Ahora se declara el ciclo inferior, que ira desde el valor de la variable "i" hasta 0, por lo que el operador tendrá que ser de decremento
-    Se ira multiplicando el valor de la variable factorial en j por cada iteración que se haga en el ciclo inferior
-    Se cierra el ciclo for de la línea 4
-    Se imprime el valor de la variable "factorial", que hace referencia a el factorial de "i" en esa iteración
-    Se cierra  el ciclo for superior de la línea 2
+                    <code class="javascript">    Se crea la variable "matriz" y se iguala a una lista vacía
+    Se crea un ciclo for, que empieza en "i = 0" y va hasta "i < n", su incremento es de 1 en 1
+    Dentro de este ciclo superior, se declara la variable "fila", esta variable se iguala a una lista vacía (Que representa las filas de la matriz)
+    Luego se declara un ciclo for interno (Que sirve para agregar datos a la lista "fila"), este ciclo for vas desde "j=0" hasta "j < n" y su incremento será de 1 en 1
+    Se crea una variable llamada "num" y se iguala a un número aleatorio entre 0 y 10
+    Ahora a la lista "fila" se le agrega el valor de la variable "num"
+    Se cierra el ciclo for interno
+    Ahora por fuera del ciclo interno, se agrega a la lista "matriz" (La que representa la matriz de números aleatorios), la lista "fila" (Que contiene los datos agregados del ciclo interno anterior)
+    Se cierra el ciclo externo
+    Se crea un comentario que indica que se va a realizar el recorrido de la primera diagonal
+    Se crean dos variables "i" y "j", las dos variables se igualan a cero
+    Y se crea una variable llamada "sum1" esta variable servirá para llevar la suma de la primera diagonal
+    Se declara un ciclo while, que se ejecutara mientras que "i" sea diferente de 3 y "j" también sea diferente de 3
+    Dentro de este ciclo, se aumenta la variable "sum1" en el valor que se encuentre en la matriz en la posición "[ i ][ j ]"
+    Se aumenta la variable "i" en 1
+    Se aumenta la variable "j" en 1
+    Se cierra el ciclo while
+    Se crea un comentario que indica que se va a realizar el recorrido de la segunda diagonal
+    Se actualizan los valores de "i" y "j" en 0 y 2 respectivamente
+    Y se crea una variable llamada "sum2" esta variable servirá para llevar la suma de la segunda diagonal
+    Se declara un ciclo while, que se ejecutara mientras que "i" sea diferente de 3 y "j" sea mayor a -1
+    Dentro de este ciclo, se aumenta la variable "sum2" en el valor que se encuentre en la matriz en la posición "[ i ][ j ]"
+    Se aumenta la variable "i" en 1
+    Se disminuye la variable "j" en 1
+    Se cierra el ciclo while
+    Se imprime la matriz creada
+    Se imprime la suma de sus diagonales, sumando las variables "sum1+sum2"
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -77,33 +115,42 @@
 @section('scripts')
 
     <script>
-
-        var dato1 = 0,
-            max_inputs = 1, 
-            cont = 0,
-            placeholders_form1 = ['Ingrese numero: '],
-            list_datas_form1 = []
-
-        var validar = (dato) => {
-            dato = parseInt(dato)
-            return !isNaN(dato) && dato <11 && dato > 0 ? true:false 
-        }
-
-        var placeholder_set_inputs = () => {
-            $('#dato').attr('placeholder',placeholders_form1[cont])
-        }
-
         const show_results = () => {
-            var n = parseInt(list_datas_form1[0]),
+            matriz = [],
             texto = ""
-            
-            for (var i =1; i <= n; i++) {
-                factorial = 1
-                for(var j = i;j > 0; j --){
-                    factorial *= j
+            for (var i = 0; i < 3; i++) {
+                var fila = []
+                for (var j = 0; j < 3; j++) {
+                    num = parseInt(Math.random() * 11)
+                    fila.push(num)
                 }
-                texto += "Factorial de "+i+" = "+ factorial + "<br>"
+                matriz.push(fila)
             }
+            // Primera diagonal
+            var i=0,j=0,
+                sum1 = 0
+            while(i!=3 && j!=3){
+                sum1 += matriz[i][j]
+                i++
+                j++
+            }
+            // Segunda diagonal
+            i=0,j=2
+            var sum2 = 0
+            while(i!=3 && j > -1){
+                sum2 += matriz[i][j]
+                i++
+                j--
+            }
+            // console.log(matriz)
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    texto += matriz[i][j] + "     "
+                }
+                texto += "<br>"
+            }
+            texto += "<br>"
+            texto+= "Suma de sus diagonales: " + (sum1+sum2)
             $('#resultado-operacion').html(texto)
         }
 
@@ -115,35 +162,11 @@
 
         $('#ejecutar').on('click', (e) => {
             e.preventDefault()
-            $('#datos').toggle('explode')
             $('#ejecutar').toggle('explode')
-            $('#sig').toggle('explode')
-            placeholder_set_inputs()
+            $('#exp').toggle('explode')
+            $('#result').toggle('explode')
+            show_results()
         })
-
-        $('#formulario').submit((e) => {
-            e.preventDefault()
-            var valor = $('#dato').val()
-            if(validar(valor)){
-                dato1 = valor
-                list_datas_form1.push(dato1)
-                $('#formulario')[0].reset()
-                cont ++
-                if(cont < max_inputs){
-                    placeholder_set_inputs()
-                }else{
-                    $('#datos').toggle('explode')
-                    $('#exp').toggle('explode')
-                    $('#result').toggle('explode')
-                    show_results()
-                }
-            }else{
-                alertify.set('notifier', 'position', 'bottom-center');
-                if(parseInt(valor) < 10){ var msg = alertify.error('Dato no valido'); }else { var msg = alertify.error('El dato debe ser menor o igual a 10'); }
-                msg.delay(1.3)
-            }
-        })
-
 
         $('#exp').on('click', (e) => {
             e.preventDefault()

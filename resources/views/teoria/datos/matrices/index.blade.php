@@ -122,7 +122,7 @@
             <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">4.2.5</span>Recorrer una matriz</h3>
                 <p class="mt-3">
-                    Anteriormente se mostro que para recorrer una lista era necesario hacer uno del ciclo for, el cual empezaría a iterar desde el índice 0 hasta la longitud de la lista, permitiendo así poder tener acceso a todos los datos de una lista. Bueno, de manera similar se puede recorrer una matriz, se necesitará ahora hacer uso de un ciclo for anidado (un ciclo que realice la iteración de las filas y otro que realice el de las columnas), por lo que su sentencia seria algo similar a esto: 
+                    Anteriormente se mostró  que para recorrer una lista era necesario hacer uno del ciclo for, el cual empezaría a iterar desde el índice 0 hasta la longitud de la lista, permitiendo así poder tener acceso a todos los datos de una lista. Bueno, de manera similar se puede recorrer una matriz, se necesitará ahora hacer uso de un ciclo for anidado (un ciclo que realice la iteración de las filas y otro que realice el de las columnas), por lo que su sentencia seria algo similar a esto: 
                 </p>
 
                 <pre>
@@ -173,7 +173,7 @@
                     </div>
 
                     <div class="cardboton">
-                        <a href="{{ route('simplesydobles-ejemplo-index') }}" class="btn">Ir a los ejemplos</a>
+                        <a href="{{ route('matrices-ejemplo-index') }}" class="btn">Ir a los ejemplos</a>
                     </div>
                 </div>
 
