@@ -101,9 +101,10 @@
                 </div>
                 <div class="collapse" id="collapseExample5">
                     <div class="card card-body text-left" style="background: none; color: white">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                        proident.
+                        En la siguiente sección se va a mostrar el concepto de funciones en JavaScript, en esta sección se podrá encontrar ejemplos y ejercicios de funciones como también la importancia de porque utilizarlas
+                    </div>
+                    <div id="boton">
+                        <a href="{{ route('funciones') }}" class="btn btn-primary">Ir al modulo</a>
                     </div>
                 </div>
             </div>

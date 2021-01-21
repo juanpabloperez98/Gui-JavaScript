@@ -535,3 +535,18 @@ Route::prefix('estructuras-datos/')->group(function () {
         ]);
     })->name('objetos');
 });
+// Funciones
+Route::prefix('funciones/')->group(function () {
+    Route::get('index/', function () {
+        return view('teoria.funciones.index', [
+            'page' => 'funciones'
+        ]);
+    })->name('funciones');
+
+    // funciones
+    Route::get('functions/', function () {
+        return view('teoria.funciones.funciones.index', [
+            'page' => 'functions'
+        ]);
+    })->name('functions');
+});
