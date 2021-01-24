@@ -10,7 +10,7 @@
     <title>Guia JavaScript</title>
 
     {{-- Favicon --}}
-    <link rel="icon" type="image/png" href="{{ asset('imagenes/icons/favicon.ico') }}"/>
+    <link rel="icon" type="image/png" href="{{ asset('imagenes/icons/favicon.ico') }}" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
-    {{-- Alertify  --}}
+    {{-- Alertify --}}
     <link rel="stylesheet" href="{{ asset('js/alertifyjs/css/alertify.css') }}">
     <link rel="stylesheet" href="{{ asset('js/alertifyjs/css/themes/default.css') }}">
 
@@ -52,24 +52,27 @@
                         de Pereira</p>
                 </div>
 
+                
+                {{-- <div class="col-md-8">
+                    <h5 class="text-uppercase">Links</h5>
+                </div> --}}
                 <hr class="clearfix w-100 d-md-none pb-3">
+
 
                 <div class="col-md-3 mb-md-0 mb-3">
 
-                    <h5 class="text-uppercase">Links</h5>
+                    {{-- <h5 class="text-uppercase">Links</h5>
+                    --}}
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!">Link 1</a>
+                            <a href="{{ route('secuencia') }}">Estructuras de secuencia</a>
                         </li>
                         <li>
-                            <a href="#!">Link 2</a>
+                            <a href="{{ route('condicion') }}">Estructuras condicionales</a>
                         </li>
                         <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
+                            <a href="{{ route('repeticion') }}">Estructuras repetitivas</a>
                         </li>
                     </ul>
 
@@ -77,20 +80,18 @@
 
                 <div class="col-md-3 mb-md-0 mb-3">
 
-                    <h5 class="text-uppercase">Links</h5>
+                    {{-- <h5 class="text-uppercase">Links</h5>
+                    --}}
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!">Link 1</a>
+                            <a href="{{ route('datos') }}">Estructuras de datos</a>
                         </li>
                         <li>
-                            <a href="#!">Link 2</a>
+                            <a href="{{ route('funciones') }}">Funciones</a>
                         </li>
                         <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
+                            <a href="#">Graficos HTML</a>
                         </li>
                     </ul>
 
@@ -120,7 +121,7 @@
     {{-- Alertify --}}
     <script src="{{ asset('js/alertifyjs/alertify.js') }}"></script>
 
-    
+
     <script>
         hljs.initHighlightingOnLoad();
         hljs.initLineNumbersOnLoad();
@@ -131,6 +132,7 @@
             $('#icon-menu').toggleClass('desactivate')
             $('#icon-close').toggleClass('desactivate')
         })
+
     </script>
     @yield('scripts')
 </body>

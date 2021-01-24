@@ -14,20 +14,17 @@
 
             <div class="col-md-3 mb-md-0 mb-3">
 
-                <h5 class="text-uppercase">Links</h5>
+                {{-- <h5 class="text-uppercase">Links</h5> --}}
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Link 1</a>
+                        <a href="#!">Estructuras de Secuencia</a>
                     </li>
                     <li>
                         <a href="#!">Link 2</a>
                     </li>
                     <li>
                         <a href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 4</a>
                     </li>
                 </ul>
 
@@ -35,7 +32,7 @@
 
             <div class="col-md-3 mb-md-0 mb-3">
 
-                <h5 class="text-uppercase">Links</h5>
+                {{-- <h5 class="text-uppercase">Links</h5> --}}
 
                 <ul class="list-unstyled">
                     <li>
@@ -46,9 +43,6 @@
                     </li>
                     <li>
                         <a href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 4</a>
                     </li>
                 </ul>
 

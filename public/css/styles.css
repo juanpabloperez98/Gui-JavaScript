@@ -258,6 +258,10 @@ body::after {
     background-color: #4d4d4d;
 }
 
+.list-unstyled li a{
+    color: white;
+}
+
 /* Medias */
 
 @media only screen and (max-width: 990px) {
