@@ -417,6 +417,24 @@
                         </a>
                     </li>
                     @break
+                    @case('objetos-ejemplos-index')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('estructuras-datos/objetos#ejemplos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('objetos-ejemplos')
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="{{ route('objetos-ejemplo-index') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
                     @case('functions')
                     <li class="nav-item">
                         <a class="nav-link" href="#ejemplos">

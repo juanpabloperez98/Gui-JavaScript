@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Realizar un programa que genera la lista de los N primeros números primos, N es el dato de entrada
+                    Crear un objeto vacío al cual se le vayan agregando claves ingresadas por el usuario, el programa finalizara cuando el número de claves creadas sean mayor o igual 3
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,17 +25,15 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var n = parseInt(prompt("Ingrese un número: "))
-   for (var i = 2; i < n; i++) {
-        var isprime = true
-        for (var j = 2; j < i; j++) {
-            if (i % j == 0) {
-                isprime = false
-                break
-            }
-        }
-        isprime == true ? console.log(i) : null
-    }
+                    <code class="javascript">   var objeto = {},
+        n = 0
+    do {
+        var clave = prompt("Ingrese nombre de la clave: "),
+            valor = prompt("Ingrese valor de la clave: ")
+        objeto[clave] = valor
+        n++
+    } while (n < 3);
+    console.log(objeto)
                     </code>
                 </pre>
                 <div id="datos" class="desactivate">
@@ -58,17 +56,15 @@
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se declara la variable "n" y se iguala al valor que ingrese el usuario convertido a entero
-    Luego se crea la sentencia for, donde la variable de iteración será "i", la cual empieza en 2 y va hasta "n" (El número ingresado por el usuario)
-    Se declara una variable llamada "isprime" y se iguala a true (Esta variable sirve para verificar más adelante si un número es primo o no)
-    Se crea otra sentencia for (ciclo interno), para recorrer los números desde el 2 hasta el valor de la variable del ciclo superior "i" (Este ciclo es el que permite recorrer todos los números desde el 2 hasta el valor de la variable "i" que se encuentre en iteración)
-    Se valida si el valor de la operación módulo entre "i" y "j" es igual a cero
-    Si la condición se cumple, significa que el número no es primo (Porque hay más de un divisor diferentes al 1 y al mismo número), entonces se iguala la variable "isprime" a false
-    Se rompe el ciclo for con un break (Se utiliza el break para romper el ciclo porque ya no es necesario seguir recorriendo los números comprendidos entre 2 y la variable "i", pues ya se sabe que el número no es primo)
-    Se cierra la condicional de la línea 5
-    Se cierra el ciclo inferior de la línea 4
-    Ahora utilizando una condición ternaria, se valida si la variable "isprime" es igual a true, de ser cierto, entonces se imprime la variable "i", de lo contrario no se hace nada utilizando la palabra reservada null
-    Se cierra el ciclo superior de la línea 2
+                    <code class="javascript">    Se crea la variable "objeto", la cual se iguala a un objeto vacío
+    Luego se declara una variable llamada "n"
+    Se declara un ciclo do while (Empezando con el do)
+    Se crea dentro del ciclo una variable "clave" y se iguala al nombre de la clave que digite el usuario
+    Se declara una variable llamada "valor" y se iguala al valor de la clave que ingrese el usuario
+    Ahora se le agrega al objeto una nueva clave "objeto[clave]" y se iguala al valor ingresado por el usuario que esta almacenado en la variable "valor"
+    La variable "n" aumenta en 1
+    Se valida que el ciclo se va a repetir, siempre y cuando "n" sea menor que 3
+    Se imprime el objeto con las claves y valores ya agregados
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -80,20 +76,18 @@
 @endsection
 
 
-
 @section('scripts')
 
     <script>
 
         var dato1 = 0,
-            max_inputs = 1, 
+            max_inputs = 6, 
             cont = 0,
-            placeholders_form1 = ['Ingrese numero: '],
+            placeholders_form1 = ['Ingrese nombre de la clave:','Ingrese valor de la clave:','Ingrese nombre de la clave:','Ingrese valor de la clave:','Ingrese nombre de la clave:','Ingrese valor de la clave:'],
             list_datas_form1 = []
 
         var validar = (dato) => {
-            dato = parseInt(dato)
-            return !isNaN(dato) ? true:false 
+            return dato != "" ? true:false 
         }
 
         var placeholder_set_inputs = () => {
@@ -101,20 +95,18 @@
         }
 
         const show_results = () => {
-            var n = parseInt(list_datas_form1[0]),
-            texto = ""
-            
-            for (var i = 2; i < n; i++) {
-                var isprime = true
-                for (var j = 2; j < i; j++) {
-                    if (i % j == 0) {
-                        isprime = false
-                        break
-                    }
-                }
-                isprime == true ? texto += i+" " : null
-            }
-
+            var texto = "",
+                c1 = list_datas_form1[0],
+                v1 = list_datas_form1[1],
+                c2 = list_datas_form1[2],
+                v2 = list_datas_form1[3],
+                c3 = list_datas_form1[4],
+                v3 = list_datas_form1[5],
+            texto = '{'
+            texto += c1+":"+v1+","
+            texto += c2+":"+v2+","
+            texto += c3+":"+v3
+            texto += "}"
             $('#resultado-operacion').html(texto)
         }
 

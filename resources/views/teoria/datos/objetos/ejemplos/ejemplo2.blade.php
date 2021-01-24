@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Programa que calcula el producto de dos números enteros y positivos mediante sumas sucesivas.
+                    Se tienen 3 objetos donde se guarda la información de una persona, se pide crear un programa que permite añadirle a cada uno de los objetos la información adicional correspondiente a la edad
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,11 +25,27 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var numero1 = parseInt(prompt("Ingrese numero1: ")),
-          numero2 = parseInt(prompt("Ingrese numero2: ")),
-          resultado = 0
-    for (var i = 0; i < numero2; i++) {  resultado += numero1 }
-    console.log("El resultado de la multipliación es:" + resultado)
+                    <code class="javascript">   var persona1 = {
+        nombre: "Carlos",
+        apellidos: "Hernandez",
+    }
+    var persona2 = {
+        nombre: "Cristina",
+        apellidos: "Santos",
+    }
+    var persona3 = {
+        nombre: "David",
+        apellidos: "Alzate",
+    }
+    lista_personas = [persona1,persona2,persona3]
+    for (var i = 0; i < lista_personas.length; i++) {
+        const objeto = lista_personas[i];
+        edad = parseInt(prompt("Ingrese la edad para "+objeto['nombre']+": "))
+        objeto["edad"] = edad
+    }
+    console.log(persona1)
+    console.log(persona2)
+    console.log(persona3)
                     </code>
                 </pre>
                 <div id="datos" class="desactivate">
@@ -52,11 +68,27 @@
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se crea la variable "numero1" y se iguala a un valor ingresado por el usuario convertido a entero
-    Se crea la variable "numero2" y se iguala a un valor ingresado por el usuario convertido a entero
-    Luego se declara la variable "resultado" y se iguala a cero (esta variable servirá para hacer las sumas sucesivas)
-    Ahora se declara la sentencia for, la cual se le define una variable "i" que inicia en 0 y va hasta el valor de la variable "numero2", por cada iteración que haga la variable resultado (que en un comienzo vale cero), ira aumentando en el valor de la variable "numero1" (si por ejemplo su valor es 2, entonces se ira aumentado en 2 la variable resultado)
-    Por último, Se imprime el resultado de la multiplicación
+                    <code class="javascript">    Se crea el primer objeto que se llamara "persona1"
+    Se declara una clave "nombre" que tiene como valor un nombre determinado
+    Se declara una clave "apellido" que tiene como valor un nombre determinado
+    Se cierra el objeto
+    Se crea el primer objeto que se llamara "persona2"
+    Se declara una clave "nombre" que tiene como valor un nombre determinado
+    Se declara una clave "apellido" que tiene como valor un nombre determinado
+    Se cierra el objeto
+    Se crea el primer objeto que se llamara "persona3" con sus respectivos datos
+    Se declara una clave "nombre" que tiene como valor un nombre determinado
+    Se declara una clave "apellido" que tiene como valor un nombre determinado
+    Se cierra el objeto
+    Se crea una variable "lista_personas" que se iguala a una lista con los objetos ya creados
+    Se declara un ciclo for que empieza en "i=0" y va hasta la longitud de la lista de personas (En este caso sería 3, pero de esta manera se garantiza que el programa sea dinámico)
+    Dentro del ciclo for, se crea una variable llamada "objeto" y se iguala a lo que se encuentre en la lista de personas en la posición "[ i ]"
+    Ahora se declara una variable llamada "edad" y se iguala al valor de la edad ingresado por el usuario
+    Ahora se añade una nueva clave llamada "[ edad ]" al objeto correspondiente (Acordarse de que la variable objeto tiene almacenado un objeto de "lista_personas"), a esta clave se le iguala al valor de la variable "edad"
+    Se cierra el ciclo for
+    Se imprime el objeto "persona1"
+    Se imprime el objeto "persona2"
+    Se imprime el objeto "persona3"
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -67,14 +99,15 @@
     </main>
 @endsection
 
+
 @section('scripts')
 
     <script>
 
         var dato1 = 0,
-            max_inputs = 2, 
+            max_inputs = 3, 
             cont = 0,
-            placeholders_form1 = ['Ingrese numero1: ','Ingrese numero2: '],
+            placeholders_form1 = ['Ingrese la edad para Carlos: ','Ingrese la edad para Cristina: ','Ingrese la edad para David: '],
             list_datas_form1 = []
 
         var validar = (dato) => {
@@ -87,12 +120,32 @@
         }
 
         const show_results = () => {
-            var numero1 = parseInt(list_datas_form1[0]),
-            numero2 = parseInt(list_datas_form1[1]),
-            resultado = 0,
-            texto = ""
-            for (var i = 0; i < numero2; i++) {  resultado += numero1 }
-            texto = "El resultado de la multipliación es:  " + resultado
+            var texto = "",
+                n1 = list_datas_form1[0],
+                n2 = list_datas_form1[1],
+                n3 = list_datas_form1[2]
+
+            texto = '{'
+            texto += " nombre: Carlos,"
+            texto += " apellido: Hernandez,"
+            texto += " edad: "+ n1
+            texto += "}"
+            texto += "<br>"
+
+            texto += '{'
+            texto += " nombre: Cristina,"
+            texto += " apellido: Santos,"
+            texto += " edad: "+ n2
+            texto += "}"
+            texto += "<br>"
+
+            texto += '{'
+            texto += " nombre: David,"
+            texto += " apellido: Alzate,"
+            texto += " edad: "+ n3
+            texto += "}"
+            texto += "<br>"
+
             $('#resultado-operacion').html(texto)
         }
 

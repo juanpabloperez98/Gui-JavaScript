@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Realizar un programa que calcule la serie de Fibonacci hasta un número ingresado por el usuario (El número no puede ser mayor a 20)
+                    Crear una lista de objetos los cuales almacenaran la información de un usuario tales como (nombre, apellido, ciudad). Se puede agregar hasta max 5 personas y al final se deberá mostrar toda la información de los objetos almacenados a la lista
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,18 +25,25 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var n = parseInt(prompt("Ingrese número: "))
-        num1 = 0,
-        num2 = 1
-        serie = ""
-    serie += "0-1"
-    for(var i = 1; i < n; i++){
-        z = num2 + num1
-        serie += "-" + z 
-        num1 = num2
-        num2 = z 
-    }
-    console.log(serie)
+                    <code class="javascript">   var n = parseInt(prompt("Numero de objetos a crear: "))
+    val = n > 0 && n <= 5 ? true : false
+    if (val == true) {
+        objetos_lista = []
+        for (var i = 0; i < n; i++) {
+            const nombre = prompt("Ingrese el nombre: "),
+                apellido = prompt("Ingrese el apellido: "),
+                ciudad = prompt("Ingrese la ciudad: ")
+            objeto = {
+                nombre_:nombre,
+                apellido_:apellido,
+                ciudad_:ciudad,
+            }
+            objetos_lista.push(objeto)
+        }
+        for (var i = 0; i < objetos_lista.length; i++) {
+            console.log(objetos_lista[i])
+        }
+    } else { console.log("Número no valido") }
                     </code>
                 </pre>
                 <div id="datos" class="desactivate">
@@ -59,18 +66,25 @@
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se crea la variable "n" y se iguala a lo que ingresa el usuario convertido a entero
-    Se crea la variable "num1" y se iguala a 0 (El inicio de la serie de Fibonacci)
-    Se crea la variable "num2" y se iguala a 1 (El segundo número de la serie de Fibonacci)
-    Se declara una variable llamada "serie" y se iguala a un string vacío
-    La variable serie se le concatena "01"
-    Luego se crea una sentencia for, que ira desde el número 1 hasta el valor de la variable "n" ingresada por el usuario
-    Después se declara una variable "z", esta se iguala a la suma entre las variables "num2" y "num1"
-    La variable "serie" se le concatena el valor de "z", (Esta variable contiene el valor de la suma de los dos números anteriores de la serie)
-    La variable "num1" se actualiza al valor de lo que hay en la variable "num2"
-    Y ahora la variable "num2" se iguala al valor de la variable z (La suma de los anteriores dos números de la serie)
-    Se cierra el ciclo for de la línea 6
-    Se imprime el valor de la variable "serie"
+                    <code class="javascript">    Se crea una variable "n" y se iguala al valor que ingrese el usuario por pantalla
+    Luego con una condición ternaria se valida si "n" es mayor a cero y menor a 5, de ser así la variable "val" se convierte en verdadera, de lo contrario se convertirá en falsa
+    Se valida si "val" es igual a true
+    Si la condición se cumple, se declara una variable llamada "objetos_lista" y se iguala a una lista vacía
+    Se declara un ciclo for que va desde "i=0" hasta "i < n" y su incremento será de 1 en 1
+    Se declara una constante "nombre" y se iguala al nombre que ingrese el usuario
+    Se declara una constante "apellido" y se iguala al apellido que ingrese el usuario
+    Se declara una constante "ciudad" y se iguala a la ciudad que ingrese el usuario
+    Ahora se crea un objeto con los datos pedidos anteriormente
+    Se declara una clave "nombre_" que tiene como valor la variable "nombre"
+    Se declara una clave "apellido_" que tiene como valor la variable "apellido"
+    Se declara una clave "ciudad_" que tiene como valor la variable "ciudad"
+    Se cierra el objeto
+    Ahora se le agrega a la lista "objetos_lista" el objeto que se acaba de crear
+    Se cierra el ciclo for
+    Se declara un ciclo for que va desde "i=0" hasta la longitud de la lista de objetos y su incremento será de 1 en 1
+    Se imprime lo que se obtenga de la lista de objetos en la posición "[ i ]"
+    Se cierra el ciclo for
+    Si la condición de la línea 3 no se cumple, entonces se imprime que el número no es valido
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -88,32 +102,38 @@
         var dato1 = 0,
             max_inputs = 1, 
             cont = 0,
-            placeholders_form1 = ['Ingrese número: '],
-            list_datas_form1 = []
+            indez = 0
+            placeholders_form1 = ['Numero de objetos a crear: ','Ingrese el nombre: ','Ingrese el apellido: ','Ingrese la ciudad:'],
+            list_datas_form1 = [],
+            N = 0
 
         var validar = (dato) => {
-            dato = parseInt(dato)
-            return !isNaN(dato) && dato <20 && dato > 0 ? true:false 
+            return dato != "" ? true:false 
         }
 
-        var placeholder_set_inputs = () => {
-            $('#dato').attr('placeholder',placeholders_form1[cont])
+        var placeholder_set_inputs = (index) => {
+            $('#dato').attr('placeholder',placeholders_form1[index])
         }
 
         const show_results = () => {
-            var n = parseInt(list_datas_form1[0]),
-            texto = "",
-            num1 = 0,
-            num2 = 1
-            serie = ""
-            serie += "0-1"
-            for(var i = 1; i < n; i++){
-                z = num2 + num1
-                serie += "-"+z
-                num1 = num2
-                num2 = z 
+            var salida = true,
+                i = 1,
+                j = 0,
+                texto = ""
+            while(j < N){
+                nombre = list_datas_form1[i]
+                apellido = list_datas_form1[i+1]
+                ciudad = list_datas_form1[i+2]
+
+                texto += '{'
+                texto += " nombre_:"+nombre+","
+                texto += " apellido_:"+apellido+","
+                texto += " ciudad_:"+ciudad
+                texto += "}"
+                texto += "<br>"
+                j++
+                i += 3
             }
-            texto = serie
             $('#resultado-operacion').html(texto)
         }
 
@@ -128,7 +148,7 @@
             $('#datos').toggle('explode')
             $('#ejecutar').toggle('explode')
             $('#sig').toggle('explode')
-            placeholder_set_inputs()
+            placeholder_set_inputs(0)
         })
 
         $('#formulario').submit((e) => {
@@ -136,16 +156,19 @@
             var valor = $('#dato').val()
             if(validar(valor)){
                 dato1 = valor
+                cont == 0 ? N = parseInt(dato1) : null
                 list_datas_form1.push(dato1)
                 $('#formulario')[0].reset()
                 cont ++
-                if(cont < max_inputs){
-                    placeholder_set_inputs()
+                if(cont <= (N*3) && (N > 0 && N <= 5)){
+                    indez ++
+                    placeholder_set_inputs(indez)
+                    indez == 3 ? indez = 0 : null
                 }else{
                     $('#datos').toggle('explode')
                     $('#exp').toggle('explode')
                     $('#result').toggle('explode')
-                    show_results()
+                    N > 0 && N <= 5 ? show_results() : $('#resultado-operacion').html("Número no valido")
                 }
             }else{
                 alertify.set('notifier', 'position', 'bottom-center');
@@ -153,7 +176,6 @@
                 msg.delay(1.3)
             }
         })
-
 
         $('#exp').on('click', (e) => {
             e.preventDefault()

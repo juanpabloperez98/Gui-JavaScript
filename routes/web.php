@@ -534,6 +534,50 @@ Route::prefix('estructuras-datos/')->group(function () {
             'page' => 'objetos'
         ]);
     })->name('objetos');
+
+    Route::get('objetos/ejemplos', function () {
+        return view('teoria.datos.objetos.ejemplos.ejemplos_index', [
+            'page' => 'objetos-ejemplos-index'
+        ]);
+    })->name('objetos-ejemplo-index');
+
+    Route::get('objetos/ejemplo1', function () {
+        return view('teoria.datos.objetos.ejemplos.ejemplo1', [
+            'page' => 'objetos-ejemplos'
+        ]);
+    })->name('objetos-ejemplo1');
+
+    Route::get('objetos/ejemplo2', function () {
+        return view('teoria.datos.objetos.ejemplos.ejemplo2', [
+            'page' => 'objetos-ejemplos'
+        ]);
+    })->name('objetos-ejemplo2');
+
+    Route::get('objetos/ejemplo3', function () {
+        return view('teoria.datos.objetos.ejemplos.ejemplo3', [
+            'page' => 'objetos-ejemplos'
+        ]);
+    })->name('objetos-ejemplo3');
+
+    Route::get('objetos/ejemplo4', function () {
+        return view('teoria.datos.objetos.ejemplos.ejemplo4', [
+            'page' => 'objetos-ejemplos'
+        ]);
+    })->name('objetos-ejemplo4');
+
+    Route::get('objetos/ejemplo5', function () {
+        return view('teoria.datos.objetos.ejemplos.ejemplo5', [
+            'page' => 'objetos-ejemplos'
+        ]);
+    })->name('objetos-ejemplo5');
+
+    Route::get('objetos/ejemplo6', function () {
+        return view('teoria.datos.objetos.ejemplos.ejemplo6', [
+            'page' => 'objetos-ejemplos'
+        ]);
+    })->name('objetos-ejemplo6');
+
+
 });
 // Funciones
 Route::prefix('funciones/')->group(function () {

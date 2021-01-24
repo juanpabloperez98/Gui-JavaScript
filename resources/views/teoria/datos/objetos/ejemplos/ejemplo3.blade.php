@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Realizar un programa que muestre la tabla de multiplicar de un número ingresado por el usuario desde el 1 hasta al 9, el resultado de estas operaciones se debe mostrar desde el mayor hasta el menor
+                    Se tiene un objeto que tiene una clave llamada colores la cual contiene una lista con colores, se pide crear un programa que imprima cada uno de los elementos de la lista colores excluyendo los colores primarios.
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,10 +25,17 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var numero = parseInt(prompt("Ingresa número: "))
-    for (var i = 9; i >= 1; i--) {
-        resultado = numero*i
-        console.log(numero +" x "+i+" = "+resultado)
+                    <code class="javascript">   var objeto = {
+        nombre: 'Objeto',
+        longitud:25,
+        colores: ['rojo','verde','azul','amarillo','rosa','naranja','beis','negro','violeta','dorado']
+    }
+    list_colors = objeto['colores']
+    for (var i = 0; i < list_colors.length; i++) {
+        const color = list_colors[i];
+        if(color != 'amarillo' && color != 'azul' && color != 'rojo'){
+            console.log(color)
+        }
     }
                     </code>
                 </pre>
@@ -52,11 +59,18 @@
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se crea la variable "numero" y se iguala a lo ingresado por el usuario convertido a entero
-    Se declara la sentencia for, donde la variable de iteración será "i", esta variable empezará en 9 e ira hasta 1, por lo que el operador deberá ser un operador de decremento
-    Se declara una variable resultado y se iguala al resultado de multiplicar la variable "numero" por la variable "i" (La variable "i" es la que itera entre 9 y 1)
-    Se imprime el resultado de la multiplicación
-    Por último, se cierra el ciclo for de la línea 2
+                    <code class="javascript">    Se crea el objeto llamado "objeto"
+    Se declara una clave "nombre" que tiene como valor un nombre determinado
+    Se declara una clave "longitud" que tiene como valor un número determinado
+    Se declara una clave "colores" que tiene como valor una lista de colores
+    Se cierra el objeto
+    Se declara una variable "list_colors" y se iguala al valor de la clave "[colores]" del objeto
+    Se declara un ciclo for que empieza en "i=0" y va hasta la longitud de la lista de colores 
+    Dentro del ciclo, se declara la variable "color" y se iguala al valor que se obtenga de la lista de colores en la posición "[ i ]"
+    Se valida si el valor de la variable "color" es diferente a amarillo, azul o rojo
+    Si la condición anterior se cumple, entonces se imprime el color
+    Se cierra el condicional if
+    Se cierra el ciclo for
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -72,28 +86,10 @@
 
     <script>
 
-        var dato1 = 0,
-            max_inputs = 1, 
-            cont = 0,
-            placeholders_form1 = ['Ingrese numero: '],
-            list_datas_form1 = []
-
-        var validar = (dato) => {
-            dato = parseInt(dato)
-            return !isNaN(dato) ? true:false 
-        }
-
-        var placeholder_set_inputs = () => {
-            $('#dato').attr('placeholder',placeholders_form1[cont])
-        }
 
         const show_results = () => {
-            var numero = parseInt(list_datas_form1[0]),
-            texto = ""
-            for (var i = 9; i >= 1; i--) {
-                resultado = numero*i
-                texto += numero +" x "+i+" = "+resultado + '<br>'
-            }
+            var texto = ""
+            texto = "verde <br>rosa <br>naranja <br>beis <br>negro <br>violeta <br>dorado"
             $('#resultado-operacion').html(texto)
         }
 
@@ -105,33 +101,11 @@
 
         $('#ejecutar').on('click', (e) => {
             e.preventDefault()
-            $('#datos').toggle('explode')
             $('#ejecutar').toggle('explode')
             $('#sig').toggle('explode')
-            placeholder_set_inputs()
-        })
-
-        $('#formulario').submit((e) => {
-            e.preventDefault()
-            var valor = $('#dato').val()
-            if(validar(valor)){
-                dato1 = valor
-                list_datas_form1.push(dato1)
-                $('#formulario')[0].reset()
-                cont ++
-                if(cont < max_inputs){
-                    placeholder_set_inputs()
-                }else{
-                    $('#datos').toggle('explode')
-                    $('#exp').toggle('explode')
-                    $('#result').toggle('explode')
-                    show_results()
-                }
-            }else{
-                alertify.set('notifier', 'position', 'bottom-center');
-                var msg = alertify.error('Dato no valido');
-                msg.delay(1.3)
-            }
+            $('#exp').toggle('explode')
+            $('#result').toggle('explode')
+            show_results()
         })
 
 

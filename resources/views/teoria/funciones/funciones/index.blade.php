@@ -56,35 +56,30 @@
                     <span style="color: #efda55">NOTA</span>: esta forma de declarar una función es conocida como arrow function o función flecha
                 </p>
             </div>
-            <div class="col-lg-5 mx-auto mt-3 bg-light columna-principal">
-                <h3 class="text-md-center"><span class="spancolor mr-2">5.1.3</span>Acceder a un elemento de una lista</h3>
-                <p class="mt-3">
-                    Ya se ha visto como declarar una lista con datos dentro de ella, ahora de nada sirve tener contenido
-                    estos datos dentro de una lista si no hay forma de como acceder a ellos para poder tratarlos. Para
-                    obtener los datos de una lista se pueden utilizar varias formas para logarlo. Para obtener un solo dato
-                    de una lista solo basta con llamar la variable y entre llaves [ ] colocar la posición en la que se
-                    encuentra dicho elemento (recordar que en programación la primera posición de algún objeto o estructura
-                    empieza en 0).
+            <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
+                <h3 class="text-md-center"><span class="spancolor mr-2">5.1.3</span>Llamado a una función</h3>
+                <p class="mt-3">    
+                    Ya se ha visto cómo se crea una función, ahora bien, para hacer uso de esta función ese necesario hacer el llamado a ella en cualquier parte del código donde se necesite ejecutarla, para entender mejor esto se presenta un ejemplo sencillo de imprimir por pantalla un mensaje determinado:
                 </p>
                 <pre>
-                                <code class="javascript">   var lista = ["posicion1", "posicion2", "posicion3"]
-       console.log("Lista en la primera posicion: " + lista[0])
+                                <code class="javascript">   function saludo(){
+        console.log("Hola!!...Este es un saludo desde la función")
+    }
+    saludo()
                                 </code>
                     </pre>
                 <div id="result1" class="result px-md-3 text-center desactivate" style="margin-top: -59px">
                     <div class="row mx-auto">
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <h6 class=" font-weight-bold" style="color: white">Resultado</h6>
                             <p class="text-center" style="color: white;">
-                                Lista en la primera posicion: posicion2
+                                Hola!!...Este es un saludo desde la función
                             </p>
                         </div>
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <h6 class=" font-weight-bold" style="color: white">NOTA</h6>
                             <p class="text-left mt-4" style="color: white;">
-                                La variable lista contiene 3 datos que son de tipo string, al acceder a su posición <span
-                                    style="color: blue;">[ 1 ]</span> se esta accediendo al segundo elemento de la lista
-                                (como se mencionó anteriormente, en programación la primera posición empieza en cero)
+                                Cada vez que se haga el llamado a la función <span style="color: blue">saludo()</span>, esta función imprimirá por pantalla un saludo al usuario. En este ejemplo no se ve realmente la importancia de una función pues la sentencia de código a ejecutar es un simple <span style="color: blue">console.log()</span>, pero mas adelante se mostraran ejemplos donde se pueda apreciar mejor la importancia de las funciones.
                             </p>
                         </div>
                     </div>
@@ -94,38 +89,32 @@
                 </div>
             </div>
 
-            <div class="col-lg-5 mx-auto mt-3 bg-light columna-principal">
-                <h3 class="text-md-center"><span class="spancolor mr-2">5.1.4</span>Acceder a varios elementos de una lista
+            <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
+                <h3 class="text-md-center"><span class="spancolor mr-2">5.1.4</span>Parametros en las funciones
                 </h3>
                 <p class="mt-3">
-                    Ya se vio como acceder a un dato en especifico de una lista, pero ¿qué tal si se necesita acceder a
-                    todos los elementos de una lista?, para acceder a los elementos de una lista es importante utilizar una
-                    de las estructuras repetitivas vistas anteriormente, el ciclo for. El ciclo for va a permitir recorrer
-                    todos los elementos encontrados en una lista, donde su condición de inicio será el número 0 y su
-                    condición final será hasta llegar al final de la lista.
+                    Ya se ha mencionado que las funciones son bloques de código que están encapsulados en una estructura previamente definida, por lo que, para ejecutar dichos bloques de códigos es necesario hacer el llamado a la función para que se ejecuten. Las funciones tienen parámetros, que básicamente son valores que recibe la función y pueden ser utilizados dentro del código que ejecuta la función, A continuación, un ejemplo:
                 </p>
                 <pre>
-                                <code class="javascript">   var lista = ["posicion1","posicion2","posicion3"]
-        for (var i = 0; i < lista.length; i++) { console.log(lista[i]) }
+                                <code class="javascript">   function saludo(param){
+        console.log(param)
+    }
+    var mensaje = "Este es el saludo que quiero mandar"
+    saludo(mensaje)
                                 </code>
                                 </pre>
                 <div id="result2" class="result px-md-3 text-center desactivate" style="margin-top: -59px">
                     <div class="row mx-auto">
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <h6 class=" font-weight-bold" style="color: white">Resultado</h6>
                             <p class="text-center" style="color: white;">
-                                posicion1<br>
-                                posicion2
-                                posicion3
+                                Este es el saludo que quiero mandar
                             </p>
                         </div>
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <h6 class=" font-weight-bold" style="color: white">NOTA</h6>
                             <p class="text-left mt-4" style="color: white;">
-                                Utilizando la misma lista del ejemplo pasado, pero ahora adicional utilizando un ciclo for,
-                                se muestran todos los elementos que se encuentran en la lista. Nota: se utiliza la palabra
-                                reservada <span style="color: blue">length</span> para obtener la longitud de la lista y así
-                                poder colocar la condición de parada
+                                Fíjese que se declara una variable llamada <span style="color: blue">mensaje</span>, la cual se iguala a un mensaje determinado y se manda a la función como parámetro. En la función <span style="color: blue">saludo()</span> dentro de los paréntesis se define una variable llamada <span style="color: greenyellow">param</span> la cual va a tener el valor de la variable <span style="color: blue">mensaje</span> que se paso como parámetro, es de esa manera como se puede imprimir cualquier mensaje enviado como parámetro.
                             </p>
                         </div>
                     </div>
@@ -138,54 +127,31 @@
 
 
             <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
-                <h3 class="text-md-center"><span class="spancolor mr-2">5.1.5</span>Añadir elementos a una lista</h3>
+                <h3 class="text-md-center"><span class="spancolor mr-2">5.1.5</span>Retorno de una función</h3>
                 <p class="mt-3">
-                    Ya se ha visto como crear y acceder a los elementos de una lista, ahora se vera como añadir elementos a
-                    dicha lista, como anteriormente se vio, se puede crear una lista con los elementos ya implementados
-                    dentro de esta, pero habrá veces en las que se necesitara añadir elementos de manera dinámica (es decir
-                    no declarados directamente por el programador). JavaScript tiene una palabra reservada que permite
-                    ingresar elementos al final y al principio de una lista, estas palabras reservadas son <span
-                        style="color: blue">push</span> y <span style="color: blue">unshift</span>.
+                    Como se ha explicado, una función ejecuta unos bloques de códigos, los cuales realizan una tarea especifica y pueden o no, retornar un valor. Pero de nada sirve retornar un valor sino se puede realizar una tarea con dicho valor retornado. A continuación, se muestra como capturar un valor retornado por una función
                 </p>
-                <div class="row mx-auto">
-                    <div class="col-lg-6">
-                        <pre>
-                                <code class="javascript">   var lista = ["posicion1","posicion2","posicion3"]
-        lista.push("posicion3")
-        console.log(lista)
-                                </code>
-                                </pre>
-                    </div>
-                    <div class="col-lg-6">
-                        <pre>
-                                <code class="javascript">   var lista = ["posicion1","posicion2","posicion3"]
-        lista.unshift("posicion0")
-        console.log(lista)
-                                </code>
-                                </pre>
-                    </div>
-                </div>
+                <pre>
+                    <code class="javascript">   function modulo2(num){
+        return num % 2
+    }
+    var numero = 3
+    result = modulo2(numero)
+    console.log(result)
+                    </code>
+                    </pre>
                 <div id="result3" class="result px-md-3 text-center desactivate" style="margin-top: -59px">
                     <div class="row mx-auto">
                         <div class="col-lg-6">
                             <h6 class=" font-weight-bold" style="color: white">Resultado</h6>
                             <p class="text-center" style="color: white;">
-                                [ "posicion0", "posicion1", "posicion2", "posicion3" ]<br>
+                                1
                             </p>
                         </div>
                         <div class="col-lg-6">
-                            <h6 class=" font-weight-bold" style="color: white">Resultado</h6>
-                            <p class="text-center" style="color: white;">
-                                [ "posicion1", "posicion2", "posicion3", "posicion4" ]
-                            </p>
-                        </div>
-                        <div class="col-lg-11">
                             <h6 class=" font-weight-bold" style="color: white">NOTA</h6>
                             <p class="text-left mt-4" style="color: white;">
-                                Del lado izquierdo se tiene el ejemplo de cuando se agrega un elemento a una lista al final
-                                utilizando la palabra reservada <span style="color: blue">push</span>. Del lado derecho se
-                                agrega otro elemento, pero esta vez al inicio de la lista utilizando la palabra reservada
-                                <span style="color: blue">unshift</span>.
+                                Se crea la función <span style="color: blue">modulo2</span> la cual recibe como parámetro un valor y se guarda en la variable <span style="color: greenyellow">num</span>, esta función devuelve el módulo del número pasado como parámetro entre 2, para devolver un valor de una función se utiliza la palabra reservada <span style="color: blue">return</span>. Toda función que devuelve un valor, al ser declarada o hacer el llamado a esta función es necesario crear una variable e igualarla al llamado de la función como se ve en la línea 5, el valor que retorna la función es almacenado en la variable <span style="color: blue">result</span>.
                             </p>
                         </div>
                     </div>
@@ -194,127 +160,6 @@
                     <a href="#" class="btn btn-probar" id="boton-probar3">Probar</a>
                 </div>
             </div>
-
-            <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
-                <h3 class="text-md-center"><span class="spancolor mr-2">5.1.6</span>Eliminar elementos a una lista</h3>
-                <p class="mt-3">
-                    Ahora se va a mostrar a continuación, como se puede eliminar elementos de una lista. Los elementos de
-                    una lista pueden ser eliminados por: el ultimo elemento, el primer elemento y un elemento especificado.
-                    Para eliminar el ultimo elemento de una lista se utiliza la palabra reservada pop(), para eliminar el
-                    primer elemento de una lista se utiliza la palabra reservada shift().
-                </p>
-                <div class="row mx-auto">
-                    <div class="col-lg-6">
-                        <pre>
-                                <code class="javascript">   var lista = ["posicion1","posicion2","posicion3","posicion4"]
-        lista.pop()
-        console.log(lista)
-                                </code>
-                                </pre>
-                    </div>
-                    <div class="col-lg-6">
-                        <pre>
-                                <code class="javascript">   var lista = ["posicion1","posicion2","posicion3","posicion4"]
-        lista.shift()
-        console.log(lista)
-                                </code>
-                                </pre>
-                    </div>
-                </div>
-                <div id="result4" class="result px-md-3 text-center desactivate" style="margin-top: -59px">
-                    <div class="row mx-auto">
-                        <div class="col-lg-6">
-                            <h6 class=" font-weight-bold" style="color: white">Resultado</h6>
-                            <p class="text-center" style="color: white;">
-                                [ "posicion1","posicion2","posicion3" ]<br>
-                            </p>
-                        </div>
-                        <div class="col-lg-6">
-                            <h6 class=" font-weight-bold" style="color: white">Resultado</h6>
-                            <p class="text-center" style="color: white;">
-                                [ "posicion2","posicion3","posicion4" ]
-                            </p>
-                        </div>
-                        <div class="col-lg-11">
-                            <h6 class=" font-weight-bold" style="color: white">NOTA</h6>
-                            <p class="text-left mt-4" style="color: white;">
-                                Del lado izquierdo se puede ver como se elimina el ultimo elemento de la lista utilizando la
-                                palabra reservada <span style="color: blue">pop()</span>, como también se puede observar al
-                                lado derecho se elimina el primer elemento de la lista utilizando la palabra reservada <span
-                                    style="color: blue">shift()</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-3">
-                    <a href="#" class="btn btn-probar" id="boton-probar4">Probar</a>
-                </div>
-            </div>
-
-            <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
-                <h3 class="text-md-center"><span class="spancolor mr-2">5.1.7</span>Eliminar elementos especificos</h3>
-                <p class="mt-3">
-                    Ya se pudo observar cómo se pueden eliminar elementos de una lista ya sea de su primera posición o de su
-                    última posición, pero también se pueden eliminar elementos específicos a partir de una posición
-                    diferente a la primera o la última. Para esto se utiliza la palabra reservada <span
-                        style="color: blue">splice()</span>, que permite recibir dos parámetros, el primero será el
-                    parámetro que índica la posición del elemento desde donde se va a eliminar y el segundo parámetro es el
-                    número de elementos a eliminar desde la posición escogida, entonces para eliminar solamente el elemento
-                    contenido en la posición especificada se pasa como segundo parámetro el número 1 que indica que solo se
-                    va a eliminar ese elemento.
-                </p>
-                <div class="row mx-auto">
-                    <div class="col-lg-6">
-                        <pre>
-                                <code class="javascript">   var lista = ["posicion1","posicion2","posicion3","posicion4"]
-        lista.splice(0,1)
-        console.log(lista)
-                                </code>
-                                </pre>
-                    </div>
-                    <div class="col-lg-6">
-                        <pre>
-                                <code class="javascript">   var lista = ["posicion1","posicion2","posicion3","posicion4"]
-        lista.splice(1,2)
-        console.log(lista)
-                                </code>
-                                </pre>
-                    </div>
-                </div>
-                <div id="result5" class="result px-md-3 text-center desactivate" style="margin-top: -59px">
-                    <div class="row mx-auto">
-                        <div class="col-lg-6">
-                            <h6 class=" font-weight-bold" style="color: white">Resultado</h6>
-                            <p class="text-center" style="color: white;">
-                                [ "posicion2", "posicion3", "posicion4" ]<br>
-                            </p>
-                        </div>
-                        <div class="col-lg-6">
-                            <h6 class=" font-weight-bold" style="color: white">Resultado</h6>
-                            <p class="text-center" style="color: white;">
-                                [ "posicion1", "posicion4" ]
-                            </p>
-                        </div>
-                        <div class="col-lg-12">
-                            <h6 class=" font-weight-bold" style="color: white">NOTA</h6>
-                            <p class="text-left mt-4" style="color: white;">
-                                En el primer ejemplo se especifica que se va a eliminar el elemento que se encuentra en la
-                                posición 0, y que a su vez <span style="font-weight: bold">solo</span> se eliminara ese
-                                elemento pasándole como segundo parámetro a la función <span
-                                    style="color: blue">splice</span> el número 1. En el segundo ejemplo se especifica que
-                                se va a eliminar el elemento que se encuentra en la posición 1 de la lista, y a su vez se
-                                eliminara el siguiente elemento a la posición especificada (en este caso la posición 2).
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-3">
-                    <a href="#" class="btn btn-probar" id="boton-probar5">Probar</a>
-                </div>
-            </div>
-
-
-
         </div>
 
 

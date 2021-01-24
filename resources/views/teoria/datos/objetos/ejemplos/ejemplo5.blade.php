@@ -17,7 +17,12 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Realizar un programa que calcula el factorial de un nº entero y positivo.
+                    Pedir al usuario un código de respuesta http (200,404,503) el cual se va a almacenar en una clave de un objeto y se mostrara por pantalla el mensaje correspondiente al código:
+                    <ul class="container">
+                        <li>Si el código es 200 el mensaje será: "Respuesta con exito!!"</li>
+                        <li>Si el código es 404 el mensaje será: "Error 404 not found!!"</li>
+                        <li>Si el código es 503 el mensaje será: "Servicio no disponible!!"</li>
+                    </ul>
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -25,14 +30,30 @@
             </div>
             <div class="col-lg-6 mx-auto desactivate" id="codigo">
                 <pre>
-                    <code class="javascript">   var n = parseInt(prompt("Ingrese un número: "))
-    for (var i =1; i <= n; i++) {
-        factorial = 1
-        for(var j = i;j > 0; j --){
-            factorial *= j
+                    <code class="javascript">   var codigo = parseInt(prompt("Ingrese codigo de respuesta del servidor: ")),
+        val = codigo == 200 || codigo == 404 || codigo == 503 ? true : false
+    if(val == true){
+        var message = ""
+        switch(codigo){
+            case 200:{
+                message = "Respuesta con exito!!"
+                break
+            }
+            case 404:{
+                message = "Error 404 not found!!"
+                break
+            }
+            case 503:{
+                message = "Servicio no disponible!!"
+                break
+            }
         }
-        console.log("Factorial de "+i+" = "+ factorial)
-    }
+        var respuesta = {
+            codigo_: codigo,
+            message_: message,
+        }
+        console.log(respuesta)
+    } else { console.log("Codigo de respuesta no valido") }
                     </code>
                 </pre>
                 <div id="datos" class="desactivate">
@@ -55,14 +76,30 @@
             </div>
             <div class="col-lg-6 desactivate" id="code-explain">
                 <pre>
-                    <code class="javascript">    Se declara la variable "n" y se iguala a lo que ingrese el usuario convertido a entero
-    Se declara un ciclo for superior, que ira iterando desde 1 hasta el valor de "n", utilizando como variable iteradora a "i"
-    Se declara una variable llamada "factorial", esta se iguala a 1
-    Ahora se declara el ciclo inferior, que ira desde el valor de la variable "i" hasta 0, por lo que el operador tendrá que ser de decremento
-    Se ira multiplicando el valor de la variable factorial en j por cada iteración que se haga en el ciclo inferior
-    Se cierra el ciclo for de la línea 4
-    Se imprime el valor de la variable "factorial", que hace referencia a el factorial de "i" en esa iteración
-    Se cierra  el ciclo for superior de la línea 2
+                    <code class="javascript">    Se crea una variable llamada "codigo" y se iguala al código que ingrese el usuario
+    Utilizando una condición ternaria, se valida si el código ingresado por el usuario es igual a 200 o 404 o 503 de ser así se guarda en la variable "val" un booleano true, de lo contrario se guarda un false
+    Se valida si "val" es igual a true
+    Se declara una variable "message" y se iguala a un string vacío
+    Se crea un switch case, el cual se le pasa la variable "codigo"
+    Se valida en caso de que "codigo" sea 200
+    Se actualiza el valor de la variable "message" a un mensaje de respuesta exitoso
+    Se utiliza la palabra reservada break para romper el switch case
+    Se cierra el case
+    Se valida en caso de que "codigo" sea 404
+    Se actualiza el valor de la variable "message" a un mensaje de respuesta Not Found
+    Se utiliza la palabra reservada break para romper el switch case
+    Se cierra el case
+    Se valida en caso de que "codigo" sea 200
+    Se actualiza el valor de la variable "message" a un mensaje de respuesta que el servicio no está disponible
+    Se utiliza la palabra reservada break para romper el switch case
+    Se cierra el case
+    Se cierra el Switch
+    Ahora se crea un objeto llamado "respuesta" 
+    Se declara una clave "codigo_" que tiene como valor la variable "codigo"
+    Se declara una clave "message_" que tiene como valor la variable "message"
+    Se cierra el objeto
+    Se imprime el objeto "respuesta" creado
+    Si la condición de la línea 3 no se cumple, entonces se imprime que el código de respuesta no es valido
                     </code>
                 </pre>
                 <div class="text-md-center">
@@ -73,7 +110,6 @@
     </main>
 @endsection
 
-
 @section('scripts')
 
     <script>
@@ -81,12 +117,12 @@
         var dato1 = 0,
             max_inputs = 1, 
             cont = 0,
-            placeholders_form1 = ['Ingrese numero: '],
+            placeholders_form1 = ['Ingrese codigo de respuesta del servidor: '],
             list_datas_form1 = []
 
         var validar = (dato) => {
             dato = parseInt(dato)
-            return !isNaN(dato) && dato <11 && dato > 0 ? true:false 
+            return !isNaN(dato) ? true:false 
         }
 
         var placeholder_set_inputs = () => {
@@ -94,16 +130,31 @@
         }
 
         const show_results = () => {
-            var n = parseInt(list_datas_form1[0]),
-            texto = ""
-            
-            for (var i =1; i <= n; i++) {
-                factorial = 1
-                for(var j = i;j > 0; j --){
-                    factorial *= j
+            var codigo = parseInt(list_datas_form1[0]),
+                val = codigo == 200 || codigo == 404 || codigo == 503 ? true : false,
+                texto = ""
+            if(val == true){
+                var message = ""
+                switch(codigo){
+                    case 200:{
+                        message = "Respuesta con exito!!"
+                        break
+                    }
+                    case 404:{
+                        message = "Error 404 not found!!"
+                        break
+                    }
+                    case 503:{
+                        message = "Servicio no disponible!!"
+                        break
+                    }
                 }
-                texto += "Factorial de "+i+" = "+ factorial + "<br>"
-            }
+                texto = '{'
+                texto += " codigo_:"+codigo+","
+                texto += " message_:"+message
+                texto += "}"
+
+            } else { texto = "Codigo de respuesta no valido" }
             $('#resultado-operacion').html(texto)
         }
 
@@ -139,7 +190,7 @@
                 }
             }else{
                 alertify.set('notifier', 'position', 'bottom-center');
-                if(parseInt(valor) < 10){ var msg = alertify.error('Dato no valido'); }else { var msg = alertify.error('El dato debe ser menor o igual a 10'); }
+                var msg = alertify.error('Dato no valido');
                 msg.delay(1.3)
             }
         })
