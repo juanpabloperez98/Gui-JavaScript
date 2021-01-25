@@ -173,7 +173,7 @@
                     </div>
 
                     <div class="cardboton">
-                        <a href="#" class="btn">Ir a los ejemplos</a>
+                        <a href="{{ route('funciones-ejemplo-index') }}" class="btn">Ir a los ejemplos</a>
                     </div>
                 </div>
 

@@ -593,4 +593,47 @@ Route::prefix('funciones/')->group(function () {
             'page' => 'functions'
         ]);
     })->name('functions');
+
+    Route::get('functions/ejemplos', function () {
+        return view('teoria.funciones.funciones.ejemplos.ejemplos_index', [
+            'page' => 'funciones-ejemplos-index'
+        ]);
+    })->name('funciones-ejemplo-index');
+
+    Route::get('functions/ejemplo1', function () {
+        return view('teoria.funciones.funciones.ejemplos.ejemplo1', [
+            'page' => 'funciones-ejemplos'
+        ]);
+    })->name('funciones-ejemplo1');
+
+    Route::get('functions/ejemplo2', function () {
+        return view('teoria.funciones.funciones.ejemplos.ejemplo2', [
+            'page' => 'funciones-ejemplos'
+        ]);
+    })->name('funciones-ejemplo2');
+
+    Route::get('functions/ejemplo3', function () {
+        return view('teoria.funciones.funciones.ejemplos.ejemplo3', [
+            'page' => 'funciones-ejemplos'
+        ]);
+    })->name('funciones-ejemplo3');
+
+    Route::get('functions/ejemplo4', function () {
+        return view('teoria.funciones.funciones.ejemplos.ejemplo4', [
+            'page' => 'funciones-ejemplos'
+        ]);
+    })->name('funciones-ejemplo4');
+
+    Route::get('functions/ejemplo5', function () {
+        return view('teoria.funciones.funciones.ejemplos.ejemplo5', [
+            'page' => 'funciones-ejemplos'
+        ]);
+    })->name('funciones-ejemplo5');
+
+    Route::get('functions/ejemplo6', function () {
+        return view('teoria.funciones.funciones.ejemplos.ejemplo6', [
+            'page' => 'funciones-ejemplos'
+        ]);
+    })->name('funciones-ejemplo6');
+
 });
