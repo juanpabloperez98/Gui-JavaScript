@@ -91,7 +91,7 @@
                             <a href="{{ route('funciones') }}">Funciones</a>
                         </li>
                         <li>
-                            <a href="#">Graficos HTML</a>
+                            <a href="{{ route('dom') }}">Manejo del DOM</a>
                         </li>
                     </ul>
 
