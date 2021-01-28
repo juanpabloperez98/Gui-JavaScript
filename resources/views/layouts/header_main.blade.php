@@ -113,14 +113,15 @@
                 <div class="content-link-toggle ">
                     <a data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false"
                         aria-controls="collapseExample6">
-                        <span>Graficos con html</span>
+                        <span>Manejo del DOM</span>
                     </a>
                 </div>
                 <div class="collapse" id="collapseExample6">
                     <div class="card card-body text-left" style="background: none; color: white">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                        proident.
+                        En este módulo se explicará acerca de las tecnologías implementadas para el desarrollo web como son HTML5, CSS y JavaScript. Se dará un repaso rápido sobre estas tres tecnologías mencionadas anteriormente y se mostraran ejemplos de como se puede manejar el DOM con JavaScript
+                    </div>
+                    <div id="boton">
+                        <a href="{{ route('dom') }}" class="btn btn-primary">Ir al modulo</a>
                     </div>
                 </div>
             </div>
