@@ -3,6 +3,16 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/teoria/ejemplos.css') }}">
+    <style>
+        #exampleDiv{
+            width: 200px;height: 200px;background-color: blue;
+        }
+        #exampleDiv:hover{
+            height: 180px;
+            width: 180px;
+            background-color: green;
+        }
+    </style>
 @endsection
 
 @section('header')
@@ -13,11 +23,11 @@
     <main id="ej-main">
         <div class="row mx-auto">
             <div class="col-lg-12 p-md-3">
-                <h4 class="font-weight-bold">Ejemplo # 2</h4>
+                <h4 class="font-weight-bold">Ejemplo # 3</h4>
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Cree un documento html en el cual cree 3 etiqueta div, 2 de ellas con una clase llamada rojo y otra sin el atributo clase
+                    Cree un contenedor en HTML que cuando se le coloque el mouse encima, este cambie de color y de tamaño 
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -29,8 +39,6 @@
         &lt;title&gt;Document&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
-        &lt;div class="rojo"&gt;&lt;/div&gt;
-        &lt;div class="rojo"&gt;&lt;/div&gt;
         &lt;div&gt;&lt;/div&gt;
     &lt;/body&gt;
     &lt;/html&gt;
@@ -39,12 +47,7 @@
                 <div id="result" class="result desactivate">
                     <h6 class="text-center font-weight-bold" style="color: white">Resultado</h6>
                     <div class="text-center" id="resultado-operacion">
-                        <p style="color: white">parrafo</p>
-                        <ul style="color: white">
-                            <li>juan</li>
-                            <li>pedro</li>
-                            <li>jose</li>
-                        </ul>
+                        <div id="exampleDiv" class="m-auto"></div>
                     </div>
                 </div>
                 <div id="botones">
@@ -52,9 +55,26 @@
                     <a href="#" class="btn desactivate" id="reiniciar">Reiniciar</a>
                 </div>
             </div>
+
+            <div class="col-lg-6 mx-auto desactivate" id="codigo2">
+                <pre>
+                    <code class="css">   div{
+        height: 200px;
+        width: 200px;
+        background-color: blue;
+    }
+    div:hover{
+        height: 180px;
+        width: 180px;
+        background-color: green;
+    }
+                    </code>
+                </pre>
+            </div>
         </div>
     </main>
 @endsection
+
 
 @section('scripts')
 
@@ -64,14 +84,19 @@
             e.preventDefault()
             $('#enunciado').toggle('explode')
             $('#codigo').toggle('explode')
-            $('#reiniciar').toggle('explode')
+            $('#codigo2').toggle('explode')
+        })
+
+        $('#ejecutar').on('click', (e) => {
+            e.preventDefault()
             $('#ejecutar').toggle('explode')
+            $('#reiniciar').toggle('explode')
+            $('#result').toggle('explode')
         })
         $('#reiniciar').on('click', (e) => {
             e.preventDefault()
             location.reload()
         })  
-
 
     </script>
 

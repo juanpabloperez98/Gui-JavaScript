@@ -60,7 +60,7 @@
                         </div>
 
                         <div class="boton">
-                            <a href="{{ route('functions') }}" class="btn">Vamos aprender</a>
+                            <a href="{{ route('css') }}" class="btn">Vamos aprender</a>
                         </div>
                     </div>
                     <div class="col-lg-6 mt-md-3 mx-auto tarjeta">
@@ -70,7 +70,7 @@
                         </div>
 
                         <div class="boton">
-                            <a href="{{ route('functions') }}" class="btn">Vamos aprender</a>
+                            <a href="#" class="btn">Vamos aprender</a>
                         </div>
                     </div>
                 </div>

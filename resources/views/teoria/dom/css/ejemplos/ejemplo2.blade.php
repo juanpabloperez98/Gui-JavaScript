@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Cree un documento html en el cual cree 3 etiqueta div, 2 de ellas con una clase llamada rojo y otra sin el atributo clase
+                    En un documento html se tiene un main y dentro se tiene 3 contenedores, se pide que le de color verde a los contenedores y al main un color rojo para distinguir. Cada contenedor debe tener un margen de 10px
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>
@@ -29,9 +29,11 @@
         &lt;title&gt;Document&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
-        &lt;div class="rojo"&gt;&lt;/div&gt;
-        &lt;div class="rojo"&gt;&lt;/div&gt;
-        &lt;div&gt;&lt;/div&gt;
+        &lt;main&gt;
+            &lt;div&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;/div&gt;
+        &lt;/main&gt;
     &lt;/body&gt;
     &lt;/html&gt;
                     </code>
@@ -39,12 +41,11 @@
                 <div id="result" class="result desactivate">
                     <h6 class="text-center font-weight-bold" style="color: white">Resultado</h6>
                     <div class="text-center" id="resultado-operacion">
-                        <p style="color: white">parrafo</p>
-                        <ul style="color: white">
-                            <li>juan</li>
-                            <li>pedro</li>
-                            <li>jose</li>
-                        </ul>
+                        <div class="m-auto" style="width: 400px;height: 300px;background-color: red;">
+                            <div style="background-color: green; margin-top: 10px; width: 80px; height: 80px;"></div>
+                            <div style="background-color: green; margin-top: 10px; width: 80px; height: 80px;"></div>
+                            <div style="background-color: green; margin-top: 10px; width: 80px; height: 80px;"></div>
+                        </div>
                     </div>
                 </div>
                 <div id="botones">
@@ -52,9 +53,26 @@
                     <a href="#" class="btn desactivate" id="reiniciar">Reiniciar</a>
                 </div>
             </div>
+
+            <div class="col-lg-6 mx-auto desactivate" id="codigo2">
+                <pre>
+                    <code class="css">   main {
+        background-color: red;
+    }
+
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        margin-top: 10px;
+    }
+                    </code>
+                </pre>
+            </div>
         </div>
     </main>
 @endsection
+
 
 @section('scripts')
 
@@ -64,14 +82,19 @@
             e.preventDefault()
             $('#enunciado').toggle('explode')
             $('#codigo').toggle('explode')
-            $('#reiniciar').toggle('explode')
+            $('#codigo2').toggle('explode')
+        })
+
+        $('#ejecutar').on('click', (e) => {
+            e.preventDefault()
             $('#ejecutar').toggle('explode')
+            $('#reiniciar').toggle('explode')
+            $('#result').toggle('explode')
         })
         $('#reiniciar').on('click', (e) => {
             e.preventDefault()
             location.reload()
         })  
-
 
     </script>
 

@@ -13,9 +13,9 @@
     <main id="ej-main">
         <div class="row mx-auto pt-5">
             <div class="col-lg-12 mt-4">
-                <h3 class="text-md-center font-weight-bold my-md-4">Ejemplos HTML</h3>
+                <h3 class="text-md-center font-weight-bold my-md-4">Ejemplos CSS</h3>
                 <p class="my-md-3">
-                    A continuación, se presentan una serie de ejemplos acerca de HTML, en estos ejemplos podrá visualizar unos ejercicios planteados y la solución a estos con su respectiva explicación.
+                    A continuación, se presentan una serie de ejemplos acerca de CSS, en estos ejemplos podrá visualizar unos ejercicios planteados y la solución a estos con su respectiva explicación.
                 </p>
             </div>
             <div class="col-lg-12">
@@ -26,7 +26,7 @@
                                 <h5>Ejemplo # 1</h5>
                             </div>
                             <div class="cardboton">
-                                <a href="{{ route('html-ejemplo1') }}" class="btn">Ir al ejemplo</a>
+                                <a href="{{ route('css-ejemplo1') }}" class="btn">Ir al ejemplo</a>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                                 <h5>Ejemplo # 2</h5>
                             </div>
                             <div class="cardboton">
-                                <a href="{{ route('html-ejemplo2') }}" class="btn">Ir al ejemplo</a>
+                                <a href="{{ route('css-ejemplo2') }}" class="btn">Ir al ejemplo</a>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                                 <h5>Ejemplo # 3</h5>
                             </div>
                             <div class="cardboton">
-                                <a href="{{ route('html-ejemplo3') }}" class="btn">Ir al ejemplo</a>
+                                <a href="{{ route('css-ejemplo3') }}" class="btn">Ir al ejemplo</a>
                             </div>
                         </div>
                     </div>

@@ -144,7 +144,7 @@
                     </code>
                 </pre>
                 <div id="result3" class="result px-md-3 text-center desactivate" style="margin-top: -59px">
-                    +<h6 class=" font-weight-bold" style="color: white">Resultado</h6>
+                    <h6 class=" font-weight-bold" style="color: white">Resultado</h6>
                     <p class="text-center" style="color: white;">
                         2
                     </p>

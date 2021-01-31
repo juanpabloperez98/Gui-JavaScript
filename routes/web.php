@@ -658,6 +658,56 @@ Route::prefix('DOM/')->group(function () {
         ]);
     })->name('html-ejemplo-index');
 
+    Route::get('html/ejemplo1', function () {
+        return view('teoria.dom.html.ejemplos.ejemplo1', [
+            'page' => 'html-ejemplos'
+        ]);
+    })->name('html-ejemplo1');
+
+    Route::get('html/ejemplo2', function () {
+        return view('teoria.dom.html.ejemplos.ejemplo2', [
+            'page' => 'html-ejemplos'
+        ]);
+    })->name('html-ejemplo2');
+
+    Route::get('html/ejemplo3', function () {
+        return view('teoria.dom.html.ejemplos.ejemplo3', [
+            'page' => 'html-ejemplos'
+        ]);
+    })->name('html-ejemplo3');
+    
+    // Css
+    Route::get('css/', function () {
+        return view('teoria.dom.css.index', [
+            'page' => 'css'
+        ]);
+    })->name('css');
+
+    Route::get('css/ejemplos', function () {
+        return view('teoria.dom.css.ejemplos.ejemplos_index', [
+            'page' => 'css-ejemplos-index'
+        ]);
+    })->name('css-ejemplo-index');
+
+    Route::get('css/ejemplo1', function () {
+        return view('teoria.dom.css.ejemplos.ejemplo1', [
+            'page' => 'css-ejemplos'
+        ]);
+    })->name('css-ejemplo1');
+
+
+    Route::get('css/ejemplo2', function () {
+        return view('teoria.dom.css.ejemplos.ejemplo2', [
+            'page' => 'css-ejemplos'
+        ]);
+    })->name('css-ejemplo2');
+
+    Route::get('css/ejemplo3', function () {
+        return view('teoria.dom.css.ejemplos.ejemplo3', [
+            'page' => 'css-ejemplos'
+        ]);
+    })->name('css-ejemplo3');
+
 
     // funciones
    /*  Route::get('functions/', function () {
