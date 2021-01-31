@@ -127,8 +127,8 @@
             </div>
 
             <div id="manuals" class="mt-5 p-4" style="background-color: #41423e">
-                <a href="#" class="d-block">Manual de usuario</a>
-                <a href="#" class="d-block">Manual tecnico</a>
+                <a href="https://drive.google.com/file/d/1CgxZv6LGrHleNeVrhw2W1UUxUrTGHDhb/view?usp=sharing" target="_blank" class="d-block">Manual de usuario</a>
+                <a href="https://drive.google.com/file/d/1ZSQXtXOJyme4fAVHg4eg8cs5x0GVtZgQ/view?usp=sharing" target="_blank" class="d-block">Manual tecnico</a>
             </div>
         </div>
     </div>
