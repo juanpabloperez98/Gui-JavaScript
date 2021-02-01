@@ -558,6 +558,47 @@
                         </a>
                     </li>
                     @break
+                    @case('js')
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ejemplos">
+                            <img src="{{ asset('imagenes/icons/ejemplo.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Ejemplos/Ejercicios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="{{ asset('imagenes/icons/icon-next.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Siguiente
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('dom') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('js-ejemplos-index')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('DOM/js#ejemplos') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
+                    @case('js-ejemplos')
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="{{ route('js-ejemplo-index') }}">
+                            <img src="{{ asset('imagenes/icons/icon-back.png') }}" alt="icon-back"
+                                style="width: 20px; margin: 0px 5px 0px 0px">
+                            Volver
+                        </a>
+                    </li>
+                    @break
                     @default
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/#title-moduls') }}">

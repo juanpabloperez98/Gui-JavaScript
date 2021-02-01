@@ -70,7 +70,7 @@
                         </div>
 
                         <div class="boton">
-                            <a href="#" class="btn">Vamos aprender</a>
+                            <a href="{{ route('js') }}" class="btn">Vamos aprender</a>
                         </div>
                     </div>
                 </div>

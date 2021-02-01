@@ -708,54 +708,35 @@ Route::prefix('DOM/')->group(function () {
         ]);
     })->name('css-ejemplo3');
 
-
-    // funciones
-   /*  Route::get('functions/', function () {
-        return view('teoria.funciones.funciones.index', [
-            'page' => 'functions'
+    // JS
+    Route::get('js/', function () {
+        return view('teoria.dom.js.index', [
+            'page' => 'js'
         ]);
-    })->name('functions');
+    })->name('js');
 
-    Route::get('functions/ejemplos', function () {
-        return view('teoria.funciones.funciones.ejemplos.ejemplos_index', [
-            'page' => 'funciones-ejemplos-index'
+    Route::get('js/ejemplos', function () {
+        return view('teoria.dom.js.ejemplos.ejemplos_index', [
+            'page' => 'js-ejemplos-index'
         ]);
-    })->name('funciones-ejemplo-index');
+    })->name('js-ejemplo-index');
 
-    Route::get('functions/ejemplo1', function () {
-        return view('teoria.funciones.funciones.ejemplos.ejemplo1', [
-            'page' => 'funciones-ejemplos'
+    Route::get('js/ejemplo1', function () {
+        return view('teoria.dom.js.ejemplos.ejemplo1', [
+            'page' => 'js-ejemplos'
         ]);
-    })->name('funciones-ejemplo1');
+    })->name('js-ejemplo1');
 
-    Route::get('functions/ejemplo2', function () {
-        return view('teoria.funciones.funciones.ejemplos.ejemplo2', [
-            'page' => 'funciones-ejemplos'
+    Route::get('js/ejemplo2', function () {
+        return view('teoria.dom.js.ejemplos.ejemplo2', [
+            'page' => 'js-ejemplos'
         ]);
-    })->name('funciones-ejemplo2');
+    })->name('js-ejemplo2');
 
-    Route::get('functions/ejemplo3', function () {
-        return view('teoria.funciones.funciones.ejemplos.ejemplo3', [
-            'page' => 'funciones-ejemplos'
+    Route::get('js/ejemplo3', function () {
+        return view('teoria.dom.js.ejemplos.ejemplo3', [
+            'page' => 'js-ejemplos'
         ]);
-    })->name('funciones-ejemplo3');
-
-    Route::get('functions/ejemplo4', function () {
-        return view('teoria.funciones.funciones.ejemplos.ejemplo4', [
-            'page' => 'funciones-ejemplos'
-        ]);
-    })->name('funciones-ejemplo4');
-
-    Route::get('functions/ejemplo5', function () {
-        return view('teoria.funciones.funciones.ejemplos.ejemplo5', [
-            'page' => 'funciones-ejemplos'
-        ]);
-    })->name('funciones-ejemplo5');
-
-    Route::get('functions/ejemplo6', function () {
-        return view('teoria.funciones.funciones.ejemplos.ejemplo6', [
-            'page' => 'funciones-ejemplos'
-        ]);
-    })->name('funciones-ejemplo6'); */
+    })->name('js-ejemplo3');
 
 });
