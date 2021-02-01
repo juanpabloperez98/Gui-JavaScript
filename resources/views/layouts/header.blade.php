@@ -526,7 +526,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ route('js') }}">
                             <img src="{{ asset('imagenes/icons/icon-next.png') }}" alt="icon-back"
                                 style="width: 20px; margin: 0px 5px 0px 0px">
                             Siguiente
