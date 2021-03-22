@@ -15,7 +15,7 @@
             <div class="col-lg-12 mt-4">
                 <h3 class="text-md-center font-weight-bold my-md-4">Ejemplos if-else</h3>
                 <p class="my-md-3">
-                    A continuación, se presentan una serie de ejemplos acerca de if-else en JavaScript, en estos ejemplos podrá visualizar unos problemas planteados y la solución a estos con su respectiva explicación.
+                    A continuación se presentan una serie de ejemplos acerca de if-else en JavaScript, en estos ejemplos podrá visualizar unos problemas planteados y la solución a estos con su respectiva explicación.
                 </p>
             </div>
             <div class="col-lg-12">

@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Hacer un programa que lea dos números, y luego hacer la diferencia entre estos dos, si la diferencia es menor o igual a 5 mostrar en pantalla todos los números comprendidos entre el numero 1 y el numero 2
+                    Hacer un programa que lea dos números, y luego hacer la diferencia entre estos dos. Si la diferencia es menor o igual a 5, mostrar en pantalla todos los números comprendidos entre el numero 1 y el numero 2.
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>

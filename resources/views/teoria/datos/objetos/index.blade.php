@@ -63,8 +63,8 @@
             <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">4.3.3</span>Acceder a los datos de un objeto</h3>
                 <p class="mt-3">
-                    Ya se ha visto a través de la sintaxis, como se puede crear un objeto y tener datos en el objeto. 
-                    Ahora se mostrará cómo se pueden acceder a los datos que hay dentro de los objetos. Para poder acceder a los datos de un objeto 
+                    Ya se ha visto a través de la sintaxis, como se puede crear un objeto y tener datos en el. 
+                    Ahora se mostrará cómo se pueden acceder a los datos que hay dentro de ellos. Para poder acceder a los datos de un objeto 
                     se utiliza una sintaxis similar a la de las matrices y listas, la cual es necesario hacer el llamado a la variable que contiene el 
                     objeto y utilizando llaves <span style="color: blue">[ ]</span> se accede a los datos que se contengan según su clave indicada: 
                 </p>
@@ -88,7 +88,7 @@
                         <div class="col-lg-12">
                             <h6 class=" font-weight-bold" style="color: white">NOTA</h6>
                             <p class="text-left mt-4" style="color: white;">
-                                Como se puede ver, la diferencia con respecto a una lista o una matriz es que, para acceder al dato de la clave de un objeto, no es necesario indicarle el <span style="color: red">índice</span> número al que corresponder, sino que es necesario indicarle el nombre de la <span style="color: blue">clave</span> correspondiente a la que se quiere acceder.
+                                Como se puede ver, la diferencia con respecto a una lista o una matriz es que, para acceder al dato de la clave de un objeto, no es necesario indicarle el <span style="color: red">índice</span> número al que corresponde, sino que es necesario indicarle el nombre de la <span style="color: blue">clave</span> correspondiente a la que se quiere acceder.
                             </p>
                         </div>
                     </div>
@@ -240,7 +240,7 @@
 
         <div class="row mx-auto p-md-4" id="ejemplos">
             <div class="col-lg-11 text-center mx-auto bg-light columna-principal">
-                <h4 class="text-center mb-md-5 font-weight-bold">Ejemplos y practica</h4>
+                <h4 class="text-center mb-md-5 font-weight-bold">Ejemplos y práctica</h4>
 
                 <div class="card-personalizada">
                     <div class="cardheader">
@@ -254,7 +254,7 @@
 
                 <div class="card-personalizada mt-5 mt-lg-0">
                     <div class="cardheader">
-                        <h5>Practica</h5>
+                        <h5>Práctica</h5>
                     </div>
 
                     <div class="cardboton">

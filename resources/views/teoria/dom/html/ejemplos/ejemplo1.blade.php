@@ -44,7 +44,7 @@
                 <div id="result" class="result desactivate">
                     <h6 class="text-center font-weight-bold" style="color: white">Resultado</h6>
                     <div class="text-center" id="resultado-operacion">
-                        <p style="color: white">parrafo</p>
+                        <p style="color: white">Parrafo</p>
                         <ul style="color: white">
                             <li>juan</li>
                             <li>pedro</li>

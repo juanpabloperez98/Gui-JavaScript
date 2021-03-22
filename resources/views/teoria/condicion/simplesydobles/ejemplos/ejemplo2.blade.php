@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Dado 3 estaturas realizar un programa que permita mostrar las estaturas ingresadas por el usuario de manera ascendente es decir de la menor a la mayor
+                    El programa debe pedir al usuario ingresar tres estaturas, luego de ser digitadas, se imprimirán en pantalla de forma ascendente.
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>

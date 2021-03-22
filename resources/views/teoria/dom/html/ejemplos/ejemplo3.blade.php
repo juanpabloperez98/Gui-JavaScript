@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    Cree 3 etiqueta p cada una con un atributo id diferente
+                    Cree 3 etiqueta &lt;p&gt; cada una con un atributo id diferente
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>

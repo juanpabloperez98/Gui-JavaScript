@@ -15,13 +15,13 @@
             <div class="col-lg-5 mx-auto bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">3.2.1</span>Ciclo While</h3>
                 <p class="mt-3">
-                    La estructura de repetición while o ciclo while, repite un bloque de instrucciones mientras una condición dada se cumpla, es decir, sea verdadera. El ciclo while dejara de ejecutarse o se cerrara cuando la condición especificada se vuelva falsa o se utilice una sentencia con el break para romper el ciclo, si la condición nunca se vuelve falsa, entonces se considera que esta en un ciclo infinito. La prueba de condición ocurre antes de que se ejecute la expresión del ciclo, lo que significa que, si la condición no es verdadera o no se cumple, entonces nunca se entra a ejecutar el bloque de sentencias del ciclo while.
+                    La estructura de repetición while o ciclo while, repite un bloque de instrucciones mientras una condición dada se cumpla, es decir, sea verdadera, el ciclo while dejará de ejecutarse o se cerrara cuando la condición especificada se vuelva falsa o se utilice una sentencia con el break para romper el ciclo, si la condición nunca se vuelve falsa, entonces se considera que está en un ciclo infinito. La prueba de condición ocurre antes de que se ejecute la expresión del ciclo, lo que significa que, si la condición no es verdadera o no se cumple, entonces nunca se entra a ejecutar el bloque de sentencias del ciclo while.
                 </p>
             </div>
             <div class="col-lg-5 mx-auto mt-3 mt-lg-0 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">3.2.2</span>Sintaxis ciclo while</h3>
                 <p class="mt-3">
-                    Una declaración while, esta definida por la palabra reservada while, acompañada entre paréntesis de la condición a evaluar, debajo de esta se puede definir una expresión a ejecutar, si se necesita ejecutar un bloque de sentencias o más de una expresión, entonces se acompañan los parentesis con unos corchetes
+                    Una declaración while, esta definida por la palabra reservada while, acompañada entre paréntesis de la condición a evaluar, debajo de esta se puede definir una expresión a ejecutar, si se necesita ejecutar un bloque de sentencias o más de una expresión, entonces se acompañan los parentesis con unos corchetes.
                 </p>
                 <pre>
                                     <code class="javascript">   while( <span style="color: greenyellow;">condicion</span> ) {
@@ -51,7 +51,7 @@
                             <p class="text-center" style="color: white;">
                                 3 x 1: 3  <br>
                                 3 x 2: 6  <br>
-                                3 x 3: 8  <br>
+                                3 x 3: 9  <br>
                                 3 x 4: 12  <br>
                                 3 x 5: 15 <br>
                                 3 x 6: 18 <br>
@@ -75,7 +75,7 @@
             <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">3.2.4</span>While anidados</h3>
                 <p class="mt-3">
-                    Aunque no son muy utilizado y son poco comunes, los while anidados tienen la misma base que los ciclos for anidados, es decir en teoría es hablar de un ciclo dentro de otro ciclo. La funcionalidad de estos suele ser cuando no se tiene especificado un valor de parada estático, es decir dependen de que cumplan una condición
+                    Aunque no son muy utilizado y son poco comunes, los while anidados tienen la misma base que los ciclos for anidados, es decir que en teoría es hablar de un ciclo dentro de otro ciclo. La funcionalidad de estos suele ser cuando no se tiene especificado un valor de parada estático, es decir dependen de que cumplan una condición
             </div>
             <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">3.2.5</span>Sintaxis while anidados</h3>

@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
-    <title>Guia JavaScript</title>
+    <title>Guía JavaScript</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -22,7 +22,7 @@
 <header id="header">
     <nav class="navbar navbar-expand-lg" id="navbar">
         <img src="{{ asset('imagenes/logo.png') }}" alt="" class="mr-2" style="width: 30px">
-        <a class="navbar-brand" id="title" href="#">Guia JavaScript
+        <a class="navbar-brand" id="title" href="#">Guía JavaScript
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

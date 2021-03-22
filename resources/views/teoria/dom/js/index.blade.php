@@ -104,8 +104,8 @@
         &lt;title&gt;Nombre del documento&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
-        &lt;p&gt; id="idp">Hola mundo desde el atributo ID&lt;/p&gt;
-        &lt;p&gt; class="classp">Hola mundo desde el atributo Class&lt;/p&gt;
+        &lt;p id="idp"&gt;>Hola mundo desde el atributo ID&lt;/p&gt;
+        &lt;p class="classp"&gt;>Hola mundo desde el atributo Class&lt;/p&gt;
     &lt;/body&gt;
     &lt;/html&gt;
                     </code>

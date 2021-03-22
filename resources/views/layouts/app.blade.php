@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
-    <title>Guia JavaScript</title>
+    <title>Guía JavaScript</title>
 
     {{-- Favicon --}}
     <link rel="icon" type="image/png" href="{{ asset('imagenes/icons/favicon.ico') }}" />
@@ -47,7 +47,7 @@
                         <img src="{{ asset('imagenes/logo.png') }}" alt="" style="width: 30px">
                         Guía JavaScript
                     </h5>
-                    <p style="color: white">El contenido de esta pagina es creado y pertenece a la Universidad
+                    <p style="color: white">El contenido de esta página es creado y pertenece a la Universidad
                         Tecnologica
                         de Pereira</p>
                 </div>

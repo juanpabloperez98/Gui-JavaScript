@@ -61,7 +61,7 @@
                     <code class="javascript">    Se crea la función "ordenar_numeros()" que recibe como parámetro una lista y se guardara en la variable "lista"
     Se retorna la lista pero invertida (Del ultimo al primero) utilizando la función reverse() (NOTA: esta función reordena del ultimo al primer elemento de la lista)
     Se cierra la función
-    Se crea una lista llamada "números_lista" esta lista guardara los números ingresados por el usuario
+    Se crea una lista llamada "numeros_lista" esta lista guardara los números ingresados por el usuario
     Se declara un ciclo for que ira desde "i = 0" hasta "i < 5" y se ira incrementando de 1 en 1
     Se declara la variable "num" y se iguala al número que ingrese el usuario
     Se agrega a la lista de números el número almacenado en la variable "num"

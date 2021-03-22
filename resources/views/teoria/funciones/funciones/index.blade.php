@@ -59,7 +59,7 @@
             <div class="col-lg-11 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">5.1.3</span>Llamado a una función</h3>
                 <p class="mt-3">    
-                    Ya se ha visto cómo se crea una función, ahora bien, para hacer uso de esta función ese necesario hacer el llamado a ella en cualquier parte del código donde se necesite ejecutarla, para entender mejor esto se presenta un ejemplo sencillo de imprimir por pantalla un mensaje determinado:
+                    Ya se ha visto cómo se crea una función, ahora bien, para hacer uso de esta función es necesario hacer el llamado a ella en cualquier parte del código donde se necesite ejecutarla, para entender mejor esto se presenta un ejemplo sencillo de imprimir por pantalla un mensaje determinado:
                 </p>
                 <pre>
                                 <code class="javascript">   function saludo(){
@@ -93,7 +93,7 @@
                 <h3 class="text-md-center"><span class="spancolor mr-2">5.1.4</span>Parametros en las funciones
                 </h3>
                 <p class="mt-3">
-                    Ya se ha mencionado que las funciones son bloques de código que están encapsulados en una estructura previamente definida, por lo que, para ejecutar dichos bloques de códigos es necesario hacer el llamado a la función para que se ejecuten. Las funciones tienen parámetros, que básicamente son valores que recibe la función y pueden ser utilizados dentro del código que ejecuta la función, A continuación, un ejemplo:
+                    Ya se ha mencionado que las funciones son bloques de código que están encapsulados en una estructura previamente definida, por lo que, para ejecutar dichos bloques de códigos es necesario hacer el llamado a la función para que se ejecuten. Las funciones tienen parámetros, que básicamente son valores que recibe la función y pueden ser utilizados dentro del código que ejecuta la función. A continuación, un ejemplo:
                 </p>
                 <pre>
                                 <code class="javascript">   function saludo(param){

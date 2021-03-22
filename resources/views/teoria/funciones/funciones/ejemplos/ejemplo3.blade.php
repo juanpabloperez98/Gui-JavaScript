@@ -74,11 +74,11 @@
     Se cierra la función
     Ahora se declara una variable "n1" y se iguala al primer número que ingrese el usuario
     Después se declara una variable "n2" y se iguala al segundo número que ingrese el usuario
-    Se crea una variable "factorial_n1" y se iguala a lo que retorne la función "facotrial()" pasándole como parámetro la variable "n1"
-    Se crea una variable "factorial_n2" y se iguala a lo que retorne la función "facotrial()" pasándole como parámetro la variable "n2"
-    Se imprime el valor de la variable "facotrial_n1"
-    Se imprime el valor de la variable "facotrial_n2"
-    Se imprime el valor de la variable de la suma entre "facotrial_n1" y "facotrial_n2"
+    Se crea una variable "factorial_n1" y se iguala a lo que retorne la función "factorial()" pasándole como parámetro la variable "n1"
+    Se crea una variable "factorial_n2" y se iguala a lo que retorne la función "factorial()" pasándole como parámetro la variable "n2"
+    Se imprime el valor de la variable "factorial_n1"
+    Se imprime el valor de la variable "factorial_n2"
+    Se imprime el valor de la variable de la suma entre "factorial_n1" y "factorial_n2"
                     </code>
                 </pre>
                 <div class="text-md-center">

@@ -165,7 +165,7 @@
 
         <div class="row mx-auto p-md-4" id="ejemplos">
             <div class="col-lg-11 text-center mx-auto bg-light columna-principal">
-                <h4 class="text-center mb-md-5 font-weight-bold">Ejemplos y practica</h4>
+                <h4 class="text-center mb-md-5 font-weight-bold">Ejemplos y práctica</h4>
 
                 <div class="card-personalizada">
                     <div class="cardheader">
@@ -179,7 +179,7 @@
 
                 <div class="card-personalizada mt-5 mt-lg-0">
                     <div class="cardheader">
-                        <h5>Practica</h5>
+                        <h5>Práctica</h5>
                     </div>
 
                     <div class="cardboton">

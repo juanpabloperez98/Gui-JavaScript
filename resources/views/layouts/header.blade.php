@@ -1,7 +1,7 @@
 <header id="header">
     <nav class="navbar navbar-expand-lg" id="navbar">
         <img src="{{ asset('imagenes/logo.png') }}" alt="" class="mr-2" style="width: 30px">
-        <a class="navbar-brand mr-auto" id="title" href="{{ url('/') }}">Guia JavaScript
+        <a class="navbar-brand mr-auto" id="title" href="{{ url('/') }}">Guía JavaScript
         </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

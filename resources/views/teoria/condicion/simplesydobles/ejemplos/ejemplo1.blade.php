@@ -149,9 +149,13 @@
             mayor = calificacion_1
             if(calificacion_2 > mayor){
                 mayor = calificacion_2
+                if(calificacion_3 > mayor){
+                    mayor = calificacion_3
+                }
             }else if(calificacion_3 > mayor){
                 mayor = calificacion_3
             }
+
             var ganador = nombre_1
             if(mayor == calificacion_2){
                 ganador = nombre_2

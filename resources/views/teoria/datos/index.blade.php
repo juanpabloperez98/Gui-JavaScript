@@ -38,7 +38,7 @@
                 <h3 id="title-themes">Temas</h3>
                 <p>
                     Al hablar de estructuras de datos, se esta hablando principalmente de tres elementos que son: Lista,
-                    Matrices, y Objetos, cada uno de estos elementos son se mostraran a continuación con sus respectivos
+                    Matrices, y Objetos, cada uno de estos elementos se mostraran a continuación con sus respectivos
                     ejemplos y ejercicios
                 </p>
             </div>

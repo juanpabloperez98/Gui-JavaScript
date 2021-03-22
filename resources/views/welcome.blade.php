@@ -11,7 +11,7 @@
                 <div class="col-lg-7" id="back-opacity" style="">
                     <h3 style="color: white; font-weight: bold">Guía de programación con JavaScript</h3>
                     <p style="color: white; font-weight: bold;font-size: 20px;margin-top: 30px">Software creado por la
-                        Universidad Tecnologica de pereria</p>
+                        Universidad Tecnologica de Pereria</p>
                 </div>
                 <div class="col-lg-5 mt-sm-4 mt-4 text-center" id="logoutp" style="">
                     <img src="{{ asset('imagenes/UTP.png') }}" alt="">

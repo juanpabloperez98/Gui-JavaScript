@@ -53,7 +53,7 @@
             <div class="col-lg-5 mx-auto mt-3 bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">2.2.3</span>Ejemplo</h3>
                 <p class="mt-3">
-                    Supóngase que dependiendo de una variable llamada <span style="color: blue; font-weight: bold">día</span> que tendrá un valor numérico, se imprima al nombre día correspondiente de la semana, según su valor, si el valor numérico no corresponde a ningún día de la semana se imprimirá que el dato no es valido
+                    Supóngase que dependiendo de una variable llamada <span style="color: blue; font-weight: bold">día</span> que tendrá un valor numérico, se imprima al nombre día correspondiente de la semana, si el valor numérico no corresponde a ningún día de la semana se imprimirá que el dato no es valido
                 </p>
                 <pre>
                                     <code class="javascript">    var dia = 2

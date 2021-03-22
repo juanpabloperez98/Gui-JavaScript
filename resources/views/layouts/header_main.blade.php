@@ -1,7 +1,7 @@
 <header id="header">
     <nav class="navbar navbar-expand-lg" id="navbar">
         <img src="{{ asset('imagenes/logo.png') }}" alt="" class="mr-2" style="width: 30px">
-        <a class="navbar-brand mr-auto" id="title" href="{{ route('welcome') }}">Guia JavaScript
+        <a class="navbar-brand mr-auto" id="title" href="{{ route('welcome') }}">Guía JavaScript
         </a>
 
         <div class="">
@@ -82,12 +82,12 @@
                 </div>
                 <div class="collapse" id="collapseExample4">
                     <div class="card card-body text-left" style="background: none; color: white">
-                        El objetivo de este modulo es aprender acerca de las estructuras de datos, cuales son y como
+                        El objetivo de este módulo es aprender acerca de las estructuras de datos, cuales son y como
                         manejarlas. En este módulo se encontrarán temas relacionado a lo que son vectores, matrices y
                         objetos.
                     </div>
                     <div id="boton">
-                        <a href="{{ route('datos') }}" class="btn btn-primary">Ir al modulo</a>
+                        <a href="{{ route('datos') }}" class="btn btn-primary">Ir al módulo</a>
                     </div>
                 </div>
             </div>

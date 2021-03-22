@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 mx-auto" style="background-color: white; padding: 15px; border-radius: 10px" id="enunciado">
                 <p>
-                    En una tienda se desea realizar un programa que permita a determinar un descuento dependiendo el valor de la venta generada, si la venta supero los $ 35000 pesos se hará un descuento del 10%, de lo contrario entonces se hará un descuento del 4%.
+                    En una tienda se desea realizar un programa que permita determinar un descuento dependiendo el valor de la venta generada, si la venta supero los $ 35000 pesos se hará un descuento del 10%, de lo contrario se hará un descuento del 4%.
                 </p>
                 <div id="botones">
                     <a href="#" class="btn" id="iniciar">Empezar</a>

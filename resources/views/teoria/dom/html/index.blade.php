@@ -34,7 +34,7 @@
                 <pre>
                     <code class="languaje-html">   &lt;html&gt;
         &lt;head&gt;
-            &lt;titl&lt;/title&gt;
+            &lt;title&gt;&lt;/title&gt;
         &lt;/head&gt;
         &lt;body&gt;&lt;/body&gt;
    &lt;/html&gt;
@@ -65,7 +65,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="font-weight-bold">&lt;!doctype html&gt;</td>
+                            <td class="font-weight-bold">&lt;!DOCTYPE html&gt;</td>
                             <td class="text-left">Define que el documento esta bajo el estandar de HTML 5</td>
                         </tr>
                         <tr>

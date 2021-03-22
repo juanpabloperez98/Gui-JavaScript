@@ -40,13 +40,13 @@
                     se le haya asignado.
                 </p>
                 <p>
-                    <span class="spancolor">Nota</span>: JavaScript es un lenguaje de programación dinámico
+                    <span class="spancolor">Nota</span>: JavaScript es un lenguaje de programación dinámico.
                 </p>
             </div>
             <div class="col-lg-11 mt-md-3 mx-auto bg-light columna-principal">
                 <h3 class="text-md-center"><span class="spancolor mr-2">1.1.3</span>¿Qué tipos de datos existen?</h3>
                 <p class="mt-md-4 mb-md-3 ">A continuación, se puede ver una tabla con los tipos de datos que maneja
-                    JavaScript</p>
+                    JavaScript.</p>
                 <table class="table mt-md-3">
                     <thead>
                         <tr style="background-color: #d3c568; color: white">
